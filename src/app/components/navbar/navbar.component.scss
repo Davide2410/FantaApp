@@ -1,0 +1,36 @@
+.bg-blue {
+    background-color: rgb(74, 74, 230);
+}
+
+.collapse {
+    background-color: white;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 80%;
+    height: 200vh;
+    z-index: 1;
+
+    .account {
+        border-top: 1px solid white;
+        height: 90px;
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .list{
+        i{
+            color: rgb(74, 74, 230);
+            margin: 30px 20px 0px 10px;
+            font-size: 20px;
+        }
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+}

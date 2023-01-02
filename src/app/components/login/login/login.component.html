@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row justify-content-center align-items-center  vh-100">
+            <div class="col-12 col-md-4">
+                <form class="shadow p-5 bg-white" #form="ngForm" (ngSubmit)="accedi(form)">
+
+                    <!-- Email input -->
+                    <mdb-form-control class="mb-4">
+                        <input mdbInput type="email" id="form1" class="form-control" name="email" #email="ngModel"
+                            ngModel required />
+                        <label mdbLabel class="form-label" for="form1">Email label</label>
+                    </mdb-form-control>
+
+                    <!-- Password input -->
+                    <mdb-form-control class="mb-4">
+                        <input mdbInput type="password" id="form2" class="form-control" name="password"
+                            #password="ngModel" ngModel required />
+                        <label mdbLabel class="form-label" for="form2">Password</label>
+                    </mdb-form-control>
+
+
+                    <button type="submit" class="btn btn-primary btn-block">Accedi</button>
+
+                    <div class="container bg-white none" id="error">
+                        <p *ngIf="err" class="text-danger text-center mt-3">{{err}}</p>
+                    </div>
+
+                    <div class="text-center mt-2">
+                        <p>Sei registrato?<a routerLink="/register">Registarti</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

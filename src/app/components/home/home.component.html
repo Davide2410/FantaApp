@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="container pt-3">
+
+        <div class="row justify-content-evenly align-items-center text-center">
+            <div class="col-6 text-start">
+                <i class="fas fa-trophy"></i><span>LEGHE</span>
+            </div>
+            <div class="col-6 text-end">
+                <a class="btn btn-outline-primary">Nuova Lega</a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center text-center mt-3">
+            <div class="col-12">
+                <img src="https://fantamaster.b-cdn.net/banners/homepage_banner.jpg" width="100%" alt="">
+            </div>
+        </div>
+    
+        <div class="row justify-content-evenly text-center align-items-center mt-3">
+            <div class="col-6 text-start">
+                <i class="fas fa-bullhorn"></i><span>NEWS E CONSIGLI</span>
+            </div>
+            <div class="col-6 text-end">
+                <a class="btn btn-outline-primary" [routerLink]="['/all']">Vedi tutti</a>
+            </div>
+    
+            <div class="col-12 mt-3">
+                <div class="card mb-1" *ngFor="let n of news" >
+                    <app-news [n]="n"></app-news>
+                    <app-secondary [n]="n"></app-secondary>
+                </div>
+           </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,22 @@
+.text-blue{
+    color: rgb(1, 1, 61);
+}
+.row{
+    height: min-content;
+    .card-text{
+        font-size: 13px;
+        text-align: left;
+        font-weight: bold;
+    }
+  
+        .category{
+            width: fit-content;
+            padding: 2px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+    .img-fluid{
+        height: 100%;
+    }
+}

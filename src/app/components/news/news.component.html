@@ -1,0 +1,9 @@
+<div *ngIf="n.id == 1"  [routerLink]="['/dettaglio/' + n.id]">
+    <img src="{{n.img}}" class="card-img-top"  alt="{{n.img}}"/>
+    <div class="card-body">
+      <p class="card-text text-blue">{{n.title}}</p>
+      <div class="d-flex justify-content-between">
+        <p [ngClass]="{'bg-warning': n.category == 'Calciomercato', 'bg-danger': n.category == 'Consigli Fantacalcio', 'bg-success': n.category == 'Ultime Notizie'}" class="text-white category" >{{n.category}}</p> <span class="date">{{n.date}}</span>
+      </div>
+    </div>
+</div>

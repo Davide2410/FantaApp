@@ -1,0 +1,12 @@
+.container-fluid{
+    background-color: rgb(74, 74, 230);
+
+    form{
+        position: relative;
+        span{
+            position: absolute;
+            top: 10px;
+            left: 15px;
+        }
+    }
+}

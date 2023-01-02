@@ -1,0 +1,119 @@
+{
+  "users": [
+    {
+      "name": "Davide",
+      "surname": "Alfons",
+      "email": "davide@davide.it",
+      "password": "$2a$10$zD.e49xNZjd8f5bRobskXuRL52PBu0AqJFkrWGLp/u3Yi6P7/fAXq",
+      "id": 1
+    },
+    {
+      "email": "luca@david.it",
+      "password": "$2a$10$w//quSMbEKw0V2U7T.woUOQjBmYLvGv2jR28N4PbhXAKew86nzCeG",
+      "name": "Luca",
+      "id": 3
+    },
+    {
+      "email": "luca@luca.it",
+      "password": "$2a$10$td2ya6vjHM3scOVlcZon6uS.dnoXmvySVOfnJyKEg061Whas/RnVO",
+      "name": "Luca",
+      "id": 4
+    },
+    {
+      "email": "davide@david.it",
+      "password": "$2a$10$kd/PYNqTaukGSp8rP98cNe9kxUrooaLfNDA5xvbZ9Kvhl6jmctQYq",
+      "name": "Davide",
+      "id": 5
+    },
+    {
+      "email": "davide@davide.it",
+      "password": "$2a$10$1b4M8xHkX.VSHyoPLr8s3uS6GKw7qBpfncEOfp0RoL2VrcLClYtv2",
+      "name": "Davide",
+      "surname": "Alfonsi",
+      "id": 6
+    },
+    {
+      "name": "Davide",
+      "surname": "Alfonsi",
+      "email": "l@l.it",
+      "password": "$2a$10$90Kgmt.n3Ar2e/YUGhSMFu3QN1rc9.YTrzL838qCiS8p0dhdev5v2",
+      "id": 7
+    },
+    {
+      "name": "Lorenzo",
+      "surname": "Alfonsi",
+      "email": "d@david.it",
+      "password": "$2a$10$HweloB3L6e1uzJ2MYiC2ieaVoYIfTObFiWEHFnPCltF9/yeTkk4dG",
+      "id": 8
+    },
+    {
+      "email": "linda@linda.it",
+      "password": "$2a$10$etHb.qEcEUSvwPM7MOBzxeeU9O5BM1AkVarnnJ0BYtvc/CnKKZVGC",
+      "name": "Linda",
+      "surname": "Tucci",
+      "id": 9
+    }
+  ],
+  "avatars": [
+    {
+      "avatar": "assets/icon/1.png"
+    },
+    {
+      "avatar": "assets/icon/2.png"
+    },
+    {
+      "avatar": "assets/icon/3.png"
+    },
+    {
+      "avatar": "assets/icon/4.png"
+    },
+    {
+      "avatar": "assets/icon/5.png"
+    },
+    {
+      "avatar": "assets/icon/6.png"
+    },
+    {
+      "avatar": "assets/icon/7.png"
+    },
+    {
+      "avatar": "assets/icon/8.png"
+    },
+    {
+      "avatar": "assets/icon/9.png"
+    },
+    {
+      "avatar": "assets/icon/10.png"
+    },
+    {
+      "avatar": "assets/icon/11.png"
+    },
+    {
+      "avatar": "assets/icon/12.png"
+    },
+    {
+      "avatar": "assets/icon/13.png"
+    },
+    {
+      "avatar": "assets/icon/14.png"
+    },
+    {
+      "avatar": "assets/icon/15.png"
+    },
+    {
+      "avatar": "assets/icon/16.png"
+    },
+    {
+      "avatar": "assets/icon/17.png"
+    },
+    {
+      "avatar": "assets/icon/18.png"
+    },
+    {
+      "avatar": "assets/icon/19.png"
+    },
+    {
+      "avatar": "assets/icon/default.png"
+    }
+  ]
+}
