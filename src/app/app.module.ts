@@ -22,6 +22,10 @@ import {MdbCollapseModule} from 'mdb-angular-ui-kit/collapse';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { SwiperModule } from 'swiper/angular';
 import { SwiperComponent } from './components/news/all/swiper/swiper.component';
+import { HomeNewsComponent } from './components/home/home-news/home-news.component';
+import { UltimeNotizieComponent } from './components/home/ultime-notizie/ultime-notizie.component';
+import { UltimeSecondaryComponent } from './components/home/ultime-notizie/ultime-secondary/ultime-secondary.component';
+import { ConsigliComponent } from './components/home/consigli/consigli.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +38,11 @@ import { SwiperComponent } from './components/news/all/swiper/swiper.component';
     SecondaryComponent,
     DettaglioComponent,
     AllComponent,
-    SwiperComponent
+    SwiperComponent,
+    HomeNewsComponent,
+    UltimeNotizieComponent,
+    UltimeSecondaryComponent,
+    ConsigliComponent
   ],
   imports: [
     BrowserModule,

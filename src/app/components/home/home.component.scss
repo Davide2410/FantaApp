@@ -7,9 +7,55 @@
 .fa-bullhorn{
     color: gray;
 }
+
+.container-fluid{
+    background-color: rgb(211, 211, 211, 0.3);
+    height: 100%;
+}
+
+.container{
+    border-radius: 20px;
+}
+
+.navbar-home{
+    height: 80px;
+    color: white;
+    font-size: 16px;
+    background: linear-gradient(0.25turn, #091768, #066779, #00E895);
+}
+
 span{
     font-size: 15px;
     margin-left: 10px;
 }
 
+.prova{
+   background-color: #00E895; 
+   color: #091768;
+}
 
+// MEDIA QUERY
+@media screen and (max-width:767px) {
+    .container-fluid{
+        background-color: white;
+
+        .container{
+            .logo{
+                display: none;
+            }
+            .navbar-home{
+                display: none;
+            }
+            .icone-app{
+                display: none;
+            }
+            .img-copied{
+               margin-top: 20px; 
+            }
+            .calciomercato{
+                display: none;
+            }
+        }
+    }
+    
+}

@@ -1,8 +1,23 @@
 <app-navbar></app-navbar>
-<div class="container-fluid">
-    <div class="container pt-3">
 
-        <div class="row justify-content-evenly align-items-center text-center">
+<div class="container-fluid p-md-5">
+    <div class="container bg-white p-0">
+
+        <div class="row justify-content-center align-items-center text-center logo">
+            <div class="col-12 p-3">
+                <img src="https://fantamaster.b-cdn.net/wp-content/uploads/2020/08/Logo-FM-2020_sitoweb-1.png" alt="">
+            </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center text-center navbar-home border m-0">
+            <div class="col-3">ULTIME</div> 
+            <div class="col-3">FORMAZIONI</div> 
+            <div class="col-3">CALCIOMERCATO</div> 
+            <div class="col-3">PROFILO</div> 
+         </div>
+
+         <!-- NUOVA LEGA SCHERMI PICCOLI -->
+        <div class="row justify-content-evenly align-items-center text-center d-md-none mt-3">
             <div class="col-6 text-start">
                 <i class="fas fa-trophy"></i><span>LEGHE</span>
             </div>
@@ -11,13 +26,41 @@
             </div>
         </div>
 
-        <div class="row justify-content-center align-items-center text-center mt-3">
-            <div class="col-12">
-                <img src="https://fantamaster.b-cdn.net/banners/homepage_banner.jpg" width="100%" alt="">
+        <div class="row justify-content-center align-items-center text-center img-copied">
+            <div class="col-12 position-relative">
+                <img src="https://fantamaster.b-cdn.net/banners/homepage_banner.jpg" width="100%" height="auto" alt="">
+
+                <div class="row position-absolute bottom-0 start-0 end-0 icone-app">
+                    <div class="col-4">
+                        <img src="https://fantamaster.b-cdn.net/banners/playstore_button.png" width="150" alt="">
+                    </div> 
+                    <div class="col-4">
+                        <img src="https://fantamaster.b-cdn.net/banners/appstore_button.png" width="150" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img src="https://fantamaster.b-cdn.net/banners/appgallery_button_it.png" width="150" alt="">
+                    </div>
+                </div>
             </div>
         </div>
-    
-        <div class="row justify-content-evenly text-center align-items-center mt-3">
+
+        <!-- CALCIOMERCATO NEWS -->
+        <div class="row justify-content-start mt-2 calciomercato">
+            <div class="col-8 ps-4">
+                <h6 class="prova p-1">CALCIOMERCATO</h6>
+                <app-home-news></app-home-news>
+            </div>
+            <div class="col-4 pe-4">
+                <H6 class="prova p-1">ULTIME NOTIZIE</H6>
+                <app-ultime-notizie></app-ultime-notizie>
+                <app-ultime-secondary></app-ultime-secondary>
+                <H6 class="prova p-1">CONSIGLI FANTACALCIO</H6>
+                <app-consigli></app-consigli>
+            </div>
+        </div>
+
+        <!-- NEWS E CONSIGLI SCHERMI PICCOLI -->
+        <div class="row justify-content-evenly text-center align-items-center mt-3 d-md-none">
             <div class="col-6 text-start">
                 <i class="fas fa-bullhorn"></i><span>NEWS E CONSIGLI</span>
             </div>

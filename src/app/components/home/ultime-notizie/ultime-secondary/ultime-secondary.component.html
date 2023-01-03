@@ -1,0 +1,11 @@
+<div *ngFor="let n of filter">
+    <div *ngIf="n.id != 4" class="row mb-3 align-items-center" [routerLink]="['/dettaglio/' + n.id]">
+        <div class="col-4">
+            <img src="{{n.img}}" class="rounded-5" width="100%" alt="">
+            <span>{{n.date}}</span>
+        </div>
+        <div class="col-8">
+            <p>{{n.title}}</p>
+        </div>
+    </div>
+</div>

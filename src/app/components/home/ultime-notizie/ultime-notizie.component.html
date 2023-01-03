@@ -1,0 +1,10 @@
+<div class="row mb-2" *ngFor="let n of filter" [routerLink]="['/dettaglio/' + n.id]">
+    <div *ngIf="n.id == 4">
+        <div class="col-12 position-relative">
+            <img src="{{n.img}}" width="100%" class="rounded-5" alt="">
+            <div class="position-absolute bottom-0 text-white p-4">
+                <p>{{n.title}}</p>
+            </div>
+        </div>
+    </div>
+</div>

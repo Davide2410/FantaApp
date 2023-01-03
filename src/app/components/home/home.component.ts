@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Auth } from 'src/app/auth/auth';
 import { AuthService } from 'src/app/auth/auth.service';
@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit {
 
    news: News[] = []
    
-
   constructor(private newSrv:NewsService , private r :Router) { }
 
   ngOnInit(): void {

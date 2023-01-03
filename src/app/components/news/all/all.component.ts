@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { News } from 'src/app/interface/news';
 import { NewsService } from 'src/app/service/news.service';
 
@@ -67,5 +67,4 @@ export class AllComponent implements OnInit {
     let heart = document.getElementById('heart')
     heart?.classList.toggle('text-danger')
   }
-
 }
