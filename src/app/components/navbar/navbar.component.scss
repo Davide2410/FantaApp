@@ -1,38 +1,17 @@
 .bg-blue {
-    background-color: rgb(74, 74, 230);
+    background: linear-gradient(0.25turn, #091768, #066779, #00E895);
+    height: 50px;
 }
 
-.collapse {
-    background-color: white;
-    width: 50%;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 80%;
-    height: 200vh;
+// .fa-user-alt{
+//     color: #091768;
+// }
+
+.profile-container{
+    border: 1px solid black;
     z-index: 1;
-
-    .account {
-        border-top: 1px solid white;
-        height: 90px;
-
-        span {
-            font-size: 14px;
-        }
-    }
-
-    .list{
-        i{
-            color: rgb(74, 74, 230);
-            margin: 30px 20px 0px 10px;
-            font-size: 20px;
-        }
-
-        span {
-            font-size: 14px;
-        }
-    }
-
+    width: 80px;
+    height: 50px;
 }
 
 // MEDIA QUERY

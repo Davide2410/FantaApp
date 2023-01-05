@@ -1,19 +1,24 @@
 <app-navbar></app-navbar>
 
 <div class="container-fluid p-md-5">
-    <div class="container bg-white p-0">
+    <div class="container bg-white p-0 position-relative">
 
         <div class="row justify-content-center align-items-center text-center logo">
-            <div class="col-12 p-3">
+            <div class="col-12 p-4">
                 <img src="https://fantamaster.b-cdn.net/wp-content/uploads/2020/08/Logo-FM-2020_sitoweb-1.png" alt="">
             </div>
         </div>
 
         <div class="row justify-content-center align-items-center text-center navbar-home border m-0">
-            <div class="col-3">ULTIME</div> 
-            <div class="col-3">FORMAZIONI</div> 
-            <div class="col-3">CALCIOMERCATO</div> 
-            <div class="col-3">PROFILO</div> 
+            <div class="col-3" [routerLink]="['/all']">
+                <p>NEWS</p>
+            </div> 
+            <div class="col-3">
+                <p>LEGHE</p>
+            </div> 
+            <div class="col-3" [routerLink]="['/profile']">
+                <p>PROFILO</p>
+            </div> 
          </div>
 
          <!-- NUOVA LEGA SCHERMI PICCOLI -->
@@ -29,23 +34,11 @@
         <div class="row justify-content-center align-items-center text-center img-copied">
             <div class="col-12 position-relative">
                 <img src="https://fantamaster.b-cdn.net/banners/homepage_banner.jpg" width="100%" height="auto" alt="">
-
-                <div class="row position-absolute bottom-0 start-0 end-0 icone-app">
-                    <div class="col-4">
-                        <img src="https://fantamaster.b-cdn.net/banners/playstore_button.png" width="150" alt="">
-                    </div> 
-                    <div class="col-4">
-                        <img src="https://fantamaster.b-cdn.net/banners/appstore_button.png" width="150" alt="">
-                    </div>
-                    <div class="col-4">
-                        <img src="https://fantamaster.b-cdn.net/banners/appgallery_button_it.png" width="150" alt="">
-                    </div>
-                </div>
             </div>
         </div>
 
         <!-- CALCIOMERCATO NEWS -->
-        <div class="row justify-content-start mt-2 calciomercato">
+        <div class="row justify-content-start mt-2 newsAll">
             <div class="col-8 ps-4">
                 <h6 class="prova p-1">CALCIOMERCATO</h6>
                 <app-home-news></app-home-news>
@@ -74,6 +67,9 @@
                     <app-secondary [n]="n"></app-secondary>
                 </div>
            </div>
+        </div>
+        <div class="footer">
+            
         </div>
     </div>
     <router-outlet></router-outlet>

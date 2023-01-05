@@ -1,4 +1,33 @@
 .container-fluid{
-    background-color: rgb(74, 74, 230);
-    width: 100%;
+    background: linear-gradient( #091768, #066779, #00E895);
+    img{
+        width: 180px;
+    }
+    p{
+        font-size: 14px;
+        color: grey;
+        a{
+            color: #091768;
+            font-weight: bold;
+        }
+    }
+}
+.position-relative{
+    .fa-envelope,
+    .fa-unlock
+    {
+        position: absolute;
+        right: 14px;
+        top: 10px;
+        color: #091768;
+        cursor: pointer;
+    }
+}
+
+.btn-login{
+    height: 40px;
+    font-size: 15px;
+    background-color: #00E895;
+    color: #091768;
+    text-transform: capitalize;
 }

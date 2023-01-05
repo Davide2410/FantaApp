@@ -1,57 +1,49 @@
 <nav class="navbar navbar-expand-lg bg-blue pt-3 pb-3">
     <div class="container-fluid justify-content-between align-items-center">
-        <i class="fas fa-arrow-left ms-2" routerLink="/"></i>
-        <i class="far fa-heart mx-2" id="heart" (click)="heartClick()"></i>
+        <i class="text-white fas fa-arrow-left" routerLink="/"></i>
+        <i class="text-white far fa-heart" id="heart" (click)="heartClick()"></i>
     </div>
 </nav>
-
-<div id="categories" class="d-flex bg-white border-bottom justify-content-center align-items-center p-2">
-   
-</div>
-
-
-<!-- <swiper
-  [slidesPerView]="4"
-  [spaceBetween]="10"
-  [pagination]="{
-    clickable: true
-  }"
-  class="mySwiper" id="categories"
->
-  <ng-template swiperSlide>Slide 2</ng-template
-  ><ng-template swiperSlide>Slide 3</ng-template
-  ><ng-template swiperSlide>Slide 4</ng-template
-  ><ng-template swiperSlide>Slide 5</ng-template
-  ><ng-template swiperSlide>Slide 6</ng-template
-  ><ng-template swiperSlide>Slide 7</ng-template
-  ><ng-template swiperSlide>Slide 8</ng-template
-  ><ng-template swiperSlide>Slide 9</ng-template>
-</swiper> -->
-
-
-
+<!-- <div id="categories" class="d-flex bg-white border-bottom justify-content-center align-items-center p-2">
+       
+</div> -->
 
 <div class="container mt-4">
     <div class="row justify-content-center align-items-center">
-        <div class="col-12 col-md-4 mx-auto mt-3">
-            <div class="card mb-3" *ngFor="let n of news" >
+        <div class="col-12 mt-3 task-list">
+
+            <div class="card mb-3" *ngFor="let n of news">
                 <div class="row" [routerLink]="['/dettaglio/' + n.id]">
                     <div class="col-8 col-md-8">
                         <div class="card-body">
                             <p class="card-text text-blue">{{n.title}}</p>
-                            <div class="d-flex position-absolute top-0">
-                                <span
-                                [ngClass]="{'text-warning': n.category == 'Calciomercato', 'text-danger': n.category == 'Consigli Fantacalcio', 'text-success': n.category == 'Ultime Notizie'}"
-                                class="category">{{n.category}}
+
+                            <span
+                                [ngClass]="{'bg-warning': n.category == 'Calciomercato', 'bg-danger': n.category == 'Consigli Fantacalcio', 'bg-success': n.category == 'Ultime Notizie'}"
+                                class="category position-absolute top-0 text-white">{{n.category}}
                             </span>
-                            </div>
+
                         </div>
                     </div>
                     <div class="col-4 col-md-4">
-                        <img src="{{n.img}}" alt="{{n.img}}" class="img-fluid d-block" />
+                        <div class="image">
+                            <img src="{{n.img}}" alt="{{n.img}}" class="img-fluid d-block mt-2" />
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
+
+
+<!-- <div *ngFor="let n of news" class="row justify-content-between align-items-center mb-3" [routerLink]="['/dettaglio/' + n.id]">
+    <div class="col-8 d-flex mx-auto">
+        <img src="{{n.img}}" class="rounded-5" width="180" alt="">
+        <div class="flex-column ms-3">
+            <p>{{n.title}}</p>
+            <p [ngClass]="{'bg-warning': n.category == 'Calciomercato', 'bg-danger': n.category == 'Consigli Fantacalcio', 'bg-success': n.category == 'Ultime Notizie'}" class="category text-white">{{n.category}}</p>
+        </div>
+    </div>
+</div> -->

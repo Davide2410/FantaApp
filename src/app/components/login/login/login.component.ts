@@ -36,6 +36,10 @@ export class LoginComponent implements OnInit {
         error!.classList.remove('none')
         this.err = `Password troppo corta`
       }
+      else if (err.error == "Email and password are required") {
+        error!.classList.remove('none')
+        this.err = `Email e Password sono richieste`
+      }
        else if (err.error == "Email format is invalid") {
         error!.classList.remove('none')
         this.err = `Formato email errato`

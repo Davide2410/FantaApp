@@ -1,9 +1,12 @@
-p{
-    font-size: 12px;
-    font-weight: bold;
-}
-span{
-    font-size: 10px;
+.row{
+    cursor: pointer;
+    p{
+        font-size: 12px;
+        font-weight: bold;
+    }
+    span{
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width:800px) {

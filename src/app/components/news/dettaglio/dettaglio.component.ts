@@ -10,48 +10,46 @@ import { NewsService } from 'src/app/service/news.service';
 })
 export class DettaglioComponent implements OnInit {
 
-  notizia!:News
-  id!:number
-  
-  news!:News[]
+  notizia!: News
+  id!: number
 
-  array!:[]
+  news!: News[]
 
-  constructor(private newSrv:NewsService , private route: ActivatedRoute) { }
+  array!: []
+
+  constructor(private newSrv: NewsService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      let stringId:any = params.get("id");
+      let stringId: any = params.get("id");
       this.id = parseFloat(stringId)
       this.dettaglio(stringId)
-  })
-  // this.navbar()
-  } 
+    })
+    // this.navbar()
+  }
 
-  dettaglio(id:number){
-    this.newSrv.dettaglioNews(id).subscribe(res=>{
+  dettaglio(id: number) {
+    this.newSrv.dettaglioNews(id).subscribe(res => {
       console.log(res);
       this.notizia = res
     })
   }
 
-  darkMode(){
+  darkMode() {
     let container = document.getElementById('container')
     let title = document.getElementById('title')
+    let title2 = document.getElementById('title2')
     container!.classList.toggle('nero')
-    title!.classList.toggle('text-blue')
+    title?.classList.toggle('text-blue')
+    title2?.classList.toggle('text-blue')
   }
 
-  right(){
-   this.newSrv.fetchNews().subscribe(res=>{
-    this.route.paramMap.subscribe(params => {
-      let stringId:any = params.get("id");
-      this.id = parseFloat(stringId) 
-    })
-    for(let i = 0; i <= res.length; i++){
-      this.dettaglio(this.id++)
-    }
-   })
+  right() {
+    this.dettaglio(this.id++)
+  }
+
+  left() {
+    this.dettaglio(this.id--)
   }
 
 
@@ -66,6 +64,6 @@ export class DettaglioComponent implements OnInit {
   //   };
   // }
 
-  
+
 
 }

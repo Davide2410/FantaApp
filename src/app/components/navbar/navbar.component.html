@@ -2,74 +2,13 @@
 
   <div class="container-fluid">
 
-    <button class="navbar-toggler" type="button" (click)="noListNav.toggle()" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup" mdbCollapse #noListNav="mdbCollapse">
-
-      <div class="navbar-nav">
-        <div class="bg-blue account">
-          <div class="img-account ms-2 mt-3">
-            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" height="40" alt="Black and White Portrait of a Man"
-              loading="lazy" />
-            <a class="btn btn-white ms-1 mb-2 btn-sm" [routerLink]="['/profile']">Profilo</a>
-          </div>
-          <span class="mx-2 text-white ">{{name}}</span>
-        </div>
-  
-  
-        <div class="list">
-          <div class="facebook">
-            <i class="fab fa-facebook"></i> <span>Facebbok</span>
-          </div>
-  
-          <div class="youtube">
-            <i class="fab fa-youtube"></i><span>YouTube</span>
-          </div>
-  
-          <div class="instagram">
-            <i class="fab fa-instagram"></i> <span>Instagram</span>
-          </div>
-  
-          <div class="tikotok">
-            <i class="fas fa-thumbs-up"></i> <span>TikTok</span>
-          </div>
-  
-          <div class="twich">
-            <i class="fab fa-twitch"></i> <span>Twich</span>
-          </div>
-  
-          <div class="contatti">
-            <i class="far fa-envelope"></i> <span>Contatti</span>
-          </div>
-  
-          <div class="valuta">
-            <i class="fas fa-star"></i> <span>Valuta App</span>
-          </div>
-  
-          <div class="invita">
-            <i class="fas fa-share-alt"></i> <span>Invita Amici</span>
-          </div>
-  
-          <div class="faq">
-            <i class="fas fa-question-circle"></i> <span>FAQ</span>
-          </div>
-  
-          <div class="info">
-            <i class="fas fa-info-circle"></i> <span>Info</span>
-          </div>
-  
-        </div>
-  
-      </div>
-    </div>
+    <i class="fas fa-sync text-white mx-3" (click)="reload()"></i>
 
     <a href="#">
       <img src="https://fantamaster.b-cdn.net/wp-content/uploads/2020/08/Logo-FM-2020_sitoweb-1.png" width="120" alt="">
     </a>
 
-    <i class="fas fa-sync text-white mx-3" (click)="reload()"></i>
+    <i class="fas fa-user-alt text-white" [routerLink]="['/profile']"></i>
+
   </div>
 </nav>

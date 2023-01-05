@@ -15,9 +15,9 @@ export class AllComponent implements OnInit {
   constructor(private newSrv: NewsService) { }
 
   ngOnInit(): void {
-    this.allNews()
-    this.allCategory()
+    // this.allCategory()
     // this.allTeam()
+    this.allNews()
   }
 
   allNews() {
@@ -67,4 +67,13 @@ export class AllComponent implements OnInit {
     let heart = document.getElementById('heart')
     heart?.classList.toggle('text-danger')
   }
+
+
+  // truncate(a:string){
+  //   if(a.length > 10){
+  //     return a.substring(0) + '...'
+  //   }else{
+  //     return a
+  //   }
+  // }
 }

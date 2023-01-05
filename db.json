@@ -3,14 +3,19 @@
     {
       "name": "Davide",
       "surname": "Alfons",
+      "gender": "M",
+      "birthday": "2000-10-24",
       "email": "davide@davide.it",
-      "password": "$2a$10$zD.e49xNZjd8f5bRobskXuRL52PBu0AqJFkrWGLp/u3Yi6P7/fAXq",
+      "password": "$2a$10$H5T/S7nLwOdreOah0gdNnu7uBmTv6MSrSa7ywT7.PakmcXxOeJGrW",
       "id": 1
     },
     {
-      "email": "luca@david.it",
-      "password": "$2a$10$w//quSMbEKw0V2U7T.woUOQjBmYLvGv2jR28N4PbhXAKew86nzCeG",
       "name": "Luca",
+      "surname": null,
+      "gender": null,
+      "birthday": null,
+      "email": "luca@david.it",
+      "password": "$2a$10$JPc6KhJUbkoryoLAZ7ZH/edhr9zEv.4UH009CGQUhNLE0L2xHcoEG",
       "id": 3
     },
     {
@@ -52,68 +57,40 @@
       "name": "Linda",
       "surname": "Tucci",
       "id": 9
-    }
-  ],
-  "avatars": [
-    {
-      "avatar": "assets/icon/1.png"
     },
     {
-      "avatar": "assets/icon/2.png"
+      "email": "davide2000alfonsi@gmail.com",
+      "password": "$2a$10$2chguQaIGSFdTDPJbEXUKuQBL.znQCK9gAT1TI6YL.sU/j/cV.VRq",
+      "name": "Davide",
+      "surname": "Alfonsi",
+      "gender": "",
+      "birthday": "",
+      "id": 10
     },
     {
-      "avatar": "assets/icon/3.png"
+      "email": "davide2alfonsi@gmail.com",
+      "password": "$2a$10$wsKE323wsD9vb6WnTUBbbuAjrozHhrLsjihnS5NJ5Gd8bfg2izAWm",
+      "name": "Davide",
+      "surname": "",
+      "gender": "",
+      "birthday": "",
+      "id": 11
     },
     {
-      "avatar": "assets/icon/4.png"
+      "email": "n@n.it",
+      "password": "$2a$10$yxHE69ZSJkifP1jqtfp4DuY8CMeo/I.G.yrDUiywvEQxnoAzIQeJy",
+      "name": "Noemi",
+      "gender": "Femmina",
+      "birthday": "2019-10-18",
+      "id": 12
     },
     {
-      "avatar": "assets/icon/5.png"
-    },
-    {
-      "avatar": "assets/icon/6.png"
-    },
-    {
-      "avatar": "assets/icon/7.png"
-    },
-    {
-      "avatar": "assets/icon/8.png"
-    },
-    {
-      "avatar": "assets/icon/9.png"
-    },
-    {
-      "avatar": "assets/icon/10.png"
-    },
-    {
-      "avatar": "assets/icon/11.png"
-    },
-    {
-      "avatar": "assets/icon/12.png"
-    },
-    {
-      "avatar": "assets/icon/13.png"
-    },
-    {
-      "avatar": "assets/icon/14.png"
-    },
-    {
-      "avatar": "assets/icon/15.png"
-    },
-    {
-      "avatar": "assets/icon/16.png"
-    },
-    {
-      "avatar": "assets/icon/17.png"
-    },
-    {
-      "avatar": "assets/icon/18.png"
-    },
-    {
-      "avatar": "assets/icon/19.png"
-    },
-    {
-      "avatar": "assets/icon/default.png"
+      "name": "Mick",
+      "gender": "",
+      "birthday": "2015-05-05",
+      "email": "m@m.it",
+      "password": "$2a$10$.BL9Tsw6cHHmXofuMNmHy.tHZFuBeIwRKTNM233vmYV2ZDKWB5/pO",
+      "id": 13
     }
   ]
 }

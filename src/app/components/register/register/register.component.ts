@@ -25,7 +25,8 @@ export class RegisterComponent implements OnInit {
       email : form.value.email,
       password: form.value.password,
       name: form.value.name,
-      surname: form.value.surname
+      gender:form.value.gender,
+      birthday:form.value.birthday
     }
 
     this.authSrv.submit(data).pipe(catchError(err=>{
@@ -44,6 +45,10 @@ export class RegisterComponent implements OnInit {
         error!.classList.remove('none')
         this.err = `Formato email errato`
       }
+      else if (err.error == "Email and password are required") {
+        error!.classList.remove('none')
+        this.err = `Email e Password sono richieste`
+      }
       else if (err.error == "Email already exists") {
         error!.classList.remove('none')
         this.err = `Email già esistente`
@@ -54,6 +59,11 @@ export class RegisterComponent implements OnInit {
       this.r.navigate(['login'])
     }))
 
+  }
+
+  open(){
+    let info = document.querySelector('.info-container')
+    info!.classList.toggle('d-none')
   }
 
 }

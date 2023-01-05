@@ -1,51 +1,78 @@
 <div class="container-fluid">
     <div class="container">
-        <div class="row justify-content-center align-items-center  vh-100">
-            <div class="col-12 col-md-4">
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-12 col-md-5 text-center">
                 <form class="border shadow p-5 bg-white" #form="ngForm" (ngSubmit)="registrati(form)">
-    
-                    <span>
+
+                    <span class="back">
                         <a [routerLink]="['/login']">
                             <i class="fas fa-long-arrow-alt-left"></i>
                         </a>
                     </span>
-    
-                    <!-- Email input -->
-                    <mdb-form-control class="mb-4">
-                        <input mdbInput type="text" id="form1" class="form-control" name="name" #name="ngModel"
-                            ngModel required />
-                        <label mdbLabel class="form-label" for="form1">Name</label>
-                    </mdb-form-control>
 
-                    <!-- Password input -->
-                    <mdb-form-control class="mb-4">
-                        <input mdbInput type="text" id="form1" class="form-control" name="surname"
-                            #surname="ngModel" ngModel required />
-                        <label mdbLabel class="form-label" for="form1">Surname</label>
-                    </mdb-form-control>
+                    <span class="info">
+                        <i class="fas fa-info" (click)="open()"></i>
+                    </span>
 
-    
-                    <!-- Email input -->
-                    <mdb-form-control class="mb-4">
-                        <input mdbInput type="email" id="form1" class="form-control" name="email" #email="ngModel"
-                            ngModel required />
-                        <label mdbLabel class="form-label" for="form1">Email</label>
-                    </mdb-form-control>
-
-                    <!-- Password input -->
-                    <mdb-form-control class="mb-4">
-                        <input mdbInput type="password" id="form1" class="form-control" name="password"
-                            #password="ngModel" ngModel required />
-                        <label mdbLabel class="form-label" for="form1">Password</label>
-                    </mdb-form-control>
-
-    
-                    <div class="container bg-white none" id="error">
-                        <h5 *ngIf="err" class="text-danger text-center mt-3">{{err}}</h5>
+                    <div class="info-container bg-white p-2 d-none">
+                        <p> <i class="fas fa-info-circle mx-2 text-danger"></i>
+                            Il carattere ' * ' sta per campo opzionale</p>
                     </div>
-    
+
+                    <img src="https://fantamaster.b-cdn.net/wp-content/uploads/2020/08/Logo-FM-2020_sitoweb-1.png"
+                        class="mb-4" alt="">
+
+
+                    <!-- Name input -->
+                    <mdb-form-control class="mb-4 position-relative">
+                        <input mdbInput type="text" id="form1" class="form-control" name="name" #name="ngModel" ngModel
+                            required />
+                        <label mdbLabel class="form-label" for="form1">Nome</label>
+                        <i class="fas fa-user-alt"></i>
+                    </mdb-form-control>
+
+
+                    <!-- Surname input -->
+                    <mdb-form-control class="mb-4 position-relative">
+                        <input mdbInput type="text" id="form2" class="form-control" name="gender" #gender="ngModel"
+                            ngModel required />
+                        <label mdbLabel class="form-label" for="form2">Sesso*</label>
+                        <i class="fas fa-transgender-alt"></i>
+                    </mdb-form-control>
+
+                    <!-- Surname input -->
+                    <mdb-form-control class="mb-4 position-relative">
+                        <input mdbInput type="date" id="form4" class="form-control" name="birthday" #birthday="ngModel"
+                            ngModel required />
+                        <label mdbLabel class="form-label" for="form4">Compleanno*</label>
+                        <i class="far fa-calendar-alt"></i>
+                    </mdb-form-control>
+
+
+                    <!-- Email input -->
+                    <mdb-form-control class="mb-4 position-relative">
+                        <input mdbInput type="email" id="form5" class="form-control" name="email" #email="ngModel"
+                            ngModel required />
+                        <label mdbLabel class="form-label" for="form5">Email</label>
+                        <i class="fas fa-envelope"></i>
+                    </mdb-form-control>
+
+                    <!-- Password input -->
+                    <mdb-form-control class="mb-4 position-relative">
+                        <input mdbInput type="password" id="form6" class="form-control" name="password"
+                            #password="ngModel" ngModel required />
+                        <label mdbLabel class="form-label" for="form6">Password</label>
+                        <i class="fas fa-unlock"></i>
+                    </mdb-form-control>
+
+
+
+                    <div class="container bg-white none" id="error">
+                        <span *ngIf="err" class="text-danger text-center mt-3">{{err}}</span>
+                    </div>
+
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-block">Registarti</button>
+                    <button type="submit" class="btn btn-register btn-block mt-2">Registarti</button>
                 </form>
             </div>
         </div>

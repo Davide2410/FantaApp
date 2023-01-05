@@ -3,16 +3,18 @@ export interface Auth {
     user:{
         id:number,
         name:string,
-        surname:string,
+
+        gender:string,
+        birthday:string,
         email:string, 
         password:string,
-        avatar:string
     }
 }
 
 export interface AuthRegister{
     name:string,
-    surname:string,
+    gender:string,
+    birthday:string,
     email:string, 
     password:string
 }
@@ -24,7 +26,8 @@ export interface AuthLogin{
 
 export interface UserPut{
     name:string,
-    surname:string,
+    gender:string,
+    birthday:string,
     email:string, 
     password:string
 }

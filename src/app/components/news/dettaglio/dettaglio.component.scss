@@ -1,51 +1,76 @@
-.bg-blue {
-    background-color: rgb(74, 74, 230);
-    position:fixed;
-    top:0;
-    background:blue;
-    width:100%;
-}
-.bg-transparent{
-    background-color: transparent;
-    top: 0;
-    width: 100%;
-    position: fixed;
-}
-.nero{
+// IMPOSTAZIONI GENERALI
+.nero {
     background-color: black;
     color: white;
     height: 200vh;
 }
-.text-blue{
+.text-blue {
     color: rgb(1, 1, 61);
 }
-.navbar{
+.phone{
+    display: none;
+}
+// NAVBAR
+.navbar {
     box-shadow: none;
-    i{
+    background: linear-gradient(0.25turn, #091768, #066779, #00E895);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    i {
         color: white;
         font-size: 20px;
+        cursor: pointer;
     }
 }
-img{
-    width: 100%;
-    height: auto;
+// CATEGORIE & DATE
+.category {
+    width: fit-content;
+    padding: 2px;
+    border-radius: 5px;
 }
+.date {
+    color: grey;
+    font-size: 14px;
+}
+// MEDIA QUERY
+@media screen and (max-width:768px) {
+    .navbar {
+        box-shadow: none;
+        width: 100%;
+        background: none;
 
-.container-fluid{
-    .row{
-        .category{
-            width: fit-content;
-            padding: 2px;
-            border-radius: 5px;
+        i {
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
         }
+    }
 
-        .date{
-            color: grey;
-            font-size: 14px;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .phone{
+        display: block;
+    }
+    .tablet{
+        display: none;
+    }
+    .container-fluid {
+        width: 100%;
+
+        .row {
+            .category {
+                width: fit-content;
+                padding: 2px;
+                border-radius: 5px;
+            }
+
+            .date {
+                color: grey;
+                font-size: 14px;
+            }
         }
     }
 }
-
-
-
-

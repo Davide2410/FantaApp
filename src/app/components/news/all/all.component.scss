@@ -1,77 +1,80 @@
+// IMPOSTAZIONI GENERALI
 .bg-blue {
-    background-color: rgb(74, 74, 230);
+    background: linear-gradient(0.25turn, #091768, #066779, #00E895);
+    height: 50px;
 }
-
+.text-blue {
+    color: #091768;
+}
+// NAVBAR
 .navbar {
     i {
-        color: white;
         font-size: 20px;
     }
 }
-
-.text-blue {
-    color: rgb(1, 1, 61);
-}
-
-.button-category{
+// CATEGORIE
+.button-category {
     font-size: 11px;
-    color:rgb(1, 1, 61);
+    color: #091768;
     padding: 10px;
     border: 1px solid lightgrey;
     text-transform: capitalize;
 }
-
-
-
+// CARD
 .card {
-    height: 73px;
-    width: 90%;
-
-    .row {
+    cursor: pointer;
+    margin: 0px auto;
+    width: fit-content;
+    height: 100px;
+    
+    .card-body {
+        width: 220px;
         .card-text {
-            font-size: 10.5px;
-            text-align: left;
+            font-size: 14px;
+            width: 200px;
             font-weight: bold;
+            white-space: wrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-
-        .d-flex {
+        .category {
+            width: fit-content;
+            padding: 2px;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+    }
+    .image{
+        overflow: hidden;
+        
+        img {
+            height: auto;
+            width: 200px;
+            border-radius: 10px;
+            transition: all 0.5s ease-in-out;
+        }
+    
+        img:hover {
+            transform: scale(1.2);
+        }
+    }
+}
+// MEDIA QUERY
+@media screen and (max-width:768px) {
+    .card {
+        height: 90px;
+        .row {
+            .card-text {
+                font-size: 10.5px;
+                width: 160px;
+            }
             .category {
                 width: fit-content;
                 padding: 2px;
                 border-radius: 5px;
-                font-size: 13px;
+                font-size: 11px;
             }
-
-            .date {
-                color: grey;
-                font-size: 10px;
-            }
-        }
-
-        .img-fluid {
-            height: auto;
-            border-radius: 10px;
         }
     }
-}
 
-// .swiper {
-//     width: 100%;
-//     height: 100%;
-//   }
-  
-//   .swiper-slide {
-//     text-align: center;
-//     font-size: 18px;
-//     background: #fff;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
-  
-//   .swiper-slide img {
-//     display: block;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
+}

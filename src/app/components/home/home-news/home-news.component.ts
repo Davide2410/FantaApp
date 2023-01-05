@@ -9,19 +9,18 @@ import { NewsService } from 'src/app/service/news.service';
 })
 export class HomeNewsComponent implements OnInit {
 
-  filter!:News[]
+  filter!: News[]
 
-  constructor(private newSrv:NewsService) { }
+  constructor(private newSrv: NewsService) { }
 
   ngOnInit(): void {
     this.calciomercatoNews()
   }
 
-  calciomercatoNews(){
-   this.newSrv.fetchNews().subscribe(res=>{
-    this.filter = res.filter(el=> el.category == 'Calciomercato')
-    console.log(this.filter);
-   })
+  calciomercatoNews() {
+    this.newSrv.fetchNews().subscribe(res => {
+      this.filter = res.filter(res => res.category == 'Calciomercato')
+    })
   }
 
 }

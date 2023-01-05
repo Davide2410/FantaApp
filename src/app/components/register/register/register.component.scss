@@ -1,12 +1,83 @@
 .container-fluid{
-    background-color: rgb(74, 74, 230);
-
+    background: linear-gradient( #091768, #066779, #00E895);
     form{
         position: relative;
-        span{
+        img{
+            width: 180px;
+        }
+        .back{
             position: absolute;
             top: 10px;
             left: 15px;
+            i{
+                color: #091768;
+            }
         }
+        .info{
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            i{
+                color: #091768;
+            }
+        }
+        .info-container{
+            position: absolute;
+            top: -60px;
+            right: 0;
+            width: 100%;
+            animation: scroll 0.7s ease-in-out;
+            p{
+                font-size: 12px;
+                color: #091768;
+            }
+        }
+    }  
+
+    
+    .container{
+        span{
+            font-size: 14px;
+        }
+    }
+    
+    .btn-register{
+        height: 40px;
+        font-size: 15px;
+        background-color: #00E895;
+        color: #091768;
+        text-transform: capitalize;
+    }
+}
+
+
+.position-relative{
+    .fa-user-alt,
+    .fa-envelope,
+    .fa-unlock,
+    .fa-calendar-alt,
+    .fa-transgender-alt
+    {
+        position: absolute;
+        right: 14px;
+        top: 10px;
+        color: #091768;
+        cursor: pointer;
+    }
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator  {
+    opacity:  0.1;
+}
+
+  
+@keyframes scroll {
+    0%{
+        position: absolute;
+        top: 0px;
+        transform: translateZ(-80px);
+    }
+    100%{
+        transform: translateX(0px);
     }
 }

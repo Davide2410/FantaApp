@@ -20,6 +20,8 @@ import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
 import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
 import {MdbCollapseModule} from 'mdb-angular-ui-kit/collapse';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
+import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
+
 import { SwiperModule } from 'swiper/angular';
 import { SwiperComponent } from './components/news/all/swiper/swiper.component';
 import { HomeNewsComponent } from './components/home/home-news/home-news.component';
@@ -54,7 +56,8 @@ import { ConsigliComponent } from './components/home/consigli/consigli.component
     MdbFormsModule,
     MdbCollapseModule,
     MdbTooltipModule,
-    SwiperModule
+    SwiperModule,
+    MdbDropdownModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

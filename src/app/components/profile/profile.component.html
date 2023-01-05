@@ -1,59 +1,68 @@
- <nav class="navbar navbar-expand-lg bg-blue pt-3 pb-3">
+<nav class="navbar navbar-expand-lg bg-blue pt-3 pb-3">
     <div class="container-fluid">
         <i class="fas fa-arrow-left" routerLink="/"></i>
-        
+
         <div class="d-flex align-items-center">
             <i class="fas fa-sign-in-alt" (click)="logOut()"></i>
         </div>
     </div>
 </nav>
 
-<div class="container mt-3">
-    <div class="row justify-content-center align-items-center text-center">
-        <div class="col-12 mt-5">
+<div class="container-fluid">
+    <div class="container">
+        <div class="row justify-content-center align-items-center text-center">
 
-            
-          
-            <div class="col-12 mt-3">
-                <h2>Ciao, {{name}}!</h2>
+           
+            <div class="col-12 pt-4 pb-4 bg-white mt-3">
+                
+
+                <div class="col-12 mt-3">
+                    <h2>Ciao, {{name}}!</h2>
+                </div>
+
+                <form [formGroup]="heroForm" (ngSubmit)="submit()">
+
+                    <mdb-form-control class="mb-4">
+                        <input mdbInput type="text" id="form1" class="form-control" name="newName"
+                            formControlName="newName" required />
+                        <label mdbLabel class="form-label" for="form1">Name</label>
+                    </mdb-form-control>
+
+                    <mdb-form-control class="mb-4">
+                        <input mdbInput type="text" id="form2" class="form-control" name="newGender"
+                            formControlName="newGender" required />
+                        <label mdbLabel class="form-label" for="form2">Sesso</label>
+                    </mdb-form-control>
+
+                    <mdb-form-control class="mb-4">
+                        <input mdbInput type="date" id="form5" class="form-control" name="newBirthday"
+                            formControlName="newBirthday" required />
+                        <label mdbLabel class="form-label" for="form5">Birthday</label>
+                    </mdb-form-control>
+
+                    <!-- Email input -->
+                    <mdb-form-control class="mb-4">
+                        <input mdbInput type="email" id="form3" class="form-control" name="newEmail"
+                            formControlName="newEmail" required />
+                        <label mdbLabel class="form-label" for="form3">Email</label>
+                    </mdb-form-control>
+
+                    <mdb-form-control class="mb-4">
+                        <input mdbInput type="password" id="form4" class="form-control" name="newPassword"
+                            formControlName="newPassword" />
+                        <label mdbLabel class="form-label" for="form4">Password</label>
+                    </mdb-form-control>
+
+
+
+                    <button type="submit" class="submit">
+                        <i class="fas fa-save mx-3"></i>
+                    </button>
+
+                </form>
+                <a class="btn btn-danger w-100" (click)="elimina()">Elimina</a>
+
             </div>
-
-            <form [formGroup]="heroForm" (ngSubmit)="submit()">
-
-                <mdb-form-control class="mb-4">
-                    <input mdbInput type="text" id="form1" class="form-control" name="newName" formControlName="newName" required />
-                    <label mdbLabel class="form-label" for="form1">Name</label>
-                </mdb-form-control>
-
-                <mdb-form-control class="mb-4">
-                    <input mdbInput type="text" id="form2" class="form-control" name="newSurname" formControlName="newSurname"
-                    required  />
-                    <label mdbLabel class="form-label" for="form2">Surname</label>
-                </mdb-form-control>
-
-                <!-- Email input -->
-                <mdb-form-control class="mb-4">
-                    <input mdbInput type="email" id="form3" class="form-control" name="newEmail" formControlName="newEmail"
-                    required  />
-                    <label mdbLabel class="form-label" for="form3">Email</label>
-                </mdb-form-control>
-
-                <mdb-form-control class="mb-4">
-                    <input mdbInput type="password" id="form4" class="form-control" name="newPassword" formControlName="newPassword"
-                    required   />
-                    <label mdbLabel class="form-label" for="form4">Password</label>
-                </mdb-form-control>
-
-
-
-                <button type="submit" class="submit">
-                    <i class="fas fa-save mx-3"></i>
-                </button>
-
-            </form>
-        </div>
-        <div class="col-12">
-            <a class="btn btn-danger w-100" (click)="elimina()">Elimina</a>
         </div>
     </div>
 </div>

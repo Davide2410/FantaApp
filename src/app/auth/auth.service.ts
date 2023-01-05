@@ -55,6 +55,7 @@ export class AuthService {
     this.authSubj.next(null)
     if(this.timeOut){
       clearTimeout(this.timeOut)
+      this.r.navigate(['/login'])
     }
   }
   

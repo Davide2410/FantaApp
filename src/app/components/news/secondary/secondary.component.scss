@@ -1,22 +1,32 @@
-.text-blue{
+.text-blue {
     color: rgb(1, 1, 61);
 }
-.row{
-    height: min-content;
-    .card-text{
-        font-size: 13px;
+
+.row {
+    .card-text {
+        font-size: 12px;
         text-align: left;
         font-weight: bold;
     }
-  
-        .category{
-            width: fit-content;
-            padding: 2px;
-            border-radius: 5px;
-            font-size: 12px;
-        }
 
-    .img-fluid{
-        height: 100%;
+    .category {
+        width: fit-content;
+        padding: 2px;
+        border-radius: 5px;
+        font-size: 10px;
+        text-align: left;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .row {
+        .card-text {
+            font-size: 10px;
+        }
     }
 }

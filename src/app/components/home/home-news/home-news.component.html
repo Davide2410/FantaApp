@@ -1,7 +1,9 @@
-<div *ngFor="let n of filter" class="row justify-content-between align-items-center mb-3" [routerLink]="['/dettaglio/' + n.id]">
+<div *ngFor="let n of filter" class="row justify-content-between align-items-center mb-3 p-0 m-0" [routerLink]="['/dettaglio/' + n.id]">
     <div class="col-12 d-flex">
-        <img src="{{n.img}}" class="rounded-5" width="180" alt="">
-        <div class="flex-column ms-3">
+        <div class="image">
+            <img src="{{n.img}}" class="rounded-5 d-block" alt="{{n.img}}">
+        </div>
+        <div class="flex-column ms-2">
             <p>{{n.title}}</p>
             <p [ngClass]="{'bg-warning': n.category == 'Calciomercato'}" class="category text-white">{{n.category}}</p>
         </div>

@@ -1,5 +1,5 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import {  UserPut } from 'src/app/auth/auth';
 import { AuthService } from 'src/app/auth/auth.service';
@@ -18,6 +18,8 @@ export class ProfileComponent implements OnInit {
   email!:string
   password!:string
   name!: string
+  gender!:string
+  birthday!:string
 
   constructor(private authSrv: AuthService, private r: Router, private fb: FormBuilder) { }
 
@@ -41,7 +43,8 @@ export class ProfileComponent implements OnInit {
 
       this.heroForm = this.fb.group({
         newName: this.fb.control(x.name),
-        newSurname: this.fb.control(x.surname),
+        newGender: this.fb.control(x.gender),
+        newBirthday: this.fb.control(x.birthday),
         newEmail: this.fb.control(x.email),
         newPassword: this.fb.control(null)
       })
@@ -52,7 +55,8 @@ export class ProfileComponent implements OnInit {
   submit() {
     let data: UserPut = {
       name: this.heroForm.value.newName,
-      surname: this.heroForm.value.newSurname,
+      gender: this.heroForm.value.newGender,
+      birthday: this.heroForm.value.newBirthday,
       email: this.heroForm.value.newEmail,
       password: this.heroForm.value.newPassword
     }

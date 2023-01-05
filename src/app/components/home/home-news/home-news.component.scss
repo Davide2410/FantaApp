@@ -1,6 +1,26 @@
-.category{
-    width: fit-content;
-    padding: 2px;
-    border-radius: 5px;
-    font-size: 14px;
+.row {
+    cursor: pointer;
+    .image{
+        overflow: hidden;
+        width: auto;
+        img {
+            transition: all 0.5s ease-in-out;
+            width: 180px;
+        }
+    
+        img:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    p{
+        width: 200px;
+    }
+
+    .category {
+        width: fit-content;
+        padding: 2px;
+        border-radius: 5px;
+        font-size: 14px;
+    }
 }
