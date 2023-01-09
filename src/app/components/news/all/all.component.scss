@@ -16,7 +16,7 @@
 }
 // CATEGORIE
 .button-category {
-    font-size: 11px;
+    font-size: 13px;
     color: #091768;
     padding: 10px;
     border: 1px solid lightgrey;
@@ -62,6 +62,37 @@
         }
     }
 }
+// TEAMS
+.teams{
+    display: flex;
+    background-color: rgb(211, 211, 211,0.1);
+    justify-content:center ;
+    align-items: center;
+    flex-wrap: wrap;
+    img{
+        height: 28px;
+        width: 24px;
+        cursor: pointer;
+    }
+}
+// LOADING
+.container-rotate{
+    background: linear-gradient(0.25turn, #091768, #066779, #00E895);
+    .rotate{
+        animation: ruota 1s ease-in-out infinite;
+        height: auto;
+        width: 100px;
+    }
+}
+
+@keyframes ruota {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 // MEDIA QUERY
 @media screen and (max-width:768px) {
     .card {
@@ -78,6 +109,10 @@
                 font-size: 11px;
             }
         }
+    }
+
+    .button-category {
+        font-size: 11px;
     }
 
 }

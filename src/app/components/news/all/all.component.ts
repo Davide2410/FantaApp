@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { News } from 'src/app/interface/news';
+import { Teams } from 'src/app/interface/teams';
 import { NewsService } from 'src/app/service/news.service';
 
 @Component({
@@ -10,13 +11,19 @@ import { NewsService } from 'src/app/service/news.service';
 export class AllComponent implements OnInit {
 
   news!: News[]
+  teams!:Teams[]
   categoria!: string
-  team!:string
+  attivo:boolean = false
+  
 
   constructor(private newSrv: NewsService) { }
 
   ngOnInit(): void {
-    this.allNews()
+    this.allTeams()
+    setTimeout(()=>{this.newSrv.fetchNews().subscribe(res=>{
+      this.news = res
+      this.attivo = true
+    })},1500)
   }
 
   allNews() {
@@ -25,10 +32,19 @@ export class AllComponent implements OnInit {
     })
   }
 
+  allTeams(){
+    this.newSrv.fetchTeams().subscribe(res=>{
+      this.teams = res  
+    })
+  }
+
   type(categoria:string){
     this.categoria = categoria
-    this.newSrv.fetchNews().subscribe((res)=>{  
-     this.news = res.filter(category=> this.categoria == category.category);
+    setTimeout(()=>{
+      this.newSrv.fetchNews().subscribe((res)=>{  
+        this.news = res.filter(category=> this.categoria == category.category);
+        this.attivo = true
+       })
     })
   }
 
@@ -38,12 +54,6 @@ export class AllComponent implements OnInit {
      this.news = res.filter(category=> this.categoria == category.team);
     })
   }
-
-  heartClick() {
-    let heart = document.getElementById('heart')
-    heart!.classList.toggle('text-danger')
-  }
-
 
   // truncate(a:string){
   //   if(a.length > 10){

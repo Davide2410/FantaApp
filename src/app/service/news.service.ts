@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, tap } from 'rxjs';
 import { News } from '../interface/news';
+import { Teams } from '../interface/teams';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +10,9 @@ import { News } from '../interface/news';
 export class NewsService {
 
   urlPath = 'https://63a3176d9704d18da0857d94.mockapi.io/news'
- 
-  dettagli!:News
 
+  urlTeam = 'http://localhost:4201/teams'
+ 
   news:News[]=[]
 
   constructor(private http:HttpClient) { }
@@ -26,6 +27,13 @@ export class NewsService {
 
   dettaglioNews(id:number){
     return this.http.get<News>(this.urlPath + `/${id}`).pipe(catchError(err=>{
+      throw err
+    }))
+  }
+
+  fetchTeams(){
+    return this.http.get<Teams[]>(this.urlTeam).pipe(catchError(err=>{
+      console.log(err);
       throw err
     }))
   }

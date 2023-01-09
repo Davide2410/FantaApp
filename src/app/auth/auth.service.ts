@@ -13,7 +13,7 @@ import { Auth, AuthLogin, AuthRegister, UserPut } from './auth';
 export class AuthService {
 
   urlPath = 'http://localhost:4201/users'
-  avatarPath = 'http://localhost:4201/avatars'
+
   urlRegister = 'http://localhost:4201/register'
   urlLogin = 'http://localhost:4201/login'
 

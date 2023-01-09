@@ -37,6 +37,19 @@
     transition: 0.5s ease-in-out;
 }
 
+// TEAMS
+.teams{
+    display: flex;
+    background-color: rgb(211, 211, 211,0.1);
+    justify-content:center ;
+    align-items: center;
+    flex-wrap: wrap;
+    img{
+        height: 28px;
+        width: 24px;
+        cursor: pointer;
+    }
+}
 
 span{
     font-size: 15px;
@@ -64,18 +77,16 @@ span{
 
         .container{
             width: 100%;
-            .logo{
-                display: none;
-            }
-            .navbar-home{
+            .logo,
+            .navbar-home,
+            .newsAll,
+            .teams{
                 display: none;
             }
             .img-copied{
                margin-top: 20px; 
             }
-            .newsAll{
-                display: none;
-            }
+            
         }
     }
     

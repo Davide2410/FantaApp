@@ -92,5 +92,107 @@
       "password": "$2a$10$.BL9Tsw6cHHmXofuMNmHy.tHZFuBeIwRKTNM233vmYV2ZDKWB5/pO",
       "id": 13
     }
+  ],
+  "teams": [
+    {
+      "id": 1,
+      "team": "/assets/team/Atalanta.png",
+      "name": "Atalanta"
+    },
+    {
+      "id": 2,
+      "team": "/assets/team/Bologna.png",
+      "name": "Bologna"
+    },
+    {
+      "id": 3,
+      "team": "/assets/team/Cremonese.png",
+      "name": "Cremonese"
+    },
+    {
+      "id": 4,
+      "team": "/assets/team/Empoli.png",
+      "name": "Empoli"
+    },
+    {
+      "id": 5,
+      "team": "/assets/team/Fiorentina.png",
+      "name": "Fiorentina"
+    },
+    {
+      "id": 6,
+      "team": "/assets/team/Inter.png",
+      "name": "Inter"
+    },
+    {
+      "id": 7,
+      "team": "/assets/team/Juventus.png",
+      "name": "Juventus"
+    },
+    {
+      "id": 8,
+      "team": "/assets/team/Lazio.png",
+      "name": "Lazio"
+    },
+    {
+      "id": 9,
+      "team": "/assets/team/Lecce.png",
+      "name": "Lecce"
+    },
+    {
+      "id": 10,
+      "team": "/assets/team/Milan.png",
+      "name": "Milan"
+    },
+    {
+      "id": 11,
+      "team": "/assets/team/Monza.png",
+      "name": "Monza"
+    },
+    {
+      "id": 12,
+      "team": "/assets/team/Napoli.png",
+      "name": "Napoli"
+    },
+    {
+      "id": 13,
+      "team": "/assets/team/Roma.png",
+      "name": "Roma"
+    },
+    {
+      "id": 14,
+      "team": "/assets/team/Salernitana.png",
+      "name": "Salernitana"
+    },
+    {
+      "id": 15,
+      "team": "/assets/team/Sampdoria.png",
+      "name": "Sampdoria"
+    },
+    {
+      "id": 16,
+      "team": "/assets/team/Sassuolo.png",
+      "name": "Sassuolo"
+    },
+    {
+      "id": 17,
+      "team": "/assets/team/Spezia.png",
+      "name": "Spezia"
+    },
+    {
+      "id": 18,
+      "team": "/assets/team/Torino.png",
+      "name": "Torino"
+    },
+    {
+      "id": 19,
+      "team": "/assets/team/Udinese.png",
+      "name": "Udinese"
+    },
+    {
+      "id": 20,
+      "team": "/assets/team/Verona.png",
+      "name": "Verona"
+    }
   ]
 }

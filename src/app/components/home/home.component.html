@@ -21,6 +21,12 @@
             </div> 
          </div>
 
+         <div class="teams p-1 border-bottom">
+            <div *ngFor="let t of teams">
+                <img src="{{t.team}}" class="mx-2" alt="">
+            </div>
+        </div>
+
          <!-- NUOVA LEGA SCHERMI PICCOLI -->
         <div class="row justify-content-evenly align-items-center text-center d-md-none mt-3">
             <div class="col-6 text-start">
