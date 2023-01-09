@@ -10,6 +10,8 @@
 .navbar {
     i {
         font-size: 20px;
+        cursor: pointer;
+        color: white;
     }
 }
 // CATEGORIE
@@ -19,6 +21,7 @@
     padding: 10px;
     border: 1px solid lightgrey;
     text-transform: capitalize;
+    margin-right: 10px;
 }
 // CARD
 .card {

@@ -45,11 +45,11 @@ export class DettaglioComponent implements OnInit {
   }
 
   right() {
-    this.dettaglio(this.id++)
+    this.dettaglio(this.id++ +1)
   }
 
   left() {
-    this.dettaglio(this.id--)
+    this.dettaglio(this.id-- -1)
   }
 
 

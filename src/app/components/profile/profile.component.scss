@@ -1,10 +1,15 @@
 .bg-blue {
     background: linear-gradient(0.25turn, #091768, #066779, #00E895);  
 }
-.bg-blu{
-    background-color: rgb(211, 211, 211,0.2);
+.text-blue{
+    color: #091768;
+}
+
+.bg-grey{
+    background-color: rgb(211, 211, 211, 0.2);
     height: 100vh;
 }
+
 
 .submit{
     position: absolute;
@@ -18,4 +23,24 @@ i{
     color: white;
     font-size: 20px;
     cursor: pointer;
+}
+.icon-nav{
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.position-relative{
+    .fa-user-alt,
+    .fa-envelope,
+    .fa-unlock,
+    .fa-calendar-alt,
+    .fa-transgender-alt
+    {
+        position: absolute;
+        right: 14px;
+        top: 10px;
+        color: #091768;
+        cursor: pointer;
+    }
 }
