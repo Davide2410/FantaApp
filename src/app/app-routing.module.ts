@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { HomeComponent } from './components/home/home.component';
 import { EnterLegaComponent } from './components/lega/enter-lega/enter-lega.component';
+import { ModificaComponent } from './components/lega/enter-lega/modifica/modifica.component';
 import { ImpostazioniComponent } from './components/lega/impostazioni/impostazioni.component';
 import { LoginComponent } from './components/login/login/login.component';
 import { AllComponent } from './components/news/all/all.component';
@@ -48,6 +49,10 @@ const routes: Routes = [
   {
     path: 'lega',
     component: EnterLegaComponent
+  },
+  {
+    path: 'modifica',
+    component: ModificaComponent
   },
   {
     path: "",

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LegaService } from '../lega.service';
 
 @Component({
   selector: 'app-enter-lega',
@@ -7,20 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnterLegaComponent implements OnInit {
 
-  nomeTeam!:string
-  budget!:boolean
+  nomeTeam!: string
+  budget!: [number]
+  id!: number
 
-  constructor() { }
+  constructor(private legaSrv: LegaService) { }
 
   ngOnInit(): void {
     this.team()
   }
 
-  team(){
-    let team:any = localStorage.getItem('team')
-    let b = JSON.parse(team)
-    this.nomeTeam = b.nome_team
-    this.budget = b.budget
+  team() {
+    let team: any = localStorage.getItem('team')
+    let t = JSON.parse(team)
+    this.id = t.id
+    this.legaSrv.recuperaTeam(t.id).subscribe((res => {
+      this.nomeTeam = res.nome_team
+      this.budget = res.budget
+    }))
   }
 
 }

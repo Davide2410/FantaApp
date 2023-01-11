@@ -51,3 +51,8 @@ export interface Partecipanti{
     user_admin:boolean,
     controlloPsw:boolean
 }
+
+export interface TeamModify{
+    nome_team: string,
+    budget: [number],
+}

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { tap } from 'rxjs';
 import { catchError } from 'rxjs/internal/operators/catchError';
 import { Numbers } from 'src/app/interface/numbers';
-import { Lega,LegaTeam, Partecipanti } from './lega';
+import { Lega,LegaTeam, Partecipanti, TeamModify } from './lega';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +31,7 @@ export class LegaService {
 
   // 2' FORM
   invio(data: LegaTeam) {
-    return this.http.post<LegaTeam>(this.urlTeam, data).pipe(catchError(err => {
+    return this.http.post<LegaTeam>(this.urlTeam, data).pipe(catchError(err=>{
       console.log(err);
       throw err
     }), tap((res => {
@@ -39,6 +39,7 @@ export class LegaService {
     })))
   }
 
+  // PARTECIPA ALLA LEGA
   newPartecipanti(data:Partecipanti){
     return this.http.post<Partecipanti>(this.urlTeam, data).pipe(catchError(err=>{
       console.log(err);
@@ -48,6 +49,24 @@ export class LegaService {
     })))
   }
 
+  // RECUPERA TEAM
+  recuperaTeam(id:number){
+    return this.http.get<LegaTeam|Partecipanti>(this.urlTeam + `/${id}`).pipe(catchError(err=>{
+      console.log(err);
+      throw err
+    }))
+  }
+
+  // MODIFICA TEAM
+  modificaTeam(data:LegaTeam|Partecipanti, id:number){
+    return this.http.put<LegaTeam|Partecipanti>(this.urlTeam + `/${id}`, data).pipe(catchError(err=>{
+      console.log(err);
+      throw err
+    }))
+  }
+
+
+  // TUTTE LE LEGHE
   fetchLeghe(){
     return this.http.get<Lega[]>(this.urlLega).pipe(catchError(err=>{
       console.log(err);

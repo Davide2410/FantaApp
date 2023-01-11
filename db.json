@@ -367,11 +367,10 @@
     {
       "nome_team": "AC Cappatoio",
       "budget": "500",
-      "controlloPsw": true,
       "user_admin": false,
+      "idLega": 1,
       "user_id": 8,
       "nomeLega": "Lega Ciamarra",
-      "idLega": 1,
       "id": 3
     }
   ]

@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg bg-blue pt-3">
+    <div class="container-fluid justify-content-start align-items-baseline text-white">
+        <i class="fas fa-arrow-left icon-nav" routerLink="/lega"></i>
+        <p class="ms-5">Personalizza squadra</p>
+    </div>
+</nav>
+
+<div class="container-fluid bg-grey">
+
+    <div class="row justify-content-center align-items-center">
+
+        <div class="col-12 mt-5">
+            <form [formGroup]="teamForm" (ngSubmit)="submit()">
+                <p>Il nome della squadra</p>
+                <mdb-form-control class="mb-5 bg-white p-5">
+                    <input mdbInput type="text" id="form1" name="newNameTeam" formControlName="newNameTeam" />
+                </mdb-form-control>
+
+                <p>Il budget della squadra</p>
+                <mdb-form-control class="mb-5 bg-white p-5">
+                    <select class="form-select mb-4" name="newBudget" formControlName="newBudget">
+                        <option value="0">0</option>
+                        <option value="500">500</option>
+                        <option value="1000">1000</option>
+                    </select>
+                </mdb-form-control>
+
+
+                <button type="submit" class="btn btn-primary">Salva</button>
+            </form>
+        </div>
+
+    </div>
+</div>

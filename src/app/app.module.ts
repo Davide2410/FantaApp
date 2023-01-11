@@ -37,6 +37,7 @@ import { SearchLegaComponent } from './components/search-lega/search-lega.compon
 import { ModalLegaComponent } from './components/modal-lega/modal-lega.component';
 import { EnterLegaComponent } from './components/lega/enter-lega/enter-lega.component';
 import { NavbarLegaComponent } from './components/navbar-lega/navbar-lega.component';
+import { ModificaComponent } from './components/lega/enter-lega/modifica/modifica.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +61,8 @@ import { NavbarLegaComponent } from './components/navbar-lega/navbar-lega.compon
     SearchLegaComponent,
     ModalLegaComponent,
     EnterLegaComponent,
-    NavbarLegaComponent
+    NavbarLegaComponent,
+    ModificaComponent
   ],
   imports: [
     BrowserModule,
