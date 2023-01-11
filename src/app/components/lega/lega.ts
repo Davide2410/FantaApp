@@ -2,6 +2,7 @@ export interface Lega {
     nomeLega: string,
     passwordLega: string,
     user_id: number,
+    nomeAdmin:string,
     gol: [number],
     autogol: [number],
     assist: [number],

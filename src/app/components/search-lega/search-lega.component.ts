@@ -28,8 +28,8 @@ export class SearchLegaComponent implements OnInit {
     let user: any = localStorage.getItem('user')
     let utente = JSON.parse(user)
 
-    let team: any = localStorage.getItem('team')
-    let b = JSON.parse(team)
+    // let team: any = localStorage.getItem('team')
+    // let b = JSON.parse(team)
 
     this.legaSrv.fetchLeghe().subscribe(res => {
       if (a.user_id != utente) {
@@ -44,10 +44,6 @@ export class SearchLegaComponent implements OnInit {
     this.modalRef = this.modalService.open(ModalLegaComponent, {
       data: { title: 'Custom title' },
     });
-  }
-
-  partecipaLega() {
-
   }
 
 }

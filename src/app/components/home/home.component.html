@@ -37,7 +37,7 @@
             </div>
             <div class="row">
                 <div *ngFor="let l of leghe" class="col-3 border p-2 m-2">
-                    {{l.nomeLega}}
+                    <span [routerLink]="['/lega']">{{l.nomeLega}}</span>
                 </div>
             </div>
         </div>

@@ -1,0 +1,30 @@
+.lega{
+    height: 300px;
+}
+.bg-blue{
+    background: linear-gradient( #091768, #066779, #00E895);
+}
+.text-blue{
+    color: #091768;
+}
+
+.box-team{
+    h6{
+        text-transform: uppercase;
+    }
+}
+
+.infoTeam{
+    background-color: rgb(211, 211, 211, 0.4);
+    font-weight: 500;
+    span{
+        font-weight: normal;
+        font-size: 13px
+    }
+}
+
+.fa-pencil-alt{
+    position: absolute;
+    top: -30px;
+    right: 0;
+}

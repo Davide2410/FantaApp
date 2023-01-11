@@ -33,6 +33,7 @@ export class ImpostazioniComponent implements OnInit {
       nomeLega: form.value.nomeLega,
       passwordLega: form.value.passwordLega,
       user_id: utente.user.id,
+      nomeAdmin:utente.user.name,
       gol: form.value.gol,
       autogol: form.value.autogol,
       assist: form.value.assist,
