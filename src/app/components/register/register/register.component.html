@@ -5,9 +5,7 @@
                 <form class="border shadow p-5 bg-white" #form="ngForm" (ngSubmit)="registrati(form)">
 
                     <span class="back">
-                        <a [routerLink]="['/login']">
-                            <i class="fas fa-long-arrow-alt-left"></i>
-                        </a>
+                        <i class="fas fa-long-arrow-alt-left" (click)="back()"></i>
                     </span>
 
                     <span class="info">

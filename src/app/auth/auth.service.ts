@@ -18,7 +18,7 @@ export class AuthService {
   urlLogin = 'http://localhost:4201/login'
 
   authSubj = new BehaviorSubject<null | Auth>(null)
-  // un oggetto che può essere osservato o osservatore, il suo compito è quando ci loggiamo con l'utente salviamo al suo inetrno i valori dell'utente(dati) e tutti i subscribe che vengono chiamti successivamente , ricebvono gli stessi valori dell'utente
+  // un oggetto che può essere osservato o osservatore, il suo compito è quando ci loggiamo con l'utente salviamo al suo inetrno i valori dell'utente(dati) e tutti i subscribe che vengono chiamti successivamente , ricevono gli stessi valori dell'utente
   user$ = this.authSubj.asObservable()
 
   jwtHelper = new JwtHelperService()
@@ -52,11 +52,12 @@ export class AuthService {
 
   logOut(){
     localStorage.removeItem('user')
+    localStorage.removeItem('team')
     this.authSubj.next(null)
     if(this.timeOut){
       clearTimeout(this.timeOut)
-      this.r.navigate(['/login'])
     }
+    this.r.navigate(['/login'])
   }
   
   autoLogOut(data:Auth){

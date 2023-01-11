@@ -1,0 +1,28 @@
+.text-blue {
+  color: rgb(1, 1, 61);
+}
+
+.row .card-text {
+  font-size: 12px;
+  text-align: left;
+  font-weight: bold;
+}
+.row .category {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 10px;
+  text-align: left;
+}
+.row img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 320px) {
+  .row .card-text {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=secondary.component.css.map */

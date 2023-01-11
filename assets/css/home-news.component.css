@@ -1,0 +1,28 @@
+.row {
+  cursor: pointer;
+}
+.row .image {
+  overflow: hidden;
+  width: auto;
+}
+.row .image img {
+  transition: all 0.5s ease-in-out;
+  width: 180px;
+}
+.row .image img:hover {
+  transform: scale(1.2);
+}
+.row p {
+  font-size: 15px;
+  font-weight: bold;
+  color: #091768;
+  width: 200px;
+}
+.row .category {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 14px;
+}/*# sourceMappingURL=home-news.component.css.map */

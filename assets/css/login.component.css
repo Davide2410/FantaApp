@@ -1,0 +1,31 @@
+.container-fluid {
+  background: linear-gradient(#091768, #066779, #00E895);
+}
+.container-fluid img {
+  width: 180px;
+}
+.container-fluid p {
+  font-size: 14px;
+  color: grey;
+}
+.container-fluid p a {
+  color: #091768;
+  font-weight: bold;
+}
+
+.position-relative .fa-envelope,
+.position-relative .fa-unlock {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  color: #091768;
+  cursor: pointer;
+}
+
+.btn-login {
+  height: 40px;
+  font-size: 15px;
+  background-color: #00E895;
+  color: #091768;
+  text-transform: capitalize;
+}/*# sourceMappingURL=login.component.css.map */

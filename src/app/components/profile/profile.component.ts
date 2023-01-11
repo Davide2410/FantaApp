@@ -79,7 +79,7 @@ export class ProfileComponent implements OnInit {
 
   logOut() {
     this.authSrv.logOut()
-    this.r.navigate(['login'])
+    this.r.navigate(['welcome'])
   }
 
 

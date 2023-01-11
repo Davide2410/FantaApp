@@ -1,0 +1,10 @@
+.row {
+  cursor: pointer;
+}
+.row span {
+  font-size: 11px;
+  color: lightgray;
+}
+.row p {
+  font-size: 11px;
+}/*# sourceMappingURL=ultime-notizie.component.css.map */

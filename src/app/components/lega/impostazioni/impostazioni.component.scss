@@ -1,0 +1,53 @@
+.bg-blue {
+    background: linear-gradient(0.25turn, #091768, #066779, #00E895);
+    height: 50px;
+}
+
+.text-blue {
+    color: #091768;
+}
+
+.position-relative {
+
+    .fa-user-alt,
+    .fa-unlock,
+    .fa-user-shield {
+        position: absolute;
+        right: 14px;
+        top: 10px;
+        color: #091768;
+        cursor: pointer;
+    }
+}
+
+
+
+.generale {
+    .form-select {
+        width: 130px;
+    }
+}
+
+.bonus {
+    label {
+        font-size: 12.5px;
+    }
+
+    .form-select {
+        width: 80px;
+    }
+}
+
+.fasceGol{
+    label {
+        font-size: 12.5px;
+    }
+   .form-select {
+        width: 80px;
+    } 
+}
+
+.fa-hand-holding-usd {
+    margin-top: 10px;
+    margin-right: 14px;
+}

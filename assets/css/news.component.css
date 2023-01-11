@@ -1,0 +1,26 @@
+.text-blue {
+  color: rgb(1, 1, 61);
+}
+
+.card-body {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.card-body .card-text {
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+.card-body .d-flex .category {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.card-body .d-flex .date {
+  color: grey;
+  font-size: 12px;
+}/*# sourceMappingURL=news.component.css.map */

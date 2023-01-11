@@ -14,16 +14,16 @@
                 <p>NEWS</p>
             </div> 
             <div class="col-3">
-                <p>LEGHE</p>
+                <p (click)="openModal()">LEGHE</p>
             </div> 
             <div class="col-3" [routerLink]="['/profile']">
                 <p>PROFILO</p>
             </div> 
          </div>
 
-         <div class="teams p-1 border-bottom">
+         <div class="teams p-2 border-bottom">
             <div *ngFor="let t of teams">
-                <img src="{{t.team}}" class="mx-2" alt="">
+                <img src="{{t.team}}" class="mx-3" width="20" height="25" alt="">
             </div>
         </div>
 
@@ -33,9 +33,16 @@
                 <i class="fas fa-trophy"></i><span>LEGHE</span>
             </div>
             <div class="col-6 text-end">
-                <a class="btn btn-outline-primary">Nuova Lega</a>
+                <a class="btn btn-outline-primary" (click)="openModal()">Nuova Lega</a>
+            </div>
+            <div class="row">
+                <div *ngFor="let l of leghe" class="col-3 border p-2 m-2">
+                    {{l.nomeLega}}
+                </div>
             </div>
         </div>
+
+        
 
         <div class="row justify-content-center align-items-center text-center img-copied">
             <div class="col-12 position-relative">
@@ -45,7 +52,7 @@
 
         <!-- CALCIOMERCATO NEWS -->
         <div class="row justify-content-start mt-2 newsAll">
-            <div class="col-8 ps-4">
+            <div class="col-5 ps-4">
                 <h6 class="prova p-1">CALCIOMERCATO</h6>
                 <app-home-news></app-home-news>
             </div>
@@ -55,6 +62,9 @@
                 <app-ultime-secondary></app-ultime-secondary>
                 <H6 class="prova p-1">CONSIGLI FANTACALCIO</H6>
                 <app-consigli></app-consigli>
+            </div>
+            <div class="col-3 bg-blue">
+                
             </div>
         </div>
 

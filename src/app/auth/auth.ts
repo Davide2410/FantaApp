@@ -3,7 +3,7 @@ export interface Auth {
     user:{
         id:number,
         name:string,
-
+        admin:boolean
         gender:string,
         birthday:string,
         email:string, 

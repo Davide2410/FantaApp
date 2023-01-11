@@ -1,0 +1,46 @@
+<div class="modal-header text-blue">
+    <h5 class="modal-title" id="exampleModalLabel">LEGA</h5>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modalRef.close()"
+    ></button>
+  </div>
+  <div class="modal-body text-blue">
+    <form class="bg-white p-3" #form="ngForm" (ngSubmit)="entra(form)">
+       
+                <!-- Name input -->
+                <mdb-form-control class="mb-4 position-relative">
+                    <input mdbInput type="text" id="form2" class="form-control" name="nome_team" #nome_team="ngModel"
+                        ngModel />
+                    <label mdbLabel class="form-label" for="form2">Nome Team</label>
+                    <i class="fas fa-user-shield"></i>
+                </mdb-form-control>
+
+                <div class="d-flex justify-content-between">
+                    <select class="form-select mb-4" name="budget" #budget="ngModel" ngModel>
+                        <option value="">Budget</option>
+                        <option value="0">0</option>
+                        <option value="500">500</option>
+                        <option value="1000">1000</option>
+                    </select>
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+
+                  <!-- Password input -->
+                  <mdb-form-control class="mb-4 position-relative">
+                    <input mdbInput type="password" id="form6" class="form-control" name="controlloPsw"
+                        #controlloPsw="ngModel" ngModel />
+                    <label mdbLabel class="form-label" for="form6">Password</label>
+                    <i class="fas fa-unlock"></i>
+                </mdb-form-control>
+
+                <div class="container bg-white d-none" id="error">
+                  <p *ngIf="err" class="text-danger text-center mt-3">{{err}}</p>
+              </div>
+
+                <button type="submit" class="btn btn-primary">Invia</button>
+
+    </form>
+  </div>

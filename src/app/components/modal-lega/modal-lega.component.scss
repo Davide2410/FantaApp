@@ -1,0 +1,31 @@
+.text-blue {
+    color: #091768;
+}
+
+.position-relative {
+
+    .fa-user-alt,
+    .fa-unlock,
+    .fa-user-shield {
+        position: absolute;
+        right: 14px;
+        top: 10px;
+        color: #091768;
+        cursor: pointer;
+    }
+}
+
+.d-flex {
+    label {
+        font-size: 12.5px;
+    }
+
+    .form-select {
+        width: 150px;
+    }
+}
+
+.fa-hand-holding-usd {
+    margin-top: 10px;
+    margin-right: 14px;
+}

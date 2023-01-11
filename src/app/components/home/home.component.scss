@@ -1,11 +1,14 @@
 .text-blue{
-    color: rgb(74, 74, 230);
+    color: #091768;
 }
 .fa-trophy{
     color: orange;
 }
 .fa-bullhorn{
     color: gray;
+}
+.bg-blue{
+    background: linear-gradient( #091768, #066779, #00E895);
 }
 
 .container-fluid{
@@ -45,8 +48,7 @@
     align-items: center;
     flex-wrap: wrap;
     img{
-        height: 28px;
-        width: 24px;
+       
         cursor: pointer;
     }
 }

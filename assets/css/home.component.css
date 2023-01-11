@@ -1,0 +1,94 @@
+.text-blue {
+  color: #091768;
+}
+
+.fa-trophy {
+  color: orange;
+}
+
+.fa-bullhorn {
+  color: gray;
+}
+
+.bg-blue {
+  background: linear-gradient(#091768, #066779, #00E895);
+}
+
+.container-fluid {
+  background-color: rgba(211, 211, 211, 0.3);
+  height: 100%;
+}
+
+.container {
+  border-radius: 20px;
+}
+
+.navbar-home {
+  height: 70px;
+  color: white;
+  font-size: 16px;
+  background: linear-gradient(0.25turn, #091768, #066779, #00E895);
+  cursor: pointer;
+}
+
+.navbar-home .col-3 p::after {
+  width: 0;
+  height: 2px;
+  display: block;
+  background-color: #00E895;
+  content: "";
+}
+
+.navbar-home .col-3 p:hover::after {
+  width: 50%;
+  margin: 0px auto;
+  transition: 0.5s ease-in-out;
+}
+
+.teams {
+  display: flex;
+  background-color: rgba(211, 211, 211, 0.1);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.teams img {
+  cursor: pointer;
+}
+
+span {
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.prova {
+  background-color: #00E895;
+  color: #091768;
+}
+
+.footer {
+  background-color: #00E895;
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0px 0px 10px 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .container-fluid {
+    background-color: white;
+  }
+  .container-fluid .container {
+    width: 100%;
+  }
+  .container-fluid .container .logo,
+.container-fluid .container .navbar-home,
+.container-fluid .container .newsAll,
+.container-fluid .container .teams {
+    display: none;
+  }
+  .container-fluid .container .img-copied {
+    margin-top: 20px;
+  }
+}/*# sourceMappingURL=home.component.css.map */

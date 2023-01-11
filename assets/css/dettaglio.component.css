@@ -1,0 +1,76 @@
+.nero {
+  background-color: black;
+  color: white;
+  height: 200vh;
+}
+
+.text-blue {
+  color: rgb(1, 1, 61);
+}
+
+.phone {
+  display: none;
+}
+
+.navbar {
+  box-shadow: none;
+  background: linear-gradient(0.25turn, #091768, #066779, #00E895);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar i {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.category {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.date {
+  color: grey;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    box-shadow: none;
+    width: 100%;
+    background: none;
+  }
+  .navbar i {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .phone {
+    display: block;
+  }
+  .tablet {
+    display: none;
+  }
+  .container-fluid {
+    width: 100%;
+  }
+  .container-fluid .row .category {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 2px;
+    border-radius: 5px;
+  }
+  .container-fluid .row .date {
+    color: grey;
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=dettaglio.component.css.map */

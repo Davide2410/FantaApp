@@ -1,0 +1,14 @@
+<div class="modal-header">
+    <p class="modal-title text-muted" id="exampleModalLabel">Nuova Lega</p>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modalRef.close()"
+    ></button>
+  </div>
+  <div class="modal-body d-flex flex-column">
+    <a [routerLink]="['/impostazioni']" class="text-blue" (click)="modalRef.close()">Crea una Lega</a>
+    <a [routerLink]="['/searchLega']" class="text-blue" (click)="modalRef.close()">Unisciti ad una Lega</a>
+  </div>
+

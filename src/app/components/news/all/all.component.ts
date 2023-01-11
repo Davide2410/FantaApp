@@ -23,7 +23,7 @@ export class AllComponent implements OnInit {
     setTimeout(()=>{this.newSrv.fetchNews().subscribe(res=>{
       this.news = res
       this.attivo = true
-    })},1500)
+    })})
   }
 
   allNews() {
@@ -40,12 +40,9 @@ export class AllComponent implements OnInit {
 
   type(categoria:string){
     this.categoria = categoria
-    setTimeout(()=>{
       this.newSrv.fetchNews().subscribe((res)=>{  
-        this.news = res.filter(category=> this.categoria == category.category);
-        this.attivo = true
+        this.news = res.filter(el=> this.categoria == el.category);
        })
-    })
   }
 
   squad(team:string){

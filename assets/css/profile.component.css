@@ -1,0 +1,44 @@
+.bg-blue {
+  background: linear-gradient(0.25turn, #091768, #066779, #00E895);
+}
+
+.text-blue {
+  color: #091768;
+}
+
+.bg-grey {
+  background-color: rgba(211, 211, 211, 0.2);
+  height: 100vh;
+}
+
+.submit {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  border: none;
+  background-color: transparent;
+}
+
+i {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icon-nav {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.position-relative .fa-user-alt,
+.position-relative .fa-envelope,
+.position-relative .fa-unlock,
+.position-relative .fa-calendar-alt,
+.position-relative .fa-transgender-alt {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  color: #091768;
+  cursor: pointer;
+}/*# sourceMappingURL=profile.component.css.map */

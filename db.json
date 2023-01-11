@@ -91,6 +91,54 @@
       "email": "m@m.it",
       "password": "$2a$10$.BL9Tsw6cHHmXofuMNmHy.tHZFuBeIwRKTNM233vmYV2ZDKWB5/pO",
       "id": 13
+    },
+    {
+      "email": "li@li.it",
+      "password": "$2a$10$PoDdT28aKKO/zBjiBvHOm.f/gBpdr9QzhcgXxRdexGo8sT43FF0jq",
+      "name": "Lina",
+      "gender": "Femmina",
+      "birthday": "1970-05-10",
+      "id": 14
+    },
+    {
+      "email": "luca@l.it",
+      "password": "$2a$10$yG98gj3zyinBRFj24YaYrOfmBA3iXhb2KD6enGKAtdF8PxyRavPKW",
+      "name": "Luca",
+      "gender": "Maschio",
+      "birthday": "2000-02-01",
+      "id": 15
+    },
+    {
+      "email": "b@b.it",
+      "password": "$2a$10$//wA40Z5Y9GLcm80ikzfN.oGcd8g6a8Lg3swQG24R2g.HsYjCHtFK",
+      "name": "Babbo",
+      "gender": "Maschio",
+      "birthday": "2000-10-20",
+      "id": 16
+    },
+    {
+      "email": "denti@d.it",
+      "password": "$2a$10$69ICCpFQTFKSOxP0tBccxeJ2rnR39rWosY08vMWd8v/vXKi.PxkD6",
+      "name": "denti",
+      "gender": "bho",
+      "birthday": "2020-02-01",
+      "id": 17
+    },
+    {
+      "email": "b@a.it",
+      "password": "$2a$10$aa2yFbd3sKe6WmORtEaP4eO52kgcLv92190dMw/sArYmHjMsLphB2",
+      "name": "bb",
+      "gender": "bb",
+      "birthday": "0200-10-24",
+      "id": 18
+    },
+    {
+      "email": "lulu.l@gmail.com",
+      "password": "$2a$10$nTVTJrcd5AYorPbFk9OFGeYZzXeQldPY2.C8JHiBFWxmVVQMGb01S",
+      "name": "Lulu",
+      "gender": "Femmina",
+      "birthday": "1999-12-01",
+      "id": 19
     }
   ],
   "teams": [
@@ -193,6 +241,187 @@
       "id": 20,
       "team": "/assets/team/Verona.png",
       "name": "Verona"
+    },
+    {
+      "nome_team": "Pescara Manzia",
+      "budget": "500",
+      "user_id": 1,
+      "idLega": {
+        "nomeLega": "Lega Prova",
+        "passwordLega": "12345",
+        "gol": "",
+        "autogol": "",
+        "assist": "",
+        "ammonizione": "",
+        "espulsione": "",
+        "rigoreSegnato": "",
+        "rigoreSbagliato": "",
+        "rigoreParato": "",
+        "golSubito": "",
+        "golVittoria": "",
+        "golPareggio": "",
+        "cleanSheet": "",
+        "fascia_1": "",
+        "fascia_2": "",
+        "fascia_3": "",
+        "fascia_4": "",
+        "fascia_5": "",
+        "fascia_6": "",
+        "fascia_7": "",
+        "fascia_8": "",
+        "fascia_9": "",
+        "fascia_10": "",
+        "id": 2
+      },
+      "nomeLega": {
+        "nomeLega": "Lega Prova",
+        "passwordLega": "12345",
+        "gol": "",
+        "autogol": "",
+        "assist": "",
+        "ammonizione": "",
+        "espulsione": "",
+        "rigoreSegnato": "",
+        "rigoreSbagliato": "",
+        "rigoreParato": "",
+        "golSubito": "",
+        "golVittoria": "",
+        "golPareggio": "",
+        "cleanSheet": "",
+        "fascia_1": "",
+        "fascia_2": "",
+        "fascia_3": "",
+        "fascia_4": "",
+        "fascia_5": "",
+        "fascia_6": "",
+        "fascia_7": "",
+        "fascia_8": "",
+        "fascia_9": "",
+        "fascia_10": "",
+        "id": 2
+      },
+      "id": 21
+    }
+  ],
+  "numbers": [
+    {
+      "value": 0
+    },
+    {
+      "value": 0.5
+    },
+    {
+      "value": 1
+    },
+    {
+      "value": 1.5
+    },
+    {
+      "value": 2
+    },
+    {
+      "value": 2.5
+    },
+    {
+      "value": 3
+    },
+    {
+      "value": 3.5
+    },
+    {
+      "value": 4
+    },
+    {
+      "value": 4.5
+    },
+    {
+      "value": 5
+    }
+  ],
+  "negativeNumbr": [
+    {
+      "value": 0
+    },
+    {
+      "value": -0.5
+    },
+    {
+      "value": -1
+    },
+    {
+      "value": -1.5
+    },
+    {
+      "value": -2
+    },
+    {
+      "value": -2.5
+    },
+    {
+      "value": -3
+    },
+    {
+      "value": -3.5
+    },
+    {
+      "value": -4
+    },
+    {
+      "value": -4.5
+    },
+    {
+      "value": -5
+    }
+  ],
+  "leghe": [
+    {
+      "nomeLega": "Lega Ciamarra",
+      "passwordLega": "test",
+      "user_id": 1,
+      "gol": "2.5",
+      "autogol": "-3.5",
+      "assist": "1.5",
+      "ammonizione": "-1",
+      "espulsione": "-0.5",
+      "rigoreSegnato": "3.5",
+      "rigoreSbagliato": "-1",
+      "rigoreParato": "1",
+      "golSubito": "-0.5",
+      "golVittoria": "1.5",
+      "golPareggio": "2",
+      "cleanSheet": "1",
+      "fascia_1": "4",
+      "fascia_2": "1.5",
+      "fascia_3": "0.5",
+      "fascia_4": "1",
+      "fascia_5": "1.5",
+      "fascia_6": "2.5",
+      "fascia_7": "2.5",
+      "fascia_8": "1.5",
+      "fascia_9": "1",
+      "fascia_10": "1.5",
+      "id": 1
+    }
+  ],
+  "squadre": [
+    {
+      "nome_team": "Testaccio68",
+      "budget": "500",
+      "user_id": 1,
+      "user_admin": true,
+      "idLega": 1,
+      "nomeLega": "Lega Ciamarra",
+      "id": 1
+    },
+    {
+      "nome_team": "Pescara Manzia",
+      "budget": "500",
+      "passwordLega": true,
+      "user_admin": false,
+      "user_id": 19,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 2
     }
   ]
 }

@@ -21,6 +21,8 @@ import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
 import {MdbCollapseModule} from 'mdb-angular-ui-kit/collapse';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
 
 import { SwiperModule } from 'swiper/angular';
 import { SwiperComponent } from './components/news/all/swiper/swiper.component';
@@ -28,6 +30,11 @@ import { HomeNewsComponent } from './components/home/home-news/home-news.compone
 import { UltimeNotizieComponent } from './components/home/ultime-notizie/ultime-notizie.component';
 import { UltimeSecondaryComponent } from './components/home/ultime-notizie/ultime-secondary/ultime-secondary.component';
 import { ConsigliComponent } from './components/home/consigli/consigli.component';
+import { ModalComponent } from './modal/modal.component';
+import { ImpostazioniComponent } from './components/lega/impostazioni/impostazioni.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { SearchLegaComponent } from './components/search-lega/search-lega.component';
+import { ModalLegaComponent } from './components/modal-lega/modal-lega.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +51,12 @@ import { ConsigliComponent } from './components/home/consigli/consigli.component
     HomeNewsComponent,
     UltimeNotizieComponent,
     UltimeSecondaryComponent,
-    ConsigliComponent
+    ConsigliComponent,
+    ModalComponent,
+    ImpostazioniComponent,
+    WelcomeComponent,
+    SearchLegaComponent,
+    ModalLegaComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +70,8 @@ import { ConsigliComponent } from './components/home/consigli/consigli.component
     MdbTooltipModule,
     SwiperModule,
     MdbDropdownModule,
+    MdbModalModule,
+    MdbAccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

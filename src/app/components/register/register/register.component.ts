@@ -66,4 +66,8 @@ export class RegisterComponent implements OnInit {
     info!.classList.toggle('d-none')
   }
 
+  back(){
+    history.back()
+  }
+
 }

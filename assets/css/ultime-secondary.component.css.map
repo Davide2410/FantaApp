@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/app/components/home/ultime-notizie/ultime-secondary/ultime-secondary.component.scss","ultime-secondary.component.css"],"names":[],"mappings":"AAAA;EACI,eAAA;ACCJ;ADAI;EACI,eAAA;EACA,iBAAA;ACER;ADAI;EACI,eAAA;ACER;;ADEA;EACI;IACI,WAAA;ECCN;EDCE;IACI,iBAAA;ECCN;AACF","file":"ultime-secondary.component.css"}

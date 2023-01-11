@@ -1,0 +1,19 @@
+.row {
+  cursor: pointer;
+}
+.row p {
+  font-size: 12px;
+  font-weight: bold;
+}
+.row span {
+  font-size: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  img {
+    width: 80px;
+  }
+  p {
+    margin-left: 15px;
+  }
+}/*# sourceMappingURL=ultime-secondary.component.css.map */
