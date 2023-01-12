@@ -22,27 +22,14 @@ export class SearchLegaComponent implements OnInit {
   }
 
   allLeghe() {
-    let lega: any = localStorage.getItem('lega')
-    let a = JSON.parse(lega)
-
-    let user: any = localStorage.getItem('user')
-    let utente = JSON.parse(user)
-
-    // let team: any = localStorage.getItem('team')
-    // let b = JSON.parse(team)
-
     this.legaSrv.fetchLeghe().subscribe(res => {
-      if (a.user_id != utente) {
-        this.leghe = res
-      }else {
-        console.log('NESSUNA LEGA');
-      }
+     this.leghe = res
     })
   }
 
-  openModal() {
+  openModal(l:Lega) {
     this.modalRef = this.modalService.open(ModalLegaComponent, {
-      data: { title: 'Custom title' },
+      data: { l },
     });
   }
 

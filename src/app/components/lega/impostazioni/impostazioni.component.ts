@@ -28,12 +28,14 @@ export class ImpostazioniComponent implements OnInit {
   registrati(form: NgForm): void {
     let user: any = localStorage.getItem('user')
     let utente = JSON.parse(user)
-
+    let partecipanti:any[] = []
+    let nuovoPartecipante = partecipanti.push(utente.user.id)
     let data: Lega = {
       nomeLega: form.value.nomeLega,
       passwordLega: form.value.passwordLega,
       user_id: utente.user.id,
       nomeAdmin:utente.user.name,
+      partecipanti:partecipanti,
       gol: form.value.gol,
       autogol: form.value.autogol,
       assist: form.value.assist,
@@ -82,8 +84,8 @@ export class ImpostazioniComponent implements OnInit {
       user_admin:true,
       idLega: a.id,
       nomeLega: a.nomeLega
-
     }
+    
     this.legaSrv.invio(data).subscribe(res => {
       console.log(res);
       team.reset()

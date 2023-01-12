@@ -139,6 +139,14 @@
       "gender": "Femmina",
       "birthday": "1999-12-01",
       "id": 19
+    },
+    {
+      "email": "d@d.it",
+      "password": "$2a$10$fHHBZPWktKxiPBVczc1PJem.0BJy3ussWkOfQcDZXAjhYLM1Sz.D.",
+      "name": "Davide",
+      "gender": "Maschio",
+      "birthday": "2000-10-24",
+      "id": 20
     }
   ],
   "teams": [
@@ -319,28 +327,28 @@
       "passwordLega": "test",
       "user_id": 1,
       "nomeAdmin": "Davide",
-      "gol": "2.5",
-      "autogol": "-3",
-      "assist": "3",
-      "ammonizione": "-3",
-      "espulsione": "-2",
-      "rigoreSegnato": "0.5",
-      "rigoreSbagliato": "-2",
-      "rigoreParato": "0",
-      "golSubito": "-1.5",
+      "partecipanti": 1,
+      "gol": "0.5",
+      "autogol": "-1.5",
+      "assist": "0.5",
+      "ammonizione": "-0.5",
+      "espulsione": "-1",
+      "rigoreSegnato": "0",
+      "rigoreSbagliato": "-0.5",
+      "rigoreParato": "0.5",
+      "golSubito": "0",
       "golVittoria": "0",
-      "golPareggio": "1.5",
-      "cleanSheet": "1.5",
-      "fascia_1": "1.5",
-      "fascia_2": "1.5",
-      "fascia_3": "1",
-      "fascia_4": "1.5",
-      "fascia_5": "1",
-      "fascia_6": "1",
-      "fascia_7": "2",
-      "fascia_8": "0.5",
+      "golPareggio": "2.5",
+      "fascia_1": "2",
+      "fascia_2": "0",
+      "fascia_3": "1.5",
+      "fascia_4": "1",
+      "fascia_5": "0",
+      "fascia_6": "2",
+      "fascia_7": "1.5",
+      "fascia_8": "1.5",
       "fascia_9": "1",
-      "fascia_10": "1",
+      "fascia_10": "0.5",
       "id": 1
     }
   ],
@@ -351,7 +359,7 @@
       "user_id": 1,
       "user_admin": true,
       "idLega": 1,
-      "nomeLega": "Lega Ciamarra",
+      "nomeLega": "Lega Prova",
       "id": 1
     },
     {
@@ -360,18 +368,10 @@
       "controlloPsw": true,
       "user_admin": false,
       "user_id": 19,
-      "nomeLega": "Lega Ciamarra",
+      "nomeLega": "Lega Prova",
       "idLega": 1,
       "id": 2
-    },
-    {
-      "nome_team": "AC Cappatoio",
-      "budget": "500",
-      "user_admin": false,
-      "idLega": 1,
-      "user_id": 8,
-      "nomeLega": "Lega Ciamarra",
-      "id": 3
     }
-  ]
+  ],
+  "utentiLega": []
 }

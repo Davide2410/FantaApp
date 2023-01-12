@@ -28,15 +28,15 @@
         </div>
 
          <!-- NUOVA LEGA SCHERMI PICCOLI -->
-        <div class="row justify-content-evenly align-items-center text-center d-md-none mt-3">
-            <div class="col-6 text-start">
+        <div class="row justify-content-evenly align-items-center text-center d-md-none p-2">
+            <div class="col-6 text-start mt-4">
                 <i class="fas fa-trophy"></i><span>LEGHE</span>
             </div>
-            <div class="col-6 text-end">
+            <div class="col-6 text-end mt-4">
                 <a class="btn btn-outline-primary" (click)="openModal()">Nuova Lega</a>
             </div>
             <div class="row">
-                <div *ngFor="let l of leghe" class="col-3 border p-2 m-2">
+                <div *ngFor="let l of leghe" class="col-3 border p-2 m-2 rounded-5 bg-white">
                     <span [routerLink]="['/lega']">{{l.nomeLega}}</span>
                 </div>
             </div>

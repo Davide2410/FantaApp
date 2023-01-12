@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { BehaviorSubject } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
+import { Lega, LegaTeam, Partecipanti } from '../components/lega/lega';
+import { LegaService } from '../components/lega/lega.service';
 import { Auth, AuthLogin, AuthRegister, UserPut } from './auth';
 
 
@@ -16,6 +18,9 @@ export class AuthService {
 
   urlRegister = 'http://localhost:4201/register'
   urlLogin = 'http://localhost:4201/login'
+  urlLega = 'http://localhost:4201/leghe'
+  urlTeam = 'http://localhost:4201/squadre'
+  lega:Lega[]=[]
 
   authSubj = new BehaviorSubject<null | Auth>(null)
   // un oggetto che può essere osservato o osservatore, il suo compito è quando ci loggiamo con l'utente salviamo al suo inetrno i valori dell'utente(dati) e tutti i subscribe che vengono chiamti successivamente , ricevono gli stessi valori dell'utente
@@ -46,13 +51,37 @@ export class AuthService {
      }),tap((res=>{
       this.authSubj.next(res)
       localStorage.setItem('user' , JSON.stringify(res))
+      this.recuperaTeamLogIn(res.user.id)
+      this.recuperaLegaLogIn(res.user.id)
      })))
+  }
+
+  recuperaTeamLogIn(id:number){
+    return this.http.get<LegaTeam[]|Partecipanti[]>(`http://localhost:4201/squadre?user_id=${id}`).subscribe(res=>{
+      localStorage.setItem('team' , JSON.stringify(res[0]))
+    })
+  }
+
+  recuperaLegaLogIn(id:number){
+    return this.http.get<Lega[]>('http://localhost:4201/leghe').subscribe(res=>{
+      let a
+      this.lega = res
+      this.lega.forEach(element => {
+        element.partecipanti.forEach(el=>{
+         if( el == id){
+            a = element
+         }
+        })
+      });
+      localStorage.setItem('lega' , JSON.stringify(a))
+    })
   }
 
 
   logOut(){
     localStorage.removeItem('user')
     localStorage.removeItem('team')
+    localStorage.removeItem('lega')
     this.authSubj.next(null)
     if(this.timeOut){
       clearTimeout(this.timeOut)

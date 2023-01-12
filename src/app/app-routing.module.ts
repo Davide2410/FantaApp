@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { EnterLegaComponent } from './components/lega/enter-lega/enter-lega.component';
 import { ModificaComponent } from './components/lega/enter-lega/modifica/modifica.component';
 import { ImpostazioniComponent } from './components/lega/impostazioni/impostazioni.component';
+import { ModificaLegaComponent } from './components/lega/modifica-lega/modifica-lega.component';
 import { LoginComponent } from './components/login/login/login.component';
 import { AllComponent } from './components/news/all/all.component';
 import { DettaglioComponent } from './components/news/dettaglio/dettaglio.component';
@@ -53,6 +54,10 @@ const routes: Routes = [
   {
     path: 'modifica',
     component: ModificaComponent
+  },
+  {
+    path: 'impostazioni/lega',
+    component: ModificaLegaComponent
   },
   {
     path: "",

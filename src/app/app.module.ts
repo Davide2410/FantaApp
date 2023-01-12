@@ -38,6 +38,7 @@ import { ModalLegaComponent } from './components/modal-lega/modal-lega.component
 import { EnterLegaComponent } from './components/lega/enter-lega/enter-lega.component';
 import { NavbarLegaComponent } from './components/navbar-lega/navbar-lega.component';
 import { ModificaComponent } from './components/lega/enter-lega/modifica/modifica.component';
+import { ModificaLegaComponent } from './components/lega/modifica-lega/modifica-lega.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,7 +63,8 @@ import { ModificaComponent } from './components/lega/enter-lega/modifica/modific
     ModalLegaComponent,
     EnterLegaComponent,
     NavbarLegaComponent,
-    ModificaComponent
+    ModificaComponent,
+    ModificaLegaComponent
   ],
   imports: [
     BrowserModule,

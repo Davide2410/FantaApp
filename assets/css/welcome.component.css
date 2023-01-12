@@ -2,10 +2,5 @@
   background: linear-gradient(#091768, #066779, #00E895);
 }
 .bg-blue img {
-  width: 400px;
-}
-.bg-blue p {
-  width: 300px;
-  border: 1px solid white;
-  padding: 20px;
+  width: 150px;
 }/*# sourceMappingURL=welcome.component.css.map */

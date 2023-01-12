@@ -6,7 +6,7 @@ import { NewsService } from 'src/app/service/news.service';
 import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
 import { ModalComponent } from 'src/app/modal/modal.component';
 import { LegaService } from '../lega/lega.service';
-import { Lega, LegaInfo } from '../lega/lega';
+import { Lega, LegaInfo} from '../lega/lega';
 
 @Component({
   selector: 'app-home',
@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
    categoria!: string
    user_id!:Lega[]
    id!:number
+   nomeTeam:string|undefined
 
    
   constructor(private newSrv:NewsService , private r :Router, private modalService: MdbModalService, private legheSrv:LegaService) { }
@@ -31,6 +32,7 @@ export class HomeComponent implements OnInit {
     this.stampaNews()
     this.allTeams()
     this.allLeghe()
+    // this.squadraDettaglio()
   }
 
   stampaNews(){
@@ -45,8 +47,19 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  // squadraDettaglio(){
+  //   let team: any = localStorage.getItem('team')
+  //   let t = JSON.parse(team)
+  //   this.id = t.id
+   
+  //   this.legheSrv.recuperaTeam(t.id).subscribe(res=>{
+  //        this.nomeTeam = res.nome_team
+  //   })
+  // }
+
   allLeghe(){
-    let lega: any = localStorage.getItem('lega')
+    setTimeout(()=>{
+      let lega: any = localStorage.getItem('lega')
     let a = JSON.parse(lega)
 
     let team: any = localStorage.getItem('team')
@@ -59,6 +72,7 @@ export class HomeComponent implements OnInit {
         console.log('NESSUNA LEGA');
       }
     })
+    }, 100)
   }
 
 

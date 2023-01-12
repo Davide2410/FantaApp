@@ -1,0 +1,23 @@
+.bg-blue {
+  background: linear-gradient(0.25turn, #091768, #066779, #00E895);
+  height: 50px;
+}
+
+.navbar {
+  box-shadow: none;
+  width: 100%;
+  background: none;
+  position: fixed;
+  top: 0;
+}
+.navbar i {
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.navbar .infoLega h6 {
+  font-size: 14px;
+}
+.navbar .infoLega span {
+  font-size: 10px;
+}/*# sourceMappingURL=navbar-lega.component.css.map */

@@ -1,0 +1,288 @@
+<nav class="navbar navbar-expand-lg bg-blue pt-3 pb-3 bg-blue text-white">
+    <div class="container-fluid">
+        <i class="fas fa-arrow-left icon-nav" routerLink="/lega"></i>
+    </div>
+</nav>
+<div class="container-fluid bg-grey">
+    <div class="row justify-content-center align-items-center vh-100">
+        <div class="col-8">
+            <form class="bg-white shadow p-5 text-blue" [formGroup]="legaForm" (ngSubmit)="modifica()">
+
+                <div class="generale">
+
+                    <h5>Generale</h5>
+
+                    <!-- Name input -->
+                    <mdb-form-control class="mb-4 position-relative">
+                        <input mdbInput type="text" id="form1" class="form-control" name="newNomeLega"
+                            formControlName="newNomeLega" />
+                        <label mdbLabel class="form-label" for="form1">Nome Lega</label>
+                        <i class="fas fa-user-alt"></i>
+                    </mdb-form-control>
+
+
+                    <!-- Password input -->
+                    <mdb-form-control class="mb-4 position-relative">
+                        <input mdbInput type="password" id="form6" class="form-control" name="newPasswordLega"
+                            formControlName="newPasswordLega" />
+                        <label mdbLabel class="form-label" for="form6">Password</label>
+                        <i class="fas fa-unlock"></i>
+                    </mdb-form-control>
+
+                    <button type="button" class="btn btn-primary" (click)="next1()">Next</button>
+
+                </div>
+
+
+                <div class="bonus d-none">
+                    <h5>Bonus/Malus</h5>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol</label>
+                            <select class="form-select mb-4" name="newGol" formControlName="newGol">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Autogol</label>
+                            <select class="form-select mb-4" name="newAutogol" formControlName="newAutogol">
+                                <option value="{{n.value}}" *ngFor="let n of negative">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Assist</label>
+                            <select class="form-select mb-4" name="newAssist" formControlName="newAssist">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Ammonizione</label>
+                            <select class="form-select mb-4" name="newAmmonizione" formControlName="newAmmonizione">
+                                <option value="{{n.value}}" *ngFor="let n of negative">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Espulsione</label>
+                            <select class="form-select mb-4" name="newEspulsione" formControlName="newEspulsione">
+                                <option value="{{n.value}}" *ngFor="let n of negative">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">R. Sbagliato</label>
+                            <select class="form-select mb-4" name="newRigoreSbagliato"
+                                formControlName="newRigoreSbagliato">
+                                <option value="{{n.value}}" *ngFor="let n of negative">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">R. Segnato</label>
+                            <select class="form-select mb-4" name="newRigoreSegnato" formControlName="newRigoreSegnato">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+
+
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">R. Parato</label>
+                            <select class="form-select mb-4" name="newRigoreParato" formControlName="newRigoreParato">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex justify-content-between">
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol Subito</label>
+                            <select class="form-select mb-4" name="newGolSubito" formControlName="newGolSubito">
+                                <option value="{{n.value}}" *ngFor="let n of negative">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol Vittoria</label>
+                            <select class="form-select mb-4" name="newGolVittoria" formControlName="newGolVittoria">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex justify-content-between">
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol Pareggio</label>
+                            <select class="form-select mb-4" name="newGolPareggio" formControlName="newGolPareggio">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Clean Sheet</label>
+                            <select class="form-select mb-4" name="newCleanSheet" formControlName="newClenSheet">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-secondary" (click)="back1()">Back</button>
+
+                        <button type="button" class="btn btn-primary" (click)="next2()">Next</button>
+                    </div>
+
+                </div>
+
+
+                <div class="fasceGol d-none">
+
+                    <h5>Fasce Gol</h5>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol 1</label>
+                            <select class="form-select mb-4" name="newFascia_1" formControlName="newFascia_1">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol 2</label>
+                            <select class="form-select mb-4" name="newFascia_2" formControlName="newFascia_2">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol 3</label>
+                            <select class="form-select mb-4" name="newFascia_3" formControlName="newFascia_3">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+
+
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol 4</label>
+                            <select class="form-select mb-4" name="newFascia_4" formControlName="newFascia_4">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol 5</label>
+                            <select class="form-select mb-4" name="newFascia_5" formControlName="newFascia_5">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol 6</label>
+                            <select class="form-select mb-4" name="newFascia_6" formControlName="newFascia_6">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol 7</label>
+                            <select class="form-select mb-4" name="newFascia_7" formControlName="newFascia_7">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol 8 </label>
+                            <select class="form-select mb-4" name="newFascia_8" formControlName="newFascia_8">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex justify-content-between">
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol 9</label>
+                            <select class="form-select mb-4" name="newFascia_9" formControlName="newFascia_9">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="flex-column">
+                            <label for="inlineFormSelectPref">Gol 10</label>
+                            <select class="form-select mb-4" name="newFascia_10" formControlName="newFascia_10">
+                                <option value="{{n.value}}" *ngFor="let n of numbers">
+                                    {{n.value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-secondary" (click)="back2()">Back</button>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save mx-3"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

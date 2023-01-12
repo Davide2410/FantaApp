@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LegaService } from '../lega/lega.service';
 
 @Component({
   selector: 'app-navbar-lega',
@@ -9,14 +10,18 @@ export class NavbarLegaComponent implements OnInit {
 
   presidente!:string
   nomeLega!:string
+  id!:number
 
-  constructor() { }
+  constructor(private legaSrv:LegaService) { }
 
   ngOnInit(): void {
     let lega:any = localStorage.getItem('lega')
     let l = JSON.parse(lega)
-    this.presidente = l.nomeAdmin
-    this.nomeLega = l.nomeLega
+    this.id = l.id
+    this.legaSrv.recuperaLega(this.id).subscribe(res=>{
+      this.presidente = res.nomeAdmin,
+      this.nomeLega = res.nomeLega
+    })
   }
 
   reload(){

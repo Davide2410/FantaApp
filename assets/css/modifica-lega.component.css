@@ -1,10 +1,13 @@
 .bg-blue {
-  background: linear-gradient(0.25turn, #091768, #066779, #00E895);
-  height: 50px;
+  background: linear-gradient(#091768, #066779, #00E895);
 }
 
 .text-blue {
   color: #091768;
+}
+
+.bg-grey {
+  background-color: rgba(211, 211, 211, 0.2);
 }
 
 .position-relative .fa-user-alt,
@@ -33,9 +36,4 @@
 }
 .fasceGol .form-select {
   width: 80px;
-}
-
-.fa-hand-holding-usd {
-  margin-top: 10px;
-  margin-right: 14px;
-}/*# sourceMappingURL=impostazioni.component.css.map */
+}/*# sourceMappingURL=modifica-lega.component.css.map */

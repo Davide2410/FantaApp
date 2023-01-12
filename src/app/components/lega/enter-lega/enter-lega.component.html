@@ -1,31 +1,62 @@
-<app-navbar-lega></app-navbar-lega> 
+<app-navbar-lega></app-navbar-lega>
 <div class="container-fluid bg-blue lega"></div>
-
+<div class="container-fluid bg-grey">
+    
 <div class="container position-relative">
     <div class="row justify-content-center align-items-center">
         <div class="col-8 col-md-4 text-center box-team bg-white position-absolute p-4 text-blue shadow rounded-5">
             <h6><strong>{{nomeTeam}}</strong></h6>
+            <span id="err" class="p-2 rounded-5 text-white d-none">
+                <i class="fas fa-info-circle"></i>
+                Azione consentita solo per l'admin
+            </span>
+            <i class="fas fa-cog text-white-50" (click)="admin()"></i>
             <i class="fas fa-pencil-alt text-white-50" [routerLink]="['/modifica']"></i>
-            <div class="row justify-content-center align-items-center text-center p-2">
+            <div class="row justify-content-center align-items-center text-center p-2 mt-2">
                 <div class="col-4">
                     <p class="infoTeam rounded-4 ps-1 px-1">
-                    <span>Budget</span>
-                    {{budget}}M
+                        <span>Budget</span>
+                        {{budget}}M
                     </p>
                 </div>
                 <div class="col-4">
                     <p class="infoTeam rounded-4 ps-1 px-1">
-                    <span>Budget</span>
-                    {{budget}}M
+                        <span>Budget</span>
+                        {{budget}}M
                     </p>
                 </div>
                 <div class="col-4">
                     <p class="infoTeam rounded-4 ps-1 px-1">
-                    <span>Budget</span>
-                    {{budget}}M
+                        <span>Budget</span>
+                        {{budget}}M
                     </p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<div class="container mt-5">
+    <div class="row justify-content-center align-content-center text-center">
+        <div class="row info text-blue">
+            <div class="col-4">
+                <div class="classifica border p-3 rounded-6 shadow bg-white">
+                    <i class="fas fa-trophy"></i>
+                    <p class="text-blue fw-bolder">Classifica</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="formazioni border p-3 rounded-6 shadow bg-white">
+                    <i class="fas fa-plus-circle"></i>
+                    <p class="text-blue fw-bolder">Formazioni</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="calendario border p-3 rounded-6 shadow bg-white">
+                    <i class="far fa-calendar-alt"></i>
+                    <p class="text-blue fw-bolder">Calendario</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>

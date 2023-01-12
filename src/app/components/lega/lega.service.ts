@@ -57,6 +57,7 @@ export class LegaService {
     }))
   }
 
+  
   // MODIFICA TEAM
   modificaTeam(data:LegaTeam|Partecipanti, id:number){
     return this.http.put<LegaTeam|Partecipanti>(this.urlTeam + `/${id}`, data).pipe(catchError(err=>{
@@ -65,7 +66,6 @@ export class LegaService {
     }))
   }
 
-
   // TUTTE LE LEGHE
   fetchLeghe(){
     return this.http.get<Lega[]>(this.urlLega).pipe(catchError(err=>{
@@ -73,6 +73,23 @@ export class LegaService {
       throw err
     }))
   }
+
+  // RECUPERA LEGA
+  recuperaLega(id:number){
+    return this.http.get<Lega>(this.urlLega + `/${id}`).pipe(catchError(err=>{
+      console.log(err);
+      throw err
+    }))
+  }
+
+  // MODIFICA LEGA
+  modificaLega(data:Lega, id:number|undefined){
+    return this.http.put<Lega>(this.urlLega + `/${id}`, data).pipe(catchError(err=>{
+      console.log(err);
+      throw err
+    }))
+  }
+
 
   fetchNumbers() {
     return this.http.get<Numbers[]>(this.urlNumbers).pipe(catchError(err => {

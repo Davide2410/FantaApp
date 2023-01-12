@@ -8,6 +8,11 @@
     color: #091768;
 }
 
+.bg-grey{
+    background-color: rgb(211, 211, 211,0.1);
+}
+
+
 .box-team{
     h6{
         text-transform: uppercase;
@@ -23,8 +28,32 @@
     }
 }
 
+#err{
+    font-size: 12px;
+    background-color: orange;
+}
+
 .fa-pencil-alt{
     position: absolute;
     top: -30px;
     right: 0;
+}
+.fa-cog{
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+
+.info{
+    margin: 80px;
+
+    i{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+    
 }

@@ -1,8 +1,10 @@
 export interface Lega {
+    id?:number,
     nomeLega: string,
     passwordLega: string,
     user_id: number,
     nomeAdmin:string,
+    partecipanti:any[],
     gol: [number],
     autogol: [number],
     assist: [number],
@@ -46,7 +48,7 @@ export interface Partecipanti{
     user_id: number,
     nome_team: string,
     budget: [number],
-    idLega: number,
+    idLega: number|undefined,
     nomeLega: string,
     user_admin:boolean,
     controlloPsw:boolean
@@ -55,4 +57,34 @@ export interface Partecipanti{
 export interface TeamModify{
     nome_team: string,
     budget: [number],
+}
+
+export interface LegaModifica {
+    nomeLega: string,
+    passwordLega: string,
+    user_id: number,
+    nomeAdmin:string,
+    partecipanti:[],
+    gol: [number],
+    autogol: [number],
+    assist: [number],
+    ammonizione: [number],
+    espulsione: [number],
+    rigoreSegnato: [number],
+    rigoreSbagliato: [number],
+    rigoreParato: [number],
+    golSubito: [number],
+    golVittoria: [number],
+    golPareggio: [number],
+    cleanSheet: [number],
+    fascia_1: [number],
+    fascia_2: [number],
+    fascia_3: [number],
+    fascia_4: [number],
+    fascia_5: [number],
+    fascia_6: [number],
+    fascia_7: [number],
+    fascia_8: [number],
+    fascia_9: [number],
+    fascia_10: [number]
 }
