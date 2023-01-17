@@ -32,3 +32,15 @@ export interface UserPut{
     password:string
 }
 
+export interface UserPartecipanti{
+    user:{
+        id:number,
+        name:string,
+        admin:boolean
+        gender:string,
+        birthday:string,
+        email:string, 
+        password:string,
+    }
+}
+

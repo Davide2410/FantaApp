@@ -39,6 +39,9 @@ import { EnterLegaComponent } from './components/lega/enter-lega/enter-lega.comp
 import { NavbarLegaComponent } from './components/navbar-lega/navbar-lega.component';
 import { ModificaComponent } from './components/lega/enter-lega/modifica/modifica.component';
 import { ModificaLegaComponent } from './components/lega/modifica-lega/modifica-lega.component';
+import { PartecipantiComponent } from './components/lega/partecipanti/partecipanti.component';
+import { RosaComponent } from './components/rosa/rosa.component';
+import { DettaglioGiocatoreComponent } from './components/rosa/dettaglio-giocatore/dettaglio-giocatore.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,7 +67,10 @@ import { ModificaLegaComponent } from './components/lega/modifica-lega/modifica-
     EnterLegaComponent,
     NavbarLegaComponent,
     ModificaComponent,
-    ModificaLegaComponent
+    ModificaLegaComponent,
+    PartecipantiComponent,
+    RosaComponent,
+    DettaglioGiocatoreComponent
   ],
   imports: [
     BrowserModule,

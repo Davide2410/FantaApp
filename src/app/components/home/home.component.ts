@@ -7,6 +7,7 @@ import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
 import { ModalComponent } from 'src/app/modal/modal.component';
 import { LegaService } from '../lega/lega.service';
 import { Lega, LegaInfo} from '../lega/lega';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -26,7 +27,7 @@ export class HomeComponent implements OnInit {
    nomeTeam:string|undefined
 
    
-  constructor(private newSrv:NewsService , private r :Router, private modalService: MdbModalService, private legheSrv:LegaService) { }
+  constructor(private newSrv:NewsService , private r :Router, private modalService: MdbModalService, private legheSrv:LegaService, private authSrv:AuthService) { }
 
   ngOnInit(): void {
     this.stampaNews()
@@ -47,6 +48,13 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  click(){
+    let user: any = localStorage.getItem('user')
+    let utente = JSON.parse(user)
+    this.id = utente.user.id
+    this.authSrv.recuperaLegaLogIn(this.id)
+    this.authSrv.recuperaTeamLogIn(this.id)
+  }
   // squadraDettaglio(){
   //   let team: any = localStorage.getItem('team')
   //   let t = JSON.parse(team)
@@ -74,7 +82,6 @@ export class HomeComponent implements OnInit {
     })
     }, 100)
   }
-
 
   squad(team:string){
     this.categoria = team

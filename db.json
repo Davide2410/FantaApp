@@ -10,129 +10,6 @@
       "id": 1
     },
     {
-      "name": "Luca",
-      "surname": null,
-      "gender": null,
-      "birthday": null,
-      "email": "luca@david.it",
-      "password": "$2a$10$JPc6KhJUbkoryoLAZ7ZH/edhr9zEv.4UH009CGQUhNLE0L2xHcoEG",
-      "id": 3
-    },
-    {
-      "email": "luca@luca.it",
-      "password": "$2a$10$td2ya6vjHM3scOVlcZon6uS.dnoXmvySVOfnJyKEg061Whas/RnVO",
-      "name": "Luca",
-      "id": 4
-    },
-    {
-      "email": "davide@david.it",
-      "password": "$2a$10$kd/PYNqTaukGSp8rP98cNe9kxUrooaLfNDA5xvbZ9Kvhl6jmctQYq",
-      "name": "Davide",
-      "id": 5
-    },
-    {
-      "email": "davide@davide.it",
-      "password": "$2a$10$1b4M8xHkX.VSHyoPLr8s3uS6GKw7qBpfncEOfp0RoL2VrcLClYtv2",
-      "name": "Davide",
-      "surname": "Alfonsi",
-      "id": 6
-    },
-    {
-      "name": "Davide",
-      "surname": "Alfonsi",
-      "email": "l@l.it",
-      "password": "$2a$10$90Kgmt.n3Ar2e/YUGhSMFu3QN1rc9.YTrzL838qCiS8p0dhdev5v2",
-      "id": 7
-    },
-    {
-      "name": "Lorenzo",
-      "surname": "Alfonsi",
-      "email": "d@david.it",
-      "password": "$2a$10$HweloB3L6e1uzJ2MYiC2ieaVoYIfTObFiWEHFnPCltF9/yeTkk4dG",
-      "id": 8
-    },
-    {
-      "email": "linda@linda.it",
-      "password": "$2a$10$etHb.qEcEUSvwPM7MOBzxeeU9O5BM1AkVarnnJ0BYtvc/CnKKZVGC",
-      "name": "Linda",
-      "surname": "Tucci",
-      "id": 9
-    },
-    {
-      "email": "davide2000alfonsi@gmail.com",
-      "password": "$2a$10$2chguQaIGSFdTDPJbEXUKuQBL.znQCK9gAT1TI6YL.sU/j/cV.VRq",
-      "name": "Davide",
-      "surname": "Alfonsi",
-      "gender": "",
-      "birthday": "",
-      "id": 10
-    },
-    {
-      "email": "davide2alfonsi@gmail.com",
-      "password": "$2a$10$wsKE323wsD9vb6WnTUBbbuAjrozHhrLsjihnS5NJ5Gd8bfg2izAWm",
-      "name": "Davide",
-      "surname": "",
-      "gender": "",
-      "birthday": "",
-      "id": 11
-    },
-    {
-      "email": "n@n.it",
-      "password": "$2a$10$yxHE69ZSJkifP1jqtfp4DuY8CMeo/I.G.yrDUiywvEQxnoAzIQeJy",
-      "name": "Noemi",
-      "gender": "Femmina",
-      "birthday": "2019-10-18",
-      "id": 12
-    },
-    {
-      "name": "Mick",
-      "gender": "",
-      "birthday": "2015-05-05",
-      "email": "m@m.it",
-      "password": "$2a$10$.BL9Tsw6cHHmXofuMNmHy.tHZFuBeIwRKTNM233vmYV2ZDKWB5/pO",
-      "id": 13
-    },
-    {
-      "email": "li@li.it",
-      "password": "$2a$10$PoDdT28aKKO/zBjiBvHOm.f/gBpdr9QzhcgXxRdexGo8sT43FF0jq",
-      "name": "Lina",
-      "gender": "Femmina",
-      "birthday": "1970-05-10",
-      "id": 14
-    },
-    {
-      "email": "luca@l.it",
-      "password": "$2a$10$yG98gj3zyinBRFj24YaYrOfmBA3iXhb2KD6enGKAtdF8PxyRavPKW",
-      "name": "Luca",
-      "gender": "Maschio",
-      "birthday": "2000-02-01",
-      "id": 15
-    },
-    {
-      "email": "b@b.it",
-      "password": "$2a$10$//wA40Z5Y9GLcm80ikzfN.oGcd8g6a8Lg3swQG24R2g.HsYjCHtFK",
-      "name": "Babbo",
-      "gender": "Maschio",
-      "birthday": "2000-10-20",
-      "id": 16
-    },
-    {
-      "email": "denti@d.it",
-      "password": "$2a$10$69ICCpFQTFKSOxP0tBccxeJ2rnR39rWosY08vMWd8v/vXKi.PxkD6",
-      "name": "denti",
-      "gender": "bho",
-      "birthday": "2020-02-01",
-      "id": 17
-    },
-    {
-      "email": "b@a.it",
-      "password": "$2a$10$aa2yFbd3sKe6WmORtEaP4eO52kgcLv92190dMw/sArYmHjMsLphB2",
-      "name": "bb",
-      "gender": "bb",
-      "birthday": "0200-10-24",
-      "id": 18
-    },
-    {
       "email": "lulu.l@gmail.com",
       "password": "$2a$10$nTVTJrcd5AYorPbFk9OFGeYZzXeQldPY2.C8JHiBFWxmVVQMGb01S",
       "name": "Lulu",
@@ -141,12 +18,36 @@
       "id": 19
     },
     {
-      "email": "d@d.it",
-      "password": "$2a$10$fHHBZPWktKxiPBVczc1PJem.0BJy3ussWkOfQcDZXAjhYLM1Sz.D.",
-      "name": "Davide",
+      "email": "l@l.it",
+      "password": "$2a$10$wWXX10KzdFfiuqo5yaI9geY23J/QmiV5Mk6fKg.8fdI3FAQ1lou1q",
+      "name": "Luca",
+      "gender": "Maschio",
+      "birthday": "1994-02-02",
+      "id": 20
+    },
+    {
+      "email": "lo@lo.it",
+      "password": "$2a$10$QDWkX5kY5sZKptiS/6yQu.HCufSrrxEx828c9F0HqZuph108hNy5K",
+      "name": "Lorenzo",
       "gender": "Maschio",
       "birthday": "2000-10-24",
-      "id": 20
+      "id": 21
+    },
+    {
+      "email": "m@m.it",
+      "password": "$2a$10$SyncAit9PbR01ORwh5laUeWmGKXLvM7Owe9fdK3laeGAYq3G0zJR6",
+      "name": "Luchetto",
+      "gender": "Maschio",
+      "birthday": "1999-10-08",
+      "id": 22
+    },
+    {
+      "email": "j@j.it",
+      "password": "$2a$10$/iZB8uMSTwsZV9CuRF8Dr.my69JsybssMtmfy.nhSHBD/EN.oD7hq",
+      "name": "Jacopo",
+      "gender": "Maschio",
+      "birthday": "2000-03-25",
+      "id": 23
     }
   ],
   "teams": [
@@ -327,28 +228,36 @@
       "passwordLega": "test",
       "user_id": 1,
       "nomeAdmin": "Davide",
-      "partecipanti": 1,
-      "gol": "0.5",
-      "autogol": "-1.5",
-      "assist": "0.5",
-      "ammonizione": "-0.5",
-      "espulsione": "-1",
-      "rigoreSegnato": "0",
-      "rigoreSbagliato": "-0.5",
-      "rigoreParato": "0.5",
-      "golSubito": "0",
-      "golVittoria": "0",
-      "golPareggio": "2.5",
-      "fascia_1": "2",
-      "fascia_2": "0",
-      "fascia_3": "1.5",
-      "fascia_4": "1",
-      "fascia_5": "0",
-      "fascia_6": "2",
-      "fascia_7": "1.5",
-      "fascia_8": "1.5",
-      "fascia_9": "1",
-      "fascia_10": "0.5",
+      "partecipanti": [
+        1,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "gol": "",
+      "autogol": "",
+      "assist": "",
+      "ammonizione": "",
+      "espulsione": "",
+      "rigoreSegnato": "",
+      "rigoreSbagliato": "",
+      "rigoreParato": "",
+      "golSubito": "",
+      "golVittoria": "",
+      "golPareggio": "",
+      "cleanSheet": "",
+      "fascia_1": "",
+      "fascia_2": "",
+      "fascia_3": "",
+      "fascia_4": "",
+      "fascia_5": "",
+      "fascia_6": "",
+      "fascia_7": "",
+      "fascia_8": "",
+      "fascia_9": "",
+      "fascia_10": "",
       "id": 1
     }
   ],
@@ -359,7 +268,7 @@
       "user_id": 1,
       "user_admin": true,
       "idLega": 1,
-      "nomeLega": "Lega Prova",
+      "nomeLega": "Lega Ciamarra",
       "id": 1
     },
     {
@@ -368,10 +277,49 @@
       "controlloPsw": true,
       "user_admin": false,
       "user_id": 19,
-      "nomeLega": "Lega Prova",
+      "nomeLega": "Lega Ciamarra",
       "idLega": 1,
       "id": 2
+    },
+    {
+      "nome_team": "AC Cappatoio",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 20,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 3
+    },
+    {
+      "nome_team": "Lorenzo 24",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 21,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 4
+    },
+    {
+      "nome_team": "Mascioli",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 22,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 5
+    },
+    {
+      "nome_team": "Jaco",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 23,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 6
     }
-  ],
-  "utentiLega": []
+  ]
 }

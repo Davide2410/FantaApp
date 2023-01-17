@@ -67,7 +67,7 @@ export class AuthService {
       let a
       this.lega = res
       this.lega.forEach(element => {
-        element.partecipanti.forEach(el=>{
+        element.partecipanti.forEach((el: number)=>{
          if( el == id){
             a = element
          }
@@ -108,6 +108,13 @@ export class AuthService {
     }
     this.authSubj.next(userData)
     this.autoLogOut(userData)
+  }
+
+  allUser(){
+    return this.http.get<Auth[]>(this.urlPath).pipe(catchError(err=>{
+      console.log(err);
+      throw err
+    }))
   }
 
 

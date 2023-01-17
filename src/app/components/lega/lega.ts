@@ -4,7 +4,7 @@ export interface Lega {
     passwordLega: string,
     user_id: number,
     nomeAdmin:string,
-    partecipanti:any[],
+    partecipanti:any[number],
     gol: [number],
     autogol: [number],
     assist: [number],
@@ -36,6 +36,7 @@ export interface LegaInfo{
 }
 
 export interface LegaTeam {
+    id?:number,
     user_id: number,
     nome_team: string,
     budget: [number],
@@ -45,6 +46,7 @@ export interface LegaTeam {
 }
 
 export interface Partecipanti{
+    id?:number,
     user_id: number,
     nome_team: string,
     budget: [number],

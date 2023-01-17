@@ -1,0 +1,47 @@
+<nav id="navbar" class="navbar navbar-expand-lg p-3">
+    <div class="container-fluid justify-content-between text-white">
+        <div>
+            <i class="fas fa-arrow-left me-5" [routerLink]="['/rose']"></i>
+            <span>News</span>
+        </div>
+       <span>{{searchStat.league.season}}/23</span>
+    </div>
+</nav>
+<div class="bg-blue">
+    <div class="container-fluid" id="container">
+        <div class="row justify-content-center align-items-center pt-5">
+            <div class="col-12 pt-4 text-center">
+                <div class="d-flex justify-content-evenly align-items-center">
+                    <img src="{{searchStat.league.logo}}" class="serieA" alt="">
+                    <img src="{{searchPlayer.player.photo}}" class="imgPlayer border border-3" [ngClass]="{
+                        'border-danger':searchStat.games.position == 'Attacker',
+                        'border-primary':searchStat.games.position == 'Midfielder',
+                        'border-success':searchStat.games.position == 'Defender',
+                        'border-warning':searchStat.games.position == 'Goalkeeper'}" alt="">
+                    <img src="{{searchStat.team.logo}}" class="team" alt="">
+                </div>
+                <h5 class="text-white mt-2">{{searchPlayer.player.name}}</h5>
+                <div class="d-flex justify-content-center align-items-baseline text-center text-white">
+                    <p class="rounded-3 p-1 mx-2" [ngClass]="{
+                        'bg-danger':searchStat.games.position == 'Attacker',
+                        'bg-primary':searchStat.games.position == 'Midfielder',
+                        'bg-success':searchStat.games.position == 'Defender',
+                        'bg-warning':searchStat.games.position == 'Goalkeeper'}">{{searchStat.games.position}}</p> |<span class="mx-2"><i class="fas fa-star"></i> {{searchStat.games.rating}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="container position-relative">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-8 text-center container-stat position-absolute bg-white pt-3 shadow rounded-5">
+                <h6 class="text-muted opacity-60">STATISTICHE STAGIONE {{searchStat.league.season}}/23</h6>
+                <div id="statistics" class="row justify-content-center align-items-center text-blue">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

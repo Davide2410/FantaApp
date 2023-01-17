@@ -1,0 +1,82 @@
+*{
+    font-size: 14px;
+}
+
+// NAVBAR
+.text-blue{
+    color: #091768;
+}
+
+.bg-blue {
+    background: linear-gradient(#091768, #066779, #00E895);
+    height: 300px;
+
+    .serieA{
+        height: auto;
+        width: 25px;
+    }
+
+    .imgPlayer{
+        height: auto;
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    .team{
+        height: auto;
+        width: 40px;
+    }
+
+    .d-flex{
+        font-size: 11px;
+        .fa-star{
+            color: orange;
+        }
+    }
+}
+
+.shadow{
+    h6{
+        font-size: 14px;
+        font-weight: 500;
+        border-bottom: 1px solid lightgray;
+    }
+}
+
+    .info{
+        font-size: 11px;
+    }
+    .number{
+        color: #091768;
+        font-weight: 700;
+    }
+
+
+.navbar {
+    box-shadow: none;
+    background: linear-gradient(0.25turn, #091768, #066779, #00E895);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    i {
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+.container-stat{
+    top: -40px;
+}
+@media screen and (max-width:768px) {
+    .navbar {
+        box-shadow: none;
+        width: 100%;
+        background: none;
+
+        i {
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+}
