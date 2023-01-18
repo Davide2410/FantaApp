@@ -42,6 +42,9 @@ import { ModificaLegaComponent } from './components/lega/modifica-lega/modifica-
 import { PartecipantiComponent } from './components/lega/partecipanti/partecipanti.component';
 import { RosaComponent } from './components/rosa/rosa.component';
 import { DettaglioGiocatoreComponent } from './components/rosa/dettaglio-giocatore/dettaglio-giocatore.component';
+import { MyTeamComponent } from './components/lega/enter-lega/my-team/my-team.component';
+import { ListoneComponent } from './components/lega/enter-lega/listone/listone.component';
+import { PlayerComponent } from './components/rosa/player/player.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,7 +73,10 @@ import { DettaglioGiocatoreComponent } from './components/rosa/dettaglio-giocato
     ModificaLegaComponent,
     PartecipantiComponent,
     RosaComponent,
-    DettaglioGiocatoreComponent
+    DettaglioGiocatoreComponent,
+    MyTeamComponent,
+    ListoneComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,

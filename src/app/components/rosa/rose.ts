@@ -456,3 +456,8 @@ export interface SearchStatistics {
         saved: null
     }
 }
+
+export interface AggiungiPlayer{
+    playerId:number,
+    userId:number
+}

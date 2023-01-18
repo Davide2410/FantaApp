@@ -321,5 +321,152 @@
       "idLega": 1,
       "id": 6
     }
+  ],
+  "squad": [
+    {
+      "playerId": 2674,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "playerId": 556,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "playerId": 770,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "playerId": 30424,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "playerId": 892,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "playerId": 786,
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "playerId": 300,
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "playerId": 782,
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "playerId": 875,
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "playerId": 19194,
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "playerId": 2897,
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "playerId": 774,
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "playerId": 322,
+      "userId": 1,
+      "id": 13
+    },
+    {
+      "playerId": 329,
+      "userId": 1,
+      "id": 14
+    },
+    {
+      "playerId": 325,
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "playerId": 662,
+      "userId": 1,
+      "id": 16
+    },
+    {
+      "playerId": 30543,
+      "userId": 1,
+      "id": 21
+    },
+    {
+      "playerId": 47439,
+      "userId": 1,
+      "id": 25
+    },
+    {
+      "playerId": 51572,
+      "userId": 19,
+      "id": 26
+    },
+    {
+      "playerId": 30425,
+      "userId": 19,
+      "id": 27
+    },
+    {
+      "playerId": 862,
+      "userId": 19,
+      "id": 28
+    },
+    {
+      "playerId": 778,
+      "userId": 19,
+      "id": 29
+    },
+    {
+      "playerId": 902,
+      "userId": 19,
+      "id": 30
+    },
+    {
+      "playerId": 2897,
+      "userId": 19,
+      "id": 31
+    },
+    {
+      "playerId": 322,
+      "userId": 19,
+      "id": 32
+    },
+    {
+      "playerId": 1314,
+      "userId": 19,
+      "id": 33
+    },
+    {
+      "playerId": 47254,
+      "userId": 19,
+      "id": 34
+    },
+    {
+      "playerId": 2674,
+      "userId": 19,
+      "id": 35
+    },
+    {
+      "playerId": 277192,
+      "userId": 19,
+      "id": 37
+    }
   ]
 }

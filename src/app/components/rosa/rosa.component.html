@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-blue pt-3">
     <div class="container-fluid justify-content-between align-items-baseline text-white">
         <div class="d-flex align-items-baseline">
-            <i class="fas fa-arrow-left icon-nav" routerLink="/lega"></i>
+            <i class="fas fa-arrow-left icon-nav" routerLink="/myTeam"></i>
             <p class="ms-3">Personalizza squadra</p>
         </div>
         <i class="fas fa-sync text-white mx-3" (click)="reload()"></i>
@@ -61,501 +61,81 @@
 <div class="container-fluid mt-3" id="all">
     <div class="row justify-content-center align-items-center text-center">
 
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriRoma" >
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{roma.logo}}" width="30px">
-                        <span>{{roma.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+        <div class="col-8 mb-4" *ngFor="let p of giocatoriRoma">
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriNapoli">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{napoli.logo}}" width="30px">
-                        <span>{{napoli.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
-
-
         <div class="col-8 mb-4" *ngFor="let p of giocatoriMilan">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{milan.logo}}" width="30px">
-                        <span>{{milan.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriJuve">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{juve.logo}}" width="30px">
-                        <span>{{juve.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriInter">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{inter.logo}}" width="30px">
-                        <span>{{inter.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriLazio">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{lazio.logo}}" width="30px">
-                        <span>{{lazio.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriAtalanta">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{atalanta.logo}}" width="30px">
-                        <span>{{atalanta.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriUdinese">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{udinese.logo}}" width="30px">
-                        <span>{{udinese.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriTorino">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{torino.logo}}" width="30px">
-                        <span>{{torino.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriFiorentina">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{fiorentina.logo}}" width="30px">
-                        <span>{{fiorentina.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriBologna">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{bologna.logo}}" width="30px">
-                        <span>{{bologna.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriSalernitana">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{salernitana.logo}}" width="30px">
-                        <span>{{salernitana.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriEmpoli">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{empoli.logo}}" width="30px">
-                        <span>{{empoli.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriMonza">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{monza.logo}}" width="30px">
-                        <span>{{monza.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriSassuolo">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{sassuolo.logo}}" width="30px">
-                        <span>{{sassuolo.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriSpezia">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{spezia.logo}}" width="30px">
-                        <span>{{spezia.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriCremonese">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{cremonese.logo}}" width="30px">
-                        <span>{{cremonese.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriSampdoria">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{sampdoria.logo}}" width="30px">
-                        <span>{{sampdoria.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriVerona">
-            <div class="row justify-content-evenly align-items-center border-bottom pb-3" [routerLink]="['/details/' + p.id]">
-                <div class="col-8 d-flex">
-                    <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
-                        'border-danger': p.position == 'Attacker',
-                        'border-primary': p.position == 'Midfielder',
-                        'border-success': p.position == 'Defender',
-                        'border-warning': p.position == 'Goalkeeper'}">
-                    <div class="container-info">
-                        <h6>{{p.name}}</h6>
-                        <img src="{{verona.logo}}" width="30px">
-                        <span>{{verona.name}}</span>
-                    </div>
-                </div>
-                <div class="col-4 position">
-                    <span [ngClass]="{
-                        'bg-danger': p.position == 'Attacker',
-                        'bg-primary': p.position == 'Midfielder',
-                        'bg-success': p.position == 'Defender',
-                        'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
-                        {{p.position}}
-                    </span>
-                </div>
-            </div>
+            <app-player [p]="p"></app-player>
         </div>
 
     </div>

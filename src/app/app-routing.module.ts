@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { HomeComponent } from './components/home/home.component';
 import { EnterLegaComponent } from './components/lega/enter-lega/enter-lega.component';
+import { ListoneComponent } from './components/lega/enter-lega/listone/listone.component';
 import { ModificaComponent } from './components/lega/enter-lega/modifica/modifica.component';
+import { MyTeamComponent } from './components/lega/enter-lega/my-team/my-team.component';
 import { ImpostazioniComponent } from './components/lega/impostazioni/impostazioni.component';
 import { ModificaLegaComponent } from './components/lega/modifica-lega/modifica-lega.component';
 import { PartecipantiComponent } from './components/lega/partecipanti/partecipanti.component';
@@ -71,8 +73,16 @@ const routes: Routes = [
     component: RosaComponent
   },
   {
+    path: 'listone',
+    component: ListoneComponent
+  },
+  {
     path: 'details/:id',
     component: DettaglioGiocatoreComponent
+  },
+  {
+    path: 'myTeam',
+    component: MyTeamComponent
   },
   {
     path: "",

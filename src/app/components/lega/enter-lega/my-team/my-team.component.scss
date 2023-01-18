@@ -1,0 +1,42 @@
+.lega {
+    height: 150px;
+}
+
+.bg-blue {
+    background: linear-gradient(#091768, #066779, #00E895);
+}
+
+.text-blue {
+    color: #091768;
+}
+
+.bg-grey {
+    background-color: rgb(211, 211, 211, 0.1);
+}
+
+.teams {
+    background-color: rgb(211, 211, 211, 0.1);
+    img {
+        height: 25px;
+        width: 20px;
+        cursor: pointer;
+    }
+}
+
+.player_img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+
+.container-info {
+    margin-left: 10px;
+    text-align: left;
+}
+
+.position {
+    span {
+        font-size: 13px;
+    }
+}

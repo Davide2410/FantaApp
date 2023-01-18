@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError } from 'rxjs';
-import { Rose, Search, SearchData, SearchPlayer } from './rose';
+import { AggiungiPlayer, Rose, Search, SearchData, SearchPlayer } from './rose';
 
 @Injectable({
   providedIn: 'root'
@@ -41,8 +41,58 @@ export class RoseService {
 
   pathId = `https://api-football-v1.p.rapidapi.com/v3/players?id=`
 
+  pathSquad = 'http://localhost:4201/squad'
+
 
   constructor(private http: HttpClient) { }
+
+  aggiungiGiocatore(id:number){
+    let user:any = localStorage.getItem('user')
+    let utente = JSON.parse(user)
+    let uId = utente.user.id
+
+    let newAdd: AggiungiPlayer = {
+      playerId:id,
+      userId: uId
+    }
+
+    return this.http.post<AggiungiPlayer>(this.pathSquad, newAdd).pipe(catchError(err=>{
+      console.log(err);
+      throw err
+    }))
+  }
+
+
+  getSquad(){
+    let user:any = localStorage.getItem('user')
+    let utente = JSON.parse(user)
+    let uId = utente.user.id
+
+    return this.http.get<AggiungiPlayer[]>(`http://localhost:4201/squad?userId=${uId}`).pipe(catchError(err=>{
+      console.log(err);
+      throw err
+    }))
+  }
+
+
+  deleteGiocatore(id:number){
+    return this.http.delete(`http://localhost:4201/squad/${id}`)
+  }
+
+
+  getConutFav(id:number){
+    return this.http.get<AggiungiPlayer[]>(`http://localhost:4201/squad?playerId=${id}`).pipe(catchError(err=>{
+      console.log(err);
+      throw err
+    }))
+  }
+
+  fetchAllSquad(){
+    return this.http.get<AggiungiPlayer[]>(this.pathSquad).pipe(catchError(err=>{
+      console.log(err);
+      throw err
+    }))
+  }
 
 
   fetchById(id:number){
@@ -57,7 +107,6 @@ export class RoseService {
     return this.http.get<SearchData>(this.patchSearch + search, this.options )
   }
 
-  
 
   playerNapoli() {
     return this.http.get<Rose>(this.path + `${this.napoli}`, this.options).pipe(catchError(err => {

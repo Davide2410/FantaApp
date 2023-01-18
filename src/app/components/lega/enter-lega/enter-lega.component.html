@@ -31,6 +31,9 @@
                         {{budget}}M
                     </p>
                 </div>
+                <div class="col-12 text-end myRosa">
+                    <a [routerLink]="['/myTeam']" class="text-muted">LA MIA ROSA</a>
+                </div>
             </div>
         </div>
     </div>
@@ -40,51 +43,26 @@
         <div class="row justify-content-center align-content-center info text-blue">
             
             <div class="col-4">
-                <div class="formazioni border p-3 rounded-6 shadow bg-white">
-                    <i class="fas fa-plus-circle"></i>
-                    <p class="text-blue fw-bolder">Formazioni</p>
+                <div class="d-flex flex-column  p-2 rounded-6 shadow bg-white" [routerLink]="['/partecipanti']">
+                    <i class="fas fa-users"></i>
+                <span>Partecipanti</span>
                 </div>
             </div>
+            <div class="col-4">
+                <div class="d-flex flex-column p-2 rounded-6 shadow bg-white">
+                    <i class="fas fa-shield-alt"></i>
+                <span>Rose</span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="d-flex flex-column p-2 rounded-6 shadow bg-white"  [routerLink]="['/listone']">
+                 <i class="fas fa-futbol"></i>
+                 <span>Listone</span>
+                </div>
+             </div>
             
         </div>
     </div>
-    <div class="row justify-content-center align-items-center text-center container-choose text-blue">
-        <div class="col-4">
-            <div class="d-flex flex-column" [routerLink]="['/partecipanti']">
-                <i class="fas fa-users"></i>
-            <span>Partecipanti</span>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class="d-flex flex-column">
-                <i class="fas fa-shield-alt"></i>
-            <span>Rose</span>
-            </div>
-        </div>
-        <div class="col-4">
-           <div class="d-flex flex-column">
-            <i class="fas fa-user-friends"></i>
-            <span>Svincolati</span>
-           </div>
-        </div>
-        <div class="col-4">
-            <div class="d-flex flex-column">
-                <i class="fas fa-user"></i>
-            <span>Chi ce l'ha?</span>
-            </div>
-        </div>
-        <div class="col-4">
-            <div class=" d-flex flex-column">
-                <i class="fas fa-edit"></i>
-            <span>Gestione Ruoli</span>
-            </div>
-        </div>
-        <div class="col-4">
-           <div class="d-flex flex-column"  [routerLink]="['/rose']">
-            <i class="fas fa-futbol"></i>
-            <span>Listone</span>
-           </div>
-        </div>
-    </div>
+   
 </div>
 </div>
