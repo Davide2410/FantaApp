@@ -23,10 +23,13 @@ export class MyTeamComponent implements OnInit {
   player!:AggiungiPlayer
   vuoto: any[] = []
 
+  newBudget:number|undefined
+
 
   ngOnInit(): void {
     this.team()
     this.printSquad()
+    this.cicla()
   }
 
   team() {
@@ -55,8 +58,10 @@ export class MyTeamComponent implements OnInit {
       this.squadPlayer = res.response[0].players
       this.squadPlayer.forEach(p =>{
         this.roseSrv.fetchAllSquad().subscribe(res=>{
-          res.forEach(player=>{
+          res.forEach(player=>{ 
             if(player.userId == utente.user.id){
+              // console.log(player.paid);
+              
               if(player.playerId == p.id){
                 let b = this.vuoto.push(p)
                }
@@ -80,48 +85,46 @@ export class MyTeamComponent implements OnInit {
         })
       })
     })
+
+
+    this.roseSrv.playerMilan().subscribe(res=>{
+      this.squadPlayer = res.response[0].players
+      this.squadPlayer.forEach(p =>{
+        this.roseSrv.fetchAllSquad().subscribe(res=>{
+          res.forEach(player=>{
+            if(player.userId == utente.user.id){
+              if(player.playerId == p.id){
+                let b = this.vuoto.push(p)
+               }
+            }
+          })
+        })
+      })
+    })
   }
 
-  // b(){
-  //   let user:any = localStorage.getItem('user')
-  //   let utente = JSON.parse(user)
-  //   this.id = utente.user.id
+  cicla(){
+    let user:any = localStorage.getItem('user')
+    let utente = JSON.parse(user)
+    this.id = utente.user.id
 
-  //   this.roseSrv.fetchAllSquad().subscribe(res=>{
-  //     res.forEach(el=>{
-  //       console.log(el);
-        
-  //     })
-  //   })
+    let team: any = localStorage.getItem('team')
+    let t = JSON.parse(team)
 
-  // }
+    this.budget = t.budget
 
-  // all() {
-  //   let user: any = localStorage.getItem('user')
-  //   let utente = JSON.parse(user)
-  //   this.id = utente.user.id
+    this.roseSrv.fetchAllSquad().subscribe(res=>{
+      console.log(res);
+      res.forEach(el=>{
+        if(el.userId == utente.user.id){
+          let b = this.vuoto.push(el.paid)
+          this.budget = this.vuoto.reduce(this.getSum , this.budget)
+        }
+      })
+    })
+  }
 
-  
-  //   this.roseSrv.playerRoma().subscribe(res => {
-
-  //     this.squadPlayer = res.response[0].players
-  //     console.log(this.squadPlayer);
-  //     this.squadPlayer.forEach(el => {
-  //      console.log(el)
-  //     })
-
-  //     this.roseSrv.fetchAllSquad().subscribe(res=>{
-  //       res.forEach(player=>{
-  //         console.log(player);
-  //       })
-  //     })
-
-  //   })
-  // }
-
-
-
-
-
-
+  getSum(total:number,num:number){
+    return total - num
+  }
 }

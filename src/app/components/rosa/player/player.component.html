@@ -22,13 +22,19 @@
             'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
             {{p.position}}
         </span>
-        <i class="fas fa-plus" (click)=" isFav ? rimuoviLike() : add(p.id)" [ngClass]="{
-            'text-danger': p.position == 'Attacker',
-            'text-primary': p.position == 'Midfielder',
-            'text-success': p.position == 'Defender',
-            'text-warning': p.position == 'Goalkeeper'}"></i>
-            <!-- <form #budget="ngForm" (ngSubmit)="calcola(budget)">
-                <input type="number" name="budget" #budget="ngModel" ngModel required>
-            </form> -->
+            <form #budget="ngForm">
+                <input type="number" class="rounded-5" name="budget" #budget="ngModel" ngModel required [ngClass]="{
+                    'border-danger': p.position == 'Attacker',
+                    'border-primary': p.position == 'Midfielder',
+                    'border-success': p.position == 'Defender',
+                    'border-warning': p.position == 'Goalkeeper'}">
+                    <button type="submit" class="bg-transparent" (click)=" isFav ? rimuoviLike() : calcola(budget, p.id)">
+                        <i class="fas fa-plus mx-auto" [ngClass]="{
+                            'text-danger': p.position == 'Attacker',
+                            'text-primary': p.position == 'Midfielder',
+                            'text-success': p.position == 'Defender',
+                            'text-warning': p.position == 'Goalkeeper'}"></i>
+                    </button>
+            </form>
     </div>
 </div>

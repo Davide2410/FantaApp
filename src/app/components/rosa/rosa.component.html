@@ -11,9 +11,6 @@
 
 <div class="container-fluid">
     <div class="row justify-content-center align-items-center">
-        <!-- <div class="teams p-2 border-bottom d-flex justify-content-center align-items-center d-flex flex-wrap">
-           
-        </div> -->
         <div class="col-8 mt-4 mb-5">
             <form class="input-group" #s="ngForm" (ngSubmit)="cerca(s)">
                 <div class="position-relative">
@@ -41,6 +38,11 @@
                         <h6>{{s.player.name}}</h6>
                         <img src="{{searchStat.team.logo}}" width="30px">
                         <span>{{searchStat.team.name}}</span>
+                        <i class="fas fa-info-circle ms-2" [routerLink]="['/details/' + s.player.id]" [ngClass]="{
+                            'text-danger': searchStat.games.position == 'Attacker',
+                            'text-primary': searchStat.games.position == 'Midfielder',
+                            'text-success': searchStat.games.position == 'Defender',
+                            'text-warning': searchStat.games.position == 'Goalkeeper'}"></i>
                     </div>
                 </div>
                 <div class="col-4 position">
@@ -52,6 +54,20 @@
                         {{searchStat.games.position}}
                     </span>
                     <span>{{searchStat.games.rating}}</span>
+                    <form #budget="ngForm">
+                        <input type="number" class="rounded-5" name="budget" #budget="ngModel" ngModel required [ngClass]="{
+                            'border-danger':searchStat.games.position == 'Attacker',
+                            'border-primary':searchStat.games.position == 'Midfielder',
+                            'border-success':searchStat.games.position == 'Defender',
+                            'border-warning':searchStat.games.position == 'Goalkeeper'}">
+                            <button type="submit" class="bg-transparent" (click)=" isFav ? rimuoviLike() : calcola(budget, s.player.id)">
+                                <i class="fas fa-plus mx-auto" [ngClass]="{
+                                    'text-danger':searchStat.games.position == 'Attacker',
+                                    'text-primary':searchStat.games.position == 'Midfielder',
+                                    'text-success':searchStat.games.position == 'Defender',
+                                    'text-warning':searchStat.games.position == 'Goalkeeper'}"></i>
+                            </button>
+                    </form>
                 </div>
             </div>
         </div>

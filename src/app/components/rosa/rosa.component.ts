@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { count } from 'rxjs/internal/operators/count';
 import { Auth } from 'src/app/auth/auth';
 import { Teams } from 'src/app/interface/teams';
-import { Club, RoseTeam, Search, SearchPlayer, SearchStatistics } from './rose';
+import { AggiungiPlayer, Club, RoseTeam, Search, SearchPlayer, SearchStatistics } from './rose';
 import { RoseService } from './rose.service';
 
 @Component({
@@ -48,13 +48,18 @@ export class RosaComponent implements OnInit {
 
   @ViewChild('user') user!: Auth
   @Input() p!:RoseTeam
+
   id!:number
   count: number = 0
+  paga:any[]=[]
+
 
 
   constructor(private roseSrv: RoseService) { }
 
   ngOnInit(): void {
+    this.addPlayer()
+    this.getPlayerAdd()
     this.fetchRoma()
     this.fetchNapoli()
     // this.fetchMilan()
@@ -77,7 +82,61 @@ export class RosaComponent implements OnInit {
   reload() {
     location.reload()
   }
+  calcola(budget: NgForm, id: number) {
+    let user:any = localStorage.getItem('user')
+      let utente = JSON.parse(user)
+      let uId = utente.user.id
 
+      let data: AggiungiPlayer = {
+        playerId: id,
+        userId: uId,
+        paid: budget.value.budget
+      }
+
+      this.roseSrv.newPlayer(data).subscribe(res=>{
+        console.log(res);
+        budget.reset()
+        this.isFav = true
+        this.addPlayer()
+        this.getPlayerAdd()
+      })
+  }
+
+
+  // CONTA I LIKE
+  getPlayerAdd() {
+    this.roseSrv.getConutFav(this.id).subscribe(res => {
+      let lunghezza = res
+      this.count = lunghezza.length
+    })
+  }
+
+  addPlayer() {
+    this.roseSrv.getSquad().subscribe(res => {
+      let favorities = res
+      for(let i = 0; i < this.searchPlayer.length; i++){
+        let f = favorities.find((a: any) => a.playerId == this.searchPlayer[i].player.id)
+        if (f) {
+          this.isFav = true
+          this.count++
+          this.preferiti = f
+          console.log(this.preferiti);
+          return
+        } else {
+          this.isFav = false
+        }
+      } 
+    })
+  }
+
+
+  rimuoviLike() {
+    this.roseSrv.deleteGiocatore(this.preferiti.id).subscribe(res => {
+      console.log(res);
+    })
+    this.isFav = false
+    this.count--
+  }
   
 
 
@@ -89,6 +148,7 @@ export class RosaComponent implements OnInit {
       let container = document.getElementById('all')
       this.searchPlayer = res.response
       console.log(this.searchPlayer);
+      
       this.searchStat = res.response[0].statistics[0]
       container!.innerHTML = ''
     })

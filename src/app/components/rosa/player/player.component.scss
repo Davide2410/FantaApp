@@ -32,4 +32,22 @@
     span {
         font-size: 13px;
     }
+
+    form{
+        input{
+            width: 30px;
+            border: 1px solid lightgray;
+            height: auto;
+            margin: 10px 2px;
+        }
+        button{
+            border: none;
+            width: 25px;
+        }
+    }
+}
+
+input:focus,
+button:focus{
+    outline: 1px solid transparent;
 }

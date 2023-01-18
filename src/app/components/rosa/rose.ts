@@ -457,7 +457,8 @@ export interface SearchStatistics {
     }
 }
 
-export interface AggiungiPlayer{
-    playerId:number,
-    userId:number
+export interface AggiungiPlayer {
+    playerId: number,
+    userId: number,
+    paid: number
 }

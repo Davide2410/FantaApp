@@ -48,6 +48,14 @@
       "gender": "Maschio",
       "birthday": "2000-03-25",
       "id": 23
+    },
+    {
+      "email": "lorenzoalfonsi32@gmail.com",
+      "password": "$2a$10$4.gYvvafZ2R5SjRBf63K0u/lEjdTOvFIayYMGQkx6/tCY/7pGz8iy",
+      "name": "lorenzo",
+      "gender": "Maschio",
+      "birthday": "2000-10-24",
+      "id": 24
     }
   ],
   "teams": [
@@ -234,7 +242,8 @@
         20,
         21,
         22,
-        23
+        23,
+        24
       ],
       "gol": "",
       "autogol": "",
@@ -320,153 +329,138 @@
       "nomeLega": "Lega Ciamarra",
       "idLega": 1,
       "id": 6
+    },
+    {
+      "nome_team": "kvaradona",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 24,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 7
     }
   ],
   "squad": [
     {
       "playerId": 2674,
-      "userId": 1,
+      "userId": 19,
+      "paid": 20,
       "id": 1
     },
     {
       "playerId": 556,
-      "userId": 1,
+      "userId": 19,
+      "paid": 1,
       "id": 2
-    },
-    {
-      "playerId": 770,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "playerId": 30424,
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "playerId": 892,
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "playerId": 786,
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "playerId": 300,
-      "userId": 1,
-      "id": 7
-    },
-    {
-      "playerId": 782,
-      "userId": 1,
-      "id": 8
-    },
-    {
-      "playerId": 875,
-      "userId": 1,
-      "id": 9
-    },
-    {
-      "playerId": 19194,
-      "userId": 1,
-      "id": 10
-    },
-    {
-      "playerId": 2897,
-      "userId": 1,
-      "id": 11
-    },
-    {
-      "playerId": 774,
-      "userId": 1,
-      "id": 12
-    },
-    {
-      "playerId": 322,
-      "userId": 1,
-      "id": 13
-    },
-    {
-      "playerId": 329,
-      "userId": 1,
-      "id": 14
-    },
-    {
-      "playerId": 325,
-      "userId": 1,
-      "id": 15
-    },
-    {
-      "playerId": 662,
-      "userId": 1,
-      "id": 16
-    },
-    {
-      "playerId": 30543,
-      "userId": 1,
-      "id": 21
-    },
-    {
-      "playerId": 47439,
-      "userId": 1,
-      "id": 25
-    },
-    {
-      "playerId": 51572,
-      "userId": 19,
-      "id": 26
-    },
-    {
-      "playerId": 30425,
-      "userId": 19,
-      "id": 27
-    },
-    {
-      "playerId": 862,
-      "userId": 19,
-      "id": 28
-    },
-    {
-      "playerId": 778,
-      "userId": 19,
-      "id": 29
-    },
-    {
-      "playerId": 902,
-      "userId": 19,
-      "id": 30
-    },
-    {
-      "playerId": 2897,
-      "userId": 19,
-      "id": 31
-    },
-    {
-      "playerId": 322,
-      "userId": 19,
-      "id": 32
-    },
-    {
-      "playerId": 1314,
-      "userId": 19,
-      "id": 33
-    },
-    {
-      "playerId": 47254,
-      "userId": 19,
-      "id": 34
-    },
-    {
-      "playerId": 2674,
-      "userId": 19,
-      "id": 35
     },
     {
       "playerId": 277192,
       "userId": 19,
-      "id": 37
+      "paid": 1,
+      "id": 3
+    },
+    {
+      "playerId": 770,
+      "userId": 19,
+      "paid": 10,
+      "id": 4
+    },
+    {
+      "playerId": 30424,
+      "userId": 19,
+      "paid": 5,
+      "id": 5
+    },
+    {
+      "playerId": 892,
+      "userId": 19,
+      "paid": 20,
+      "id": 6
+    },
+    {
+      "playerId": 22222,
+      "userId": 19,
+      "paid": 10,
+      "id": 7
+    },
+    {
+      "playerId": 862,
+      "userId": 19,
+      "paid": 15,
+      "id": 8
+    },
+    {
+      "playerId": 782,
+      "userId": 19,
+      "paid": 100,
+      "id": 9
+    },
+    {
+      "playerId": 778,
+      "userId": 19,
+      "paid": 10,
+      "id": 10
+    },
+    {
+      "playerId": 902,
+      "userId": 19,
+      "paid": 5,
+      "id": 11
+    },
+    {
+      "playerId": 786,
+      "userId": 19,
+      "paid": 100,
+      "id": 12
+    },
+    {
+      "playerId": 286475,
+      "userId": 19,
+      "paid": 1,
+      "id": 13
+    },
+    {
+      "playerId": 342035,
+      "userId": 19,
+      "paid": 1,
+      "id": 14
+    },
+    {
+      "playerId": 19194,
+      "userId": 19,
+      "paid": 120,
+      "id": 15
+    },
+    {
+      "playerId": 875,
+      "userId": 19,
+      "paid": 100,
+      "id": 16
+    },
+    {
+      "playerId": 203474,
+      "userId": 19,
+      "paid": 30,
+      "id": 17
+    },
+    {
+      "playerId": 2674,
+      "userId": 24,
+      "paid": 10,
+      "id": 18
+    },
+    {
+      "playerId": 770,
+      "userId": 24,
+      "paid": 100,
+      "id": 19
+    },
+    {
+      "playerId": 322,
+      "userId": 1,
+      "paid": 10,
+      "id": 20
     }
   ]
 }

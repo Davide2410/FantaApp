@@ -43,19 +43,34 @@ export class RoseService {
 
   pathSquad = 'http://localhost:4201/squad'
 
-
+  pagato!:number
   constructor(private http: HttpClient) { }
 
-  aggiungiGiocatore(id:number){
+  // aggiungiGiocatore(id:number){
+  //   let user:any = localStorage.getItem('user')
+  //   let utente = JSON.parse(user)
+  //   let uId = utente.user.id
+
+  //   // let team:any = localStorage.getItem('team')
+  //   // let t = JSON.parse(team)
+  //   // let budget = t.budget
+
+  //   let newAdd: AggiungiPlayer = {
+  //     playerId: id,
+  //     userId: uId,
+  //     paid: this.pagato
+  //   }
+
+  //   return this.http.post<AggiungiPlayer>(this.pathSquad, newAdd).pipe(catchError(err=>{
+  //     console.log(err);
+  //     throw err
+  //   }))
+  // }
+
+  newPlayer(newAdd:AggiungiPlayer){
     let user:any = localStorage.getItem('user')
     let utente = JSON.parse(user)
     let uId = utente.user.id
-
-    let newAdd: AggiungiPlayer = {
-      playerId:id,
-      userId: uId
-    }
-
     return this.http.post<AggiungiPlayer>(this.pathSquad, newAdd).pipe(catchError(err=>{
       console.log(err);
       throw err

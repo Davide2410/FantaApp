@@ -45,6 +45,7 @@ import { DettaglioGiocatoreComponent } from './components/rosa/dettaglio-giocato
 import { MyTeamComponent } from './components/lega/enter-lega/my-team/my-team.component';
 import { ListoneComponent } from './components/lega/enter-lega/listone/listone.component';
 import { PlayerComponent } from './components/rosa/player/player.component';
+import { SearchPlayerComponent } from './components/rosa/search-player/search-player.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,7 +77,8 @@ import { PlayerComponent } from './components/rosa/player/player.component';
     DettaglioGiocatoreComponent,
     MyTeamComponent,
     ListoneComponent,
-    PlayerComponent
+    PlayerComponent,
+    SearchPlayerComponent
   ],
   imports: [
     BrowserModule,

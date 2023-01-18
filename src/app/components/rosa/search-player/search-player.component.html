@@ -1,0 +1,40 @@
+<div class="col-8 mb-4" *ngFor="let s of searchPlayer">
+    <div class="row justify-content-evenly align-items-center border-bottom pb-3">
+        <div class="col-8 d-flex">
+            <img src="{{s.player.photo}}" class="player_img border border-2" [ngClass]="{
+                        'border-danger': searchStat.games.position == 'Attacker',
+                        'border-primary': searchStat.games.position == 'Midfielder',
+                        'border-success': searchStat.games.position == 'Defender',
+                        'border-warning': searchStat.games.position == 'Goalkeeper'}">
+            <div class="container-info">
+                <h6>{{s.player.name}}</h6>
+                <img src="{{searchStat.team.logo}}" width="30px">
+                <span>{{searchStat.team.name}}</span>
+            </div>
+        </div>
+        <div class="col-4 position">
+            <span [ngClass]="{
+                        'bg-danger': searchStat.games.position == 'Attacker',
+                        'bg-primary': searchStat.games.position == 'Midfielder',
+                        'bg-success': searchStat.games.position == 'Defender',
+                        'bg-warning': searchStat.games.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
+                {{searchStat.games.position}}
+            </span>
+            <span>{{searchStat.games.rating}}</span>
+            <form #budget="ngForm">
+                <input type="number" class="rounded-5" name="budget" #budget="ngModel" ngModel required [ngClass]="{
+                            'border-danger':searchStat.games.position == 'Attacker',
+                            'border-primary':searchStat.games.position == 'Midfielder',
+                            'border-success':searchStat.games.position == 'Defender',
+                            'border-warning':searchStat.games.position == 'Goalkeeper'}">
+                <!-- <button type="submit" class="bg-transparent" (click)=" isFav ? rimuoviLike() : calcola(budget, s.player.id)">
+                                <i class="fas fa-plus mx-auto" [ngClass]="{
+                                    'text-danger':searchStat.games.position == 'Attacker',
+                                    'text-primary':searchStat.games.position == 'Midfielder',
+                                    'text-success':searchStat.games.position == 'Defender',
+                                    'text-warning':searchStat.games.position == 'Goalkeeper'}"></i>
+                            </button> -->
+            </form>
+        </div>
+    </div>
+</div>
