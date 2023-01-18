@@ -48,6 +48,12 @@ export class PlayerComponent implements OnInit {
           this.getPlayerAdd()
         })
       } else {
+        let errore = document.getElementById('errore')
+        errore!.classList.remove('d-none')
+        errore!.addEventListener("click", function() {
+          errore!.remove();
+          
+        })
         return
       }
 

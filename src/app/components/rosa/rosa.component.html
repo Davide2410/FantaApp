@@ -74,8 +74,14 @@
     </div>
 </div>
 
-<div class="container-fluid mt-3" id="all">
+<div class="container-fluid" id="all">
     <div class="row justify-content-center align-items-center text-center">
+
+        <div class="col-12 mb-4 d-none" id="errore">
+           <div class="border border-danger border-2 rounded-5 bg-danger opacity-75">
+            <p class="text-white pt-3">Hai aggiunto il numero massimo di giocatori</p>
+           </div>
+        </div>
 
         <div class="col-8 mb-4" *ngFor="let p of giocatoriRoma">
             <app-player [p]="p"></app-player>
