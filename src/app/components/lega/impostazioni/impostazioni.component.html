@@ -1,13 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
     <div class="container-fluid text-white">
         <span><i class="fas fa-arrow-left me-5" routerLink="/"></i>Impostazioni Lega</span>
-        <i class="fas fa-save mx-3"></i>
     </div>
 </nav>
-<div class="container-fluid">
-    <div class="row justify-content-center align-items-center text-center text-blue mt-5 p-2">
-        <div class="col-12 form1">
-            <form class="bg-white shadow p-5" #form="ngForm" (ngSubmit)="registrati(form)">
+<div class="container-fluid bg-grey vh-100">
+    <div class="row justify-content-center align-items-center text-center text-blue p-2 vh-100">
+        <div class="col-lg-4 col-md-6 col-12 form1 ">
+            <form class="bg-white shadow p-5 rounded-8" #form="ngForm" (ngSubmit)="registrati(form)">
 
                 <div class="generale">
 
@@ -39,7 +38,7 @@
                 <div class="bonus d-none">
                     <h5>Bonus/Malus</h5>
 
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-evenly">
                         <div class="flex-column">
                             <label for="inlineFormSelectPref">Gol</label>
                             <select class="form-select mb-4" name="gol" #gol="ngModel" ngModel>
@@ -59,7 +58,7 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-evenly">
                         <div class="flex-column">
                             <label for="inlineFormSelectPref">Assist</label>
                             <select class="form-select mb-4" name="assist" #assist="ngModel" ngModel>
@@ -78,7 +77,7 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-evenly">
                         <div class="flex-column">
                             <label for="inlineFormSelectPref">Espulsione</label>
                             <select class="form-select mb-4" name="espulsione" #espulsione="ngModel" ngModel>
@@ -98,7 +97,7 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-evenly">
                         <div class="flex-column">
                             <label for="inlineFormSelectPref">R. Segnato</label>
                             <select class="form-select mb-4" name="rigoreSegnato" #rigoreSegnato="ngModel" ngModel>
@@ -120,7 +119,7 @@
                     </div>
 
 
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-evenly">
                         <div class="flex-column">
                             <label for="inlineFormSelectPref">Gol Subito</label>
                             <select class="form-select mb-4" name="golSubito" #golSubito="ngModel" ngModel>
@@ -141,7 +140,7 @@
                     </div>
 
 
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-evenly">
                         <div class="flex-column">
                             <label for="inlineFormSelectPref">Gol Pareggio</label>
                             <select class="form-select mb-4" name="golPareggio" #golPareggio="ngModel" ngModel>
@@ -161,8 +160,8 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between">
-                        <button type="button" class="btn btn-outline-secondary" (click)="back1()">Back</button>
+                    <div class="d-flex justify-content-evenly">
+                        <button type="button" class="btn btn-outline-primary" (click)="back1()">Back</button>
 
                         <button type="button" class="btn btn-primary" (click)="next2()">Next</button>
                     </div>
@@ -174,7 +173,7 @@
 
                     <h5>Fasce Gol</h5>
 
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-evenly">
                         <div class="flex-column">
                             <label for="inlineFormSelectPref">Gol 1</label>
                             <select class="form-select mb-4" name="fascia_1" #fascia_1="ngModel" ngModel>
@@ -194,7 +193,7 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-evenly">
                         <div class="flex-column">
                             <label for="inlineFormSelectPref">Gol 3</label>
                             <select class="form-select mb-4" name="fascia_3" #fascia_3="ngModel" ngModel>
@@ -215,7 +214,7 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-evenly">
                         <div class="flex-column">
                             <label for="inlineFormSelectPref">Gol 5</label>
                             <select class="form-select mb-4" name="fascia_5" #fascia_5="ngModel" ngModel>
@@ -235,7 +234,7 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-evenly">
                         <div class="flex-column">
                             <label for="inlineFormSelectPref">Gol 7</label>
                             <select class="form-select mb-4" name="fascia_7" #fascia_7="ngModel" ngModel>
@@ -256,7 +255,7 @@
                     </div>
 
 
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-evenly">
                         <div class="flex-column">
                             <label for="inlineFormSelectPref">Gol 9</label>
                             <select class="form-select mb-4" name="fascia_9" #fascia_9="ngModel" ngModel>
@@ -275,8 +274,8 @@
                         </div>
                     </div>
 
-                    <div class="d-flex justify-content-between">
-                        <button type="button" class="btn btn-outline-secondary" (click)="back2()">Back</button>
+                    <div class="d-flex justify-content-evenly">
+                        <button type="button" class="btn btn-outline-primary" (click)="back2()">Back</button>
 
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-save mx-3"></i>
@@ -285,8 +284,8 @@
                 </div>
             </form>
         </div>
-        <div class="col-12 form2 d-none">
-            <form class="bg-white shadow p-5" #team="ngForm" (ngSubmit)="register(team)">
+        <div class="col-lg-4 col-md-4 col-sm-12 form2 d-none">
+            <form class="bg-white shadow p-5 rounded-8" #team="ngForm" (ngSubmit)="register(team)">
 
                 <!-- Name input -->
                 <mdb-form-control class="mb-4 position-relative">
@@ -305,7 +304,7 @@
                         <option value="500">500</option>
                         <option value="1000">1000</option>
                     </select>
-                    <i class="fas fa-hand-holding-usd"></i>
+                    <i class="fas fa-hand-holding-usd ms-3"></i>
 
                 </div>
                 <button type="submit" class="btn btn-primary">Invia</button>

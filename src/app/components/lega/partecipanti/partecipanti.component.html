@@ -1,15 +1,19 @@
 <nav class="navbar navbar-expand-lg bg-blue pt-3 pb-2">
     <div class="container-fluid justify-content-start align-items-baseline text-white">
-        <i class="fas fa-arrow-left icon-nav ms-2" routerLink="/lega"></i>
-        <p class="ms-5">Personalizza squadra</p>
+        <i class="fas fa-arrow-left icon-nav ms-3" [routerLink]="['/lega/' + idLega]"></i>
+        <p class="ms-5">Partecipanti Lega</p>
     </div>
 </nav>
 <div class="container-fluid bg-grey">
-    <div class="row justify-content-center align-items-center">      
-        <div class="col-12 pt-3 mb-3 bg-white" *ngFor="let u of user">
-            <h6 class="ms-2 pb-2">{{u.email}}</h6>
-            <div class="bg-grey justify-content-start align-items-baseline">
-                    <p class="ms-2 pt-2"><i class="fas fa-user-alt"></i> {{u.name}}</p>
+    <div class="container-fluid pt-3 vh-100">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 bg-white mb-3 d-flex p-2" *ngFor="let u of user">
+                <div class="d-flex flex-column">
+                    <h6 class="ms-2">{{u.email}}</h6>
+                    <p class="ms-2">{{u.name}} {{u.surname}}</p>
+                </div>
+                <i class="fas fa-shield-alt ms-3 mt-2 text-blue" [routerLink]="['/dettaglioTeam/' + u.id + '/' + idLega]"></i>
             </div>
-        </div> 
+        </div>
+    </div>
 </div>

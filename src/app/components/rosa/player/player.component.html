@@ -28,12 +28,17 @@
                     'border-primary': p.position == 'Midfielder',
                     'border-success': p.position == 'Defender',
                     'border-warning': p.position == 'Goalkeeper'}">
-                    <button type="submit" class="bg-transparent" (click)=" isFav ? rimuoviLike() : calcola(budget, p.id)">
+                    <button type="submit" class="bg-transparent" (click)=" isFav ? rimuoviLike() : calcola(budget, p.id)" (click)="plus =! minus">
                         <i class="fas fa-plus mx-auto" [ngClass]="{
                             'text-danger': p.position == 'Attacker',
                             'text-primary': p.position == 'Midfielder',
                             'text-success': p.position == 'Defender',
-                            'text-warning': p.position == 'Goalkeeper'}"></i>
+                            'text-warning': p.position == 'Goalkeeper'}" *ngIf="plus"></i>
+                            <i class="fas fa-minus mx-auto" [ngClass]="{
+                                'text-danger': p.position == 'Attacker',
+                                'text-primary': p.position == 'Midfielder',
+                                'text-success': p.position == 'Defender',
+                                'text-warning': p.position == 'Goalkeeper'}" *ngIf="minus"></i>
                     </button>
             </form>
     </div>

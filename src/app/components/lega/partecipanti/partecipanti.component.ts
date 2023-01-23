@@ -1,8 +1,10 @@
 import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Auth, UserPartecipanti, UserPut } from 'src/app/auth/auth';
 import { AuthService } from 'src/app/auth/auth.service';
-import { Lega } from '../lega';
+import { Lega, LegaTeam, Partecipanti } from '../lega';
+import { LegaService } from '../lega.service';
 
 @Component({
   selector: 'app-partecipanti',
@@ -14,28 +16,45 @@ export class PartecipantiComponent implements OnInit {
 
   partecipanti!: UserPartecipanti[]
   user:any[]=[]
+  player:any[]=[]
+  idLega!:number
+
+
   name!: string
 
+  oggetto!:Partecipanti|LegaTeam
 
-  constructor(private authSrv: AuthService) { }
+  constructor(private authSrv: AuthService , private legaSrv:LegaService , private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.allPartecipanti()
+    this.route.paramMap.subscribe(params => {
+      let stringId: any = params.get("id");
+      this.idLega = parseFloat(stringId)
+      this.allPartecipanti()
+    })
   }
 
-  allPartecipanti() {
-    this.authSrv.allUser().subscribe(res => {
+
+  allPartecipanti(){
+    this.authSrv.allUser().subscribe(res=>{
       this.partecipanti = res
-      let lega: any = localStorage.getItem('lega')
-      let l = JSON.parse(lega)
-      l.partecipanti.forEach((p: number) => {
-        this.partecipanti.forEach((el: any) => {
-          if (el.id == p) {
-          let b = this.user.push(el)
+      console.log(res);
+      this.legaSrv.fetchLeghe().subscribe(res=>{
+        res.forEach(lega=>{
+          if(lega.id == this.idLega ){
+            console.log(lega.partecipanti);
+            lega.partecipanti.forEach((element:number) => {
+              this.partecipanti.forEach((el:any)=>{
+                if(el.id == element && lega.id == this.idLega){
+                  this.user.push(el)
+                }
+              })
+            });
           }
         })
       })
     })
   }
+
 }
 

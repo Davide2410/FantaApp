@@ -32,12 +32,16 @@
             <div class="col-6 text-start mt-4">
                 <i class="fas fa-trophy"></i><span>LEGHE</span>
             </div>
-            <div class="col-6 text-end mt-4">
+            <div class="col-4 text-end mt-4">
                 <a class="btn btn-outline-primary" (click)="openModal()">Nuova Lega</a>
             </div>
-            <div class="row">
-                <div *ngFor="let l of leghe" class="col-3 border p-2 m-2 rounded-5 bg-white">
-                    <span [routerLink]="['/lega']">{{l.nomeLega}}</span>
+            <div class="row lega-team d-flex flex-nowrap">
+                <div *ngFor="let a of arrayVuoto" class="col-4 p-2 m-2 bg-white text-blue">
+                    <div class="lega mx-auto rounded-5 text-center p-2 text-blue" [routerLink]="['/lega/' + a.id]" >
+                        <p class="mb-2">{{a.nomeLega}}</p>
+                        <hr class="w-50 mx-auto mt-0 mb-0">
+                        <h6 class="mt-2">{{name}}</h6>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,14 +61,25 @@
                 <app-home-news></app-home-news>
             </div>
             <div class="col-4 pe-4">
-                <H6 class="prova p-1">ULTIME NOTIZIE</H6>
+                <h6 class="prova p-1">ULTIME NOTIZIE</h6>
                 <app-ultime-notizie></app-ultime-notizie>
-                <app-ultime-secondary></app-ultime-secondary>
-                <H6 class="prova p-1">CONSIGLI FANTACALCIO</H6>
-                <app-consigli></app-consigli>
+                <app-ultime-secondary class="text-blue"></app-ultime-secondary>
+               
             </div>
-            <div class="col-3 bg-blue">
-                
+            <div class="col-3 px-4">
+                <h6 class="prova p-1">LEGHE</h6>
+                <p class="text-start text-blue">Gioca con i tuoi amici, sfidatevi e divertitevi ma ricordate sarà solo uno a vincere!</p>
+               <div class="wrapper d-flex">
+                <div *ngFor="let a of arrayVuoto" class="col-8 bg-white text-blue p-2 text-center mb-3 mx-1">
+                    <div class="lega rounded-5 text-center p-2 text-blue" [routerLink]="['/lega/' + a.id]" >
+                        <p class="mb-2">{{a.nomeLega}}</p>
+                        <hr class="w-50 mx-auto mt-0 mb-0">
+                        <h6 class="mt-2">{{name}}</h6>
+                    </div>
+                </div>
+               </div>
+                <h6 class="prova p-1 mt-4">CONSIGLI FANTACALCIO</h6>
+                <app-consigli class="text-blue"></app-consigli>
             </div>
         </div>
 
@@ -84,8 +99,8 @@
                 </div>
            </div>
         </div>
-        <div class="footer">
-            
+        <div class="footer text-center">
+            <!-- <p>Powered by<span>Davide Alfonsi</span></p> -->
         </div>
     </div>
     <router-outlet></router-outlet>

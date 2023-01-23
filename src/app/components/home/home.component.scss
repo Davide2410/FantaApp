@@ -46,11 +46,32 @@
     background-color: rgb(211, 211, 211,0.1);
     justify-content:center ;
     align-items: center;
-    flex-wrap: wrap;
+    overflow-x: auto;
     img{
        
         cursor: pointer;
     }
+}
+
+.teams::-webkit-scrollbar{
+    width: 0px;
+}
+.lega{
+    border: 1px solid lightgray;
+    width: max-content;
+    height: auto;
+}
+// LEGA
+.lega-team{
+    margin-top: 10px;
+    display: flex;
+    overflow-x: auto;
+}
+.lega-team::-webkit-scrollbar{
+    width: 0px;
+}
+.border-blue{
+    border: 1px solid #091768;
 }
 
 span{
@@ -62,6 +83,12 @@ span{
    background-color: #00E895; 
    color: #091768;
 }
+
+.wrapper{
+    overflow-x: auto;
+    cursor: pointer;
+}
+
 
 .footer{
     background-color: #00E895;

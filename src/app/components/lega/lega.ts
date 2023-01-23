@@ -30,6 +30,7 @@ export interface Lega {
 }
 
 export interface LegaInfo{
+    id?:number,
     nomeLega: string,
     passwordLega: string,
     user_id: number,
@@ -66,7 +67,6 @@ export interface LegaModifica {
     passwordLega: string,
     user_id: number,
     nomeAdmin:string,
-    partecipanti:[],
     gol: [number],
     autogol: [number],
     assist: [number],

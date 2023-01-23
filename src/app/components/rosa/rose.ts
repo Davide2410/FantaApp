@@ -458,7 +458,9 @@ export interface SearchStatistics {
 }
 
 export interface AggiungiPlayer {
+    id?:number,
     playerId: number,
     userId: number,
+    legaId: number,
     paid: number
 }

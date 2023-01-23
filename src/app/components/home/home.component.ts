@@ -20,19 +20,23 @@ export class HomeComponent implements OnInit {
 
    news: News[] = []
    teams!:Teams[]
-   leghe:LegaInfo[]=[]
+   name!:string
+   leghe!:LegaInfo
    categoria!: string
    user_id!:Lega[]
    id!:number
    nomeTeam:string|undefined
+   arrayVuoto:LegaInfo[]=[]
 
    
   constructor(private newSrv:NewsService , private r :Router, private modalService: MdbModalService, private legheSrv:LegaService, private authSrv:AuthService) { }
 
   ngOnInit(): void {
-    this.stampaNews()
-    this.allTeams()
-    this.allLeghe()
+    setTimeout(()=>{
+      this.stampaNews()
+      this.allTeams()
+      this.allLeghe()
+    },500)
     // this.squadraDettaglio()
   }
 
@@ -66,21 +70,21 @@ export class HomeComponent implements OnInit {
   // }
 
   allLeghe(){
-    setTimeout(()=>{
-      let lega: any = localStorage.getItem('lega')
-    let a = JSON.parse(lega)
-
-    let team: any = localStorage.getItem('team')
-    let b = JSON.parse(team)
+    let user: any = localStorage.getItem('user')
+    let utente = JSON.parse(user)
+    this.id = utente.user.id
    
     this.legheSrv.fetchLeghe().subscribe(res=>{
-      if(a.id == b.idLega){
-       this.leghe = res
-      }else{
-        console.log('NESSUNA LEGA');
-      }
+     res.forEach(l=>{
+      l.partecipanti.forEach((el:any)=>{
+        if(this.id == el){
+         let sospeso = this.arrayVuoto.push(l)
+         this.leghe = l
+         this.name = l.nomeAdmin
+        }
+      })
+     })
     })
-    }, 100)
   }
 
   squad(team:string){

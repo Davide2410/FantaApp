@@ -119,7 +119,10 @@ export class RoseService {
 
 
   fetchSearch(search:string){
-    return this.http.get<SearchData>(this.patchSearch + search, this.options )
+    return this.http.get<SearchData>(this.patchSearch + search, this.options ).pipe(catchError(err=>{
+      console.log(err);
+      throw err
+    }))
   }
 
 

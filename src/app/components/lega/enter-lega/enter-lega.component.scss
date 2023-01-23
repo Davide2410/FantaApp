@@ -14,6 +14,22 @@
     background-color: rgb(211, 211, 211, 0.1);
 }
 
+.image-logo{
+    margin-top: 100px;
+}
+
+.componenti{
+    .col-lg-4{
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .image-logo{
+        width: 200px;
+        margin-top: 130px;
+    }
+}
 
 .box-team {
     h6 {
@@ -38,6 +54,11 @@
 #err {
     font-size: 12px;
     background-color: orange;
+}
+
+.fa-cog,
+.fa-pencil-alt{
+    cursor: pointer;
 }
 
 .fa-pencil-alt {

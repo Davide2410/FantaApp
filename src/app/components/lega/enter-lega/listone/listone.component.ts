@@ -76,11 +76,14 @@ export class ListoneComponent implements OnInit {
   position!: string
   a!: string
   name!: string
+  id!: number
   search!: string
   searchPlayer!: SearchPlayer[]
   searchStat!: SearchStatistics
 
   team!: Teams[]
+
+  arrayVuoto!:[]
 
   // serieA = [492, 489, 496, 487, 505, 497, 494, 503, 502, 500, 514, 511, 488, 515, 498, 504, 499]
   // options = {
@@ -93,8 +96,8 @@ export class ListoneComponent implements OnInit {
   constructor(private roseSrv: RoseService) { }
 
   ngOnInit(): void {
-    // this.fetchRoma()
-    this.fetchNapoli()
+    this.fetchRoma()
+    // this.fetchNapoli()
     // this.fetchMilan()
     // this.fetchInter()
     // this.fetchJuventus()
@@ -127,6 +130,9 @@ export class ListoneComponent implements OnInit {
   //     })
   // }
 
+  back(){
+    history.back()
+  }
 
   reload() {
     location.reload()
@@ -140,9 +146,17 @@ export class ListoneComponent implements OnInit {
     this.roseSrv.fetchSearch(data.search).subscribe(res => {
       let container = document.getElementById('all')
       this.searchPlayer = res.response
-      console.log(this.searchPlayer);
-      this.searchStat = res.response[0].statistics[0]
-      container!.innerHTML = ''
+      if(data.search.length < 4){
+        console.log(this.searchPlayer); 
+        let errore = document.getElementById('errore')
+        errore!.classList.remove('d-none')
+        errore!.addEventListener("click", function() {
+        errore!.remove();
+        })
+      }else{
+        this.searchStat = res.response[0].statistics[0]
+        container!.innerHTML = ''
+      }
     })
   }
 
@@ -153,243 +167,192 @@ export class ListoneComponent implements OnInit {
     icon?.classList.toggle('right')
   }
 
-  // dettaglioNapoli() {
-  //   this.roseSrv.playerNapoli().subscribe(res => {
-  //     this.id = res.response[0].players[0].id
-  //     console.log(res.response[0].players[0].id);
-  //     this.roseSrv.fetchById(this.id).subscribe(res=>{
-  //       console.log(res);
-  //     })
-  //   })
-  // }
-
-  
-
-
   fetchNapoli() {
-    this.roseSrv.playerNapoli().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerNapoli().subscribe(res => {      
       this.giocatoriNapoli = res.response[0].players
       this.napoli = res.response[0].team
       this.giocatoriNapoli.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchRoma() {
-    this.roseSrv.playerRoma().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerRoma().subscribe(res => {      
       this.giocatoriRoma = res.response[0].players
       this.roma = res.response[0].team
       this.giocatoriRoma.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchMilan() {
-    this.roseSrv.playerMilan().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerMilan().subscribe(res => {      
       this.giocatoriMilan = res.response[0].players
       this.milan = res.response[0].team
       this.giocatoriMilan.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchJuventus() {
-    this.roseSrv.playerJuventus().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerJuventus().subscribe(res => {      
       this.giocatoriJuve = res.response[0].players
       this.juve = res.response[0].team
       this.giocatoriJuve.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchLazio() {
-    this.roseSrv.playerLazio().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerLazio().subscribe(res => {      
       this.giocatoriLazio = res.response[0].players
       this.lazio = res.response[0].team
       this.giocatoriLazio.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchInter() {
-    this.roseSrv.playerInter().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerInter().subscribe(res => {      
       this.giocatoriInter = res.response[0].players
       this.inter = res.response[0].team
       this.giocatoriInter.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchAtalanta() {
-    this.roseSrv.playerAtalanta().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerAtalanta().subscribe(res => {      
       this.giocatoriAtalanta = res.response[0].players
       this.atalanta = res.response[0].team
       this.giocatoriAtalanta.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchUdinese() {
-    this.roseSrv.playerUdinese().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerUdinese().subscribe(res => {      
       this.giocatoriUdinese = res.response[0].players
       this.udinese = res.response[0].team
       this.giocatoriUdinese.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchTorino() {
-    this.roseSrv.playerTorino().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerTorino().subscribe(res => {      
       this.giocatoriTorino = res.response[0].players
       this.torino = res.response[0].team
       this.giocatoriTorino.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchFiorentina() {
-    this.roseSrv.playerFiorentina().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerFiorentina().subscribe(res => {      
       this.giocatoriFiorentina = res.response[0].players
       this.fiorentina = res.response[0].team
       this.giocatoriFiorentina.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchBologna() {
-    this.roseSrv.playerBologna().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerBologna().subscribe(res => {      
       this.giocatoriBologna = res.response[0].players
       this.bologna = res.response[0].team
       this.giocatoriBologna.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchSalernitana() {
-    this.roseSrv.playerSalernitana().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerSalernitana().subscribe(res => {      
       this.giocatoriSalernitana = res.response[0].players
       this.salernitana = res.response[0].team
       this.giocatoriSalernitana.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchEmpoli() {
-    this.roseSrv.playerEmpoli().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerEmpoli().subscribe(res => {      
       this.giocatoriEmpoli = res.response[0].players
       this.empoli = res.response[0].team
       this.giocatoriEmpoli.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchMonza() {
-    this.roseSrv.playerMonza().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerMonza().subscribe(res => {      
       this.giocatoriMonza = res.response[0].players
       this.monza = res.response[0].team
       this.giocatoriMonza.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchSassuolo() {
-    this.roseSrv.playerSassuolo().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerSassuolo().subscribe(res => {      
       this.giocatoriSassuolo = res.response[0].players
       this.sassuolo = res.response[0].team
       this.giocatoriSassuolo.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchSpezia() {
-    this.roseSrv.playerSpezia().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerSpezia().subscribe(res => {      
       this.giocatoriSpezia = res.response[0].players
       this.spezia = res.response[0].team
       this.giocatoriSpezia.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchCremonese() {
-    this.roseSrv.playerCremonese().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerCremonese().subscribe(res => {      
       this.giocatoriCremonese = res.response[0].players
       this.cremonese = res.response[0].team
       this.giocatoriCremonese.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchSampdoria() {
-    this.roseSrv.playerSampdoria().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerSampdoria().subscribe(res => {      
       this.giocatoriSampdoria = res.response[0].players
       this.sampdoria = res.response[0].team
       this.giocatoriSampdoria.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }
 
   fetchVerona() {
-    this.roseSrv.playerVerona().subscribe(res => {
-      console.log(res.response[0].players);
-      console.log(res.response[0].team);
+    this.roseSrv.playerVerona().subscribe(res => {      
       this.giocatoriVerona = res.response[0].players
       this.verona = res.response[0].team
       this.giocatoriVerona.forEach(el => {
-        console.log(el);
+        el
       })
     })
   }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LegaTeam, Partecipanti, TeamModify } from '../../lega';
 import { LegaService } from '../../lega.service';
 
@@ -10,17 +10,23 @@ import { LegaService } from '../../lega.service';
   styleUrls: ['./modifica.component.scss']
 })
 export class ModificaComponent implements OnInit {
+[x: string]: any;
 
   teamForm!: FormGroup
   id!: number
+  history:any
   // nome!:string
   // budget!:number
 
 
-  constructor(private legaSrv:LegaService,private fb: FormBuilder, private r:Router) { }
+  constructor(private legaSrv:LegaService,private fb: FormBuilder, private r:Router,  private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.popola()
+   this.popola()
+  }
+
+  back(){
+    history.back()
   }
 
   popola(){

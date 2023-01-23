@@ -1,66 +1,65 @@
 <app-navbar-lega></app-navbar-lega>
-<div class="container-fluid bg-blue lega"></div>
-<div class="container-fluid bg-grey">
+<div class="container-fluid bg-blue lega">
+   <div class="row justify-content-center align-items-center">
+    <div class="col-12 text-center">
+        <img src="https://fantamaster.b-cdn.net/wp-content/uploads/2020/08/Logo-FM-2020_sitoweb-1.png" class="image-logo" alt="">
+    </div>
+   </div>
+</div>
+<div class="container-fluid">
+
     
 <div class="container position-relative">
     <div class="row justify-content-center align-items-center">
         <div class="col-8 col-md-4 text-center box-team bg-white position-absolute p-4 text-blue shadow rounded-5">
             <h6><strong>{{nomeTeam}}</strong></h6>
+            <p class="border w-50 mx-auto rounded-5 p-2 border-2 text-blue">{{budget}}</p>
             <span id="err" class="p-2 rounded-5 text-white d-none">
                 <i class="fas fa-info-circle"></i>
                 Azione consentita solo per l'admin
             </span>
             <i class="fas fa-cog text-white-50" (click)="admin()"></i>
-            <i class="fas fa-pencil-alt text-white-50" [routerLink]="['/modifica']"></i>
+            <i class="fas fa-pencil-alt text-white-50" [routerLink]="['/modifica/' + id]"></i>
             <div class="row justify-content-center align-items-center text-center p-2 mt-2">
-                <div class="col-4">
-                    <p class="infoTeam rounded-4 ps-1 px-1">
-                        <span>Budget</span>
-                        {{budget}}M
-                    </p>
-                </div>
-                <div class="col-4">
-                    <p class="infoTeam rounded-4 ps-1 px-1">
-                        <span>Budget</span>
-                        {{budget}}M
-                    </p>
-                </div>
-                <div class="col-4">
-                    <p class="infoTeam rounded-4 ps-1 px-1">
-                        <span>Budget</span>
-                        {{budget}}M
-                    </p>
-                </div>
                 <div class="col-12 text-end myRosa">
-                    <a [routerLink]="['/myTeam']" class="text-muted">LA MIA ROSA</a>
+                    <a [routerLink]="['/myTeam/' + id]" class="text-muted">LA MIA ROSA</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <div class="container mt-5">
-    <div class="row justify-content-center align-content-center text-center">
-        <div class="row justify-content-center align-content-center info text-blue">
+    <div class="row justify-content-center align-content-center text-center ">
+        <div class="row justify-content-center align-content-center info text-blue componenti">
             
-            <div class="col-4">
-                <div class="d-flex flex-column  p-2 rounded-6 shadow bg-white" [routerLink]="['/partecipanti']">
+            <div class="col-lg-4 col-md-6 col-6 mb-5">
+                <div class="d-flex flex-column  p-2 rounded-6 shadow bg-white" [routerLink]="['/partecipanti/' + id]">
                     <i class="fas fa-users"></i>
                 <span>Partecipanti</span>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-md-6 col-6 mb-5">
                 <div class="d-flex flex-column p-2 rounded-6 shadow bg-white">
                     <i class="fas fa-shield-alt"></i>
-                <span>Rose</span>
+                    <span>Chi ce l'ha?</span>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-"></div>
+
+            <div class="col-lg-4 col-md-6 col-6 mb-5">
                 <div class="d-flex flex-column p-2 rounded-6 shadow bg-white"  [routerLink]="['/listone']">
                  <i class="fas fa-futbol"></i>
                  <span>Listone</span>
                 </div>
              </div>
-            
+
+             <div class="col-lg-4 col-md-6 col-6 mb-5">
+                <div class="d-flex flex-column p-2 rounded-6 shadow bg-white" [routerLink]="['/svincolati/' + id]">
+                    <i class="fas fa-user-minus"></i>
+                 <span>Svincolati</span>
+                </div>
+             </div>
+             <div class="col-"></div>   
         </div>
     </div>
    

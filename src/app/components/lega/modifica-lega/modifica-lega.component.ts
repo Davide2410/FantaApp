@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { Numbers } from 'src/app/interface/numbers';
 import { LegaModifica } from '../lega';
 import { LegaService } from '../lega.service';
@@ -15,20 +16,27 @@ export class ModificaLegaComponent implements OnInit {
   negative!: Numbers[]
   legaForm!:FormGroup
   id!:number
-  constructor(private legaSrv:LegaService,private fb: FormBuilder) { }
+  idUser!:number
+  constructor(private legaSrv:LegaService,private fb: FormBuilder, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.popolaForm()
-    this.allNegative()
-    this.allNumbers()
+    
+    this.route.paramMap.subscribe(params => {
+      let stringId: any = params.get("id");
+      this.id = parseFloat(stringId)
+      this.popolaForm()
+      this.allNegative()
+      this.allNumbers()
+    })
+  }
+
+  back(){
+    history.back()
   }
 
   popolaForm(){
-    let lega: any = localStorage.getItem('lega')
-    let a = JSON.parse(lega)
-    this.id = a.id
-
-    this.legaSrv.recuperaLega(a.id).subscribe(res=>{
+  
+    this.legaSrv.recuperaLega(this.id).subscribe(res=>{
       let x = res
       this.legaForm = this.fb.group({
         newNomeLega:this.fb.control(x.nomeLega),
@@ -63,15 +71,13 @@ export class ModificaLegaComponent implements OnInit {
   modifica(){
     let user: any = localStorage.getItem('user')
     let utente = JSON.parse(user)
-    let lega: any = localStorage.getItem('lega')
-    let a = JSON.parse(lega)
-    this.id = utente.user.id
+    
+    this.idUser = utente.user.id
     let data: LegaModifica = {
       nomeLega: this.legaForm.value.newNomeLega,
       passwordLega: this.legaForm.value.newPasswordLega,
       user_id: utente.user.id,
       nomeAdmin:utente.user.name,
-      partecipanti:utente.user.id,
       gol: this.legaForm.value.newGol,
       autogol: this.legaForm.value.newAutogol,
       assist: this.legaForm.value.newAssist,
@@ -95,7 +101,7 @@ export class ModificaLegaComponent implements OnInit {
       fascia_9: this.legaForm.value.newFascia_9,
       fascia_10: this.legaForm.value.newFascia_10
     }
-    this.legaSrv.modificaLega(data, a.id).subscribe((res=>{
+    this.legaSrv.modificaLega(data, this.id).subscribe((res=>{
       this.legaForm.reset()
       res
     }))

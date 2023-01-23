@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { AggiungiPlayer, Club, RoseTeam } from '../rose';
 import { RoseService } from '../rose.service';
 
@@ -13,17 +14,27 @@ export class PlayerComponent implements OnInit {
   @Input() roma!: Club
 
   id!: number
+  idLega!: number
   count: number = 0
   isFav: boolean = false
   preferiti: any
+  plus: boolean = true
+  minus: boolean = false
 
   paga: any[] = []
 
-  constructor(private roseSrv: RoseService) { }
+  constructor(private roseSrv: RoseService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.addPlayer()
-    this.getPlayerAdd()
+    this.route.paramMap.subscribe(params => {
+      let stringId: any = params.get("id");
+      this.idLega = parseFloat(stringId)
+      console.log(this.idLega);
+
+      this.addPlayer()
+      this.getPlayerAdd()
+    })
+
   }
 
   calcola(budget: NgForm, id: number) {
@@ -32,6 +43,7 @@ export class PlayerComponent implements OnInit {
     let uId = utente.user.id
 
     let data: AggiungiPlayer = {
+      legaId: this.idLega,
       playerId: id,
       userId: uId,
       paid: budget.value.budget
@@ -50,13 +62,11 @@ export class PlayerComponent implements OnInit {
       } else {
         let errore = document.getElementById('errore')
         errore!.classList.remove('d-none')
-        errore!.addEventListener("click", function() {
+        errore!.addEventListener("click", function () {
           errore!.remove();
-          
         })
         return
       }
-
     })
   }
 
@@ -70,15 +80,23 @@ export class PlayerComponent implements OnInit {
   }
 
   addPlayer() {
+    
     this.roseSrv.getSquad().subscribe(res => {
       let favorities = res
-      let f = favorities.find((a: any) => a.playerId == this.p.id)
+
+      let f = favorities.find((a: any) => a.playerId == this.p.id && a.legaId == this.idLega)
+
       if (f) {
+        this.plus = false
+        this.minus = true
         this.isFav = true
         this.preferiti = f
       } else {
+        this.plus = true
+        this.minus = false
         this.isFav = false
       }
+
     })
   }
 
@@ -87,6 +105,8 @@ export class PlayerComponent implements OnInit {
     this.roseSrv.deleteGiocatore(this.preferiti.id).subscribe(res => {
       console.log(res);
     })
+    this.plus = true
+    this.minus = false
     this.isFav = false
     this.count--
   }

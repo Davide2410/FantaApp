@@ -6,6 +6,9 @@ import { EnterLegaComponent } from './components/lega/enter-lega/enter-lega.comp
 import { ListoneComponent } from './components/lega/enter-lega/listone/listone.component';
 import { ModificaComponent } from './components/lega/enter-lega/modifica/modifica.component';
 import { MyTeamComponent } from './components/lega/enter-lega/my-team/my-team.component';
+import { DettaglioTeamComponent } from './components/lega/enter-lega/dettaglio-team/dettaglio-team.component';
+
+import { SvincolatiComponent } from './components/lega/enter-lega/svincolati/svincolati.component';
 import { ImpostazioniComponent } from './components/lega/impostazioni/impostazioni.component';
 import { ModificaLegaComponent } from './components/lega/modifica-lega/modifica-lega.component';
 import { PartecipantiComponent } from './components/lega/partecipanti/partecipanti.component';
@@ -53,23 +56,23 @@ const routes: Routes = [
     component: SearchLegaComponent
   },
   {
-    path: 'lega',
+    path: 'lega/:id',
     component: EnterLegaComponent
   },
   {
-    path: 'modifica',
+    path: 'modifica/:id',
     component: ModificaComponent
   },
   {
-    path: 'impostazioni/lega',
+    path: 'impostazioni/lega/:id',
     component: ModificaLegaComponent
   },
   {
-    path: 'partecipanti',
+    path: 'partecipanti/:id',
     component: PartecipantiComponent
   },
   {
-    path: 'rose',
+    path: 'rose/:id',
     component: RosaComponent
   },
   {
@@ -81,8 +84,16 @@ const routes: Routes = [
     component: DettaglioGiocatoreComponent
   },
   {
-    path: 'myTeam',
+    path: 'myTeam/:id',
     component: MyTeamComponent
+  },
+  {
+    path: 'dettaglioTeam/:id/:idLega',
+    component: DettaglioTeamComponent
+  },
+  {
+    path: 'svincolati/:id',
+    component: SvincolatiComponent
   },
   {
     path: "",

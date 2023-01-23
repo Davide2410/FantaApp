@@ -1,13 +1,32 @@
 <div class="container-fluid bg-blue">
     <div class="container">
         <div class="row justify-content-center align-items-center vh-100 text-white text-center">
-            <div class="col-8">
+
+            <div class="col-12 col-md-6 mt-5">
                 <img src="https://fantamaster.b-cdn.net/wp-content/uploads/2020/08/Logo-FM-2020_sitoweb-1.png" alt="">
-                <div class="d-flex justify-content-between mt-3">
-                    <a [routerLink]="['/login']" class="btn btn-primary">Accedi</a>
-                    <a [routerLink]="['/register']" class="btn btn-danger">Registrati</a>
+
+                <div class="d-flex flex-column mt-5">
+                    <button class="btn btn-danger w-50 mx-auto" [routerLink]="['/login']">Accedi</button>
+                    <span class="w-50 mx-auto mt-3 mb-3">o</span>
+                    <button class="btn btn-primary w-50 mx-auto" [routerLink]="['/register']">Registarti</button>
                 </div>
             </div>
+
+            <div class="col-12 col-md-6">
+                <div class="d-flex flex-wrap mb-5">
+                    <div class="phone-container mx-auto mx-md-0 shadow">
+                        <p class="cam mt-2 mb-1"></p>
+                        <div class="sfondo1">
+                        </div>
+                    </div>
+                    <div class="phone-container mt-5 mx-md-2 mx-auto shadow">
+                        <p class="cam mt-2 mb-1"></p>
+                        <div class="sfondo2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

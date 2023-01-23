@@ -11,8 +11,8 @@
         <a (click)="type('Ultime Notizie')" class="btn button-category">Ultime Notizie</a>
     </div>
 
-    <div class="teams p-2 border-bottom d-flex justify-content-center align-items-center d-flex flex-wrap">
-        <div *ngFor="let t of teams">
+    <div class="teams p-2 border-bottom justify-content-center align-items-center d-flex">
+        <div *ngFor="let t of teams" class="wrapper">
             <img src="{{t.team}}" (click)="squad(t.name)" class="mx-3"  alt="">
         </div>
     </div>

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { tap } from 'rxjs';
 import { catchError } from 'rxjs/internal/operators/catchError';
 import { Numbers } from 'src/app/interface/numbers';
-import { Lega,LegaTeam, Partecipanti, TeamModify } from './lega';
+import { Lega,LegaModifica,LegaTeam, Partecipanti, TeamModify } from './lega';
 
 @Injectable({
   providedIn: 'root'
@@ -66,6 +66,14 @@ export class LegaService {
     }))
   }
 
+  // TUTTI I TEAM
+  allTeamUser(){
+    return this.http.get<LegaTeam[]|Partecipanti[]>(this.urlTeam).pipe(catchError(err=>{
+      console.log(err);
+      throw err
+    }))
+  }
+
   // TUTTE LE LEGHE
   fetchLeghe(){
     return this.http.get<Lega[]>(this.urlLega).pipe(catchError(err=>{
@@ -83,7 +91,7 @@ export class LegaService {
   }
 
   // MODIFICA LEGA
-  modificaLega(data:Lega, id:number|undefined){
+  modificaLega(data:LegaModifica|Lega, id:number|undefined){
     return this.http.put<Lega>(this.urlLega + `/${id}`, data).pipe(catchError(err=>{
       console.log(err);
       throw err

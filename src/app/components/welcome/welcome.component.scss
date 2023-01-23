@@ -1,6 +1,112 @@
-.bg-blue{
-    background: linear-gradient( #091768, #066779, #00E895);
-    img{
-        width: 150px;
+.bg-blue {
+    background: linear-gradient(45deg, #00E895, #066779, #091768);
+
+    img {
+        width: 250px;
+    }
+}
+
+.d-flex {
+    .phone-container {
+        height: 200px;
+        width: 130px;
+        border: 1px solid rgba(211, 211, 211, 0.612);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom: none;
+        background-color: black;
+
+        .cam {
+            height: 6px;
+            width: 6px;
+            border: 1px solid rgba(211, 211, 211, 0.612);
+            border-radius: 50%;
+            margin: 0px auto;
+        }
+
+        .sfondo1 {
+            height: 181px;
+            width: 105px;
+            margin-left: 12px;
+            margin-right: 12px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-image: url('/assets/welcome/sfondo1.png');
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .sfondo2 {
+            height: 181px;
+            width: 105px;
+            margin-left: 12px;
+            margin-right: 12px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-image: url('/assets/welcome/sfondo2.png');
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    }
+}
+
+@media screen and (max-width:991px) and (min-width:769px) {
+    .d-flex {
+        .phone-container {
+            height: 220px;
+            width: 160px !important;
+
+            .cam {
+                height: 8px;
+                width: 8px;
+            }
+
+            .sfondo1 {
+                height: 229px;
+                width: 135px !important;
+            }
+
+            .sfondo2 {
+                height: 229px;
+                width: 135px !important;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    .bg-blue {
+        img {
+            width: auto;
+        }
+    }
+
+    .d-flex {
+        margin-top: 50px;
+
+        .phone-container {
+            height: 250px;
+            width: 190px;
+
+            .cam {
+                height: 8px;
+                width: 8px;
+            }
+
+            .sfondo1 {
+                height: 229px;
+                width: 165px;
+            }
+
+            .sfondo2 {
+                height: 229px;
+                width: 165px;
+            }
+        }
     }
 }

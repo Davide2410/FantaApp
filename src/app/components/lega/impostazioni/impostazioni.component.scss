@@ -3,8 +3,16 @@
     height: 50px;
 }
 
+.bg-grey {
+    background-color: rgb(211, 211, 211, 0.3);
+}
+
 .text-blue {
     color: #091768;
+}
+
+.fa-arrow-left {
+    cursor: pointer;
 }
 
 .position-relative {
@@ -38,13 +46,14 @@
     }
 }
 
-.fasceGol{
+.fasceGol {
     label {
         font-size: 12.5px;
     }
-   .form-select {
+
+    .form-select {
         width: 80px;
-    } 
+    }
 }
 
 .fa-hand-holding-usd {

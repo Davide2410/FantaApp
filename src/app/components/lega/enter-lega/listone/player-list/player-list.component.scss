@@ -1,0 +1,37 @@
+.player_img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.teams {
+    background-color: rgb(211, 211, 211, 0.1);
+    img {
+        height: 25px;
+        width: 20px;
+        cursor: pointer;
+    }
+}
+
+
+
+.container-info {
+    margin-left: 10px;
+    text-align: left;
+
+    img {
+        width: 20px;
+        height: auto;
+    }
+
+    span {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+}
+
+.position {
+    span {
+        font-size: 13px;
+    }
+}

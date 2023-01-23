@@ -73,11 +73,19 @@
 // TEAMS
 .teams {
     background-color: rgb(211, 211, 211, 0.1);
-    img {
+    overflow-x: auto;
+    height: 50px;
+    .wrapper{
+        img {
         height: 25px;
         width: 20px;
         cursor: pointer;
     }
+    }
+}
+
+.teams::-webkit-scrollbar{
+    width: 0px;
 }
 
 // LOADING

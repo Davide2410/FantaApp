@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { LegaService } from '../lega/lega.service';
 
 @Component({
@@ -12,20 +13,34 @@ export class NavbarLegaComponent implements OnInit {
   nomeLega!:string
   id!:number
 
-  constructor(private legaSrv:LegaService) { }
+  constructor(private legaSrv:LegaService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    let lega:any = localStorage.getItem('lega')
-    let l = JSON.parse(lega)
-    this.id = l.id
-    this.legaSrv.recuperaLega(this.id).subscribe(res=>{
-      this.presidente = res.nomeAdmin,
-      this.nomeLega = res.nomeLega
+    this.route.paramMap.subscribe(params => {
+      let stringId: any = params.get("id");
+      this.id = parseFloat(stringId)
+      console.log(this.id);
+      this.lega()
     })
   }
+
+
+  lega(){
+    this.legaSrv.fetchLeghe().subscribe(res=>{
+      res.forEach(el=>{
+        if(el.id == this.id){
+          this.presidente = el.nomeAdmin
+          this.nomeLega = el.nomeLega
+        }
+      })
+    })
+  }
+
 
   reload(){
     location.reload()
   }
+
+  
 
 }
