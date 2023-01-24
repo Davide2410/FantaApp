@@ -1,0 +1,20 @@
+.player_img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.container-info {
+    margin-left: 10px;
+    text-align: left;
+
+    img {
+        width: 20px;
+        height: auto;
+    }
+
+    span {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+}

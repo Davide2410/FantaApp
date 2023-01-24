@@ -7,7 +7,7 @@ import { AggiungiPlayer, Rose, Search, SearchData, SearchPlayer } from './rose';
   providedIn: 'root'
 })
 export class RoseService {
-  serieA = [492, 489, 496, 487, 505, 497, 494, 503, 502, 500, 514, 511, 488, 515, 498, 504, 499]
+  // serieA = [492, 489, 496, 487, 505, 497, 494, 503, 502, 500, 514, 511, 488, 515, 498, 504, 499]
   napoli = 492
   milan = 489
   juventus = 496
@@ -36,36 +36,26 @@ export class RoseService {
       'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
     }
   }
+
   path = `https://api-football-v1.p.rapidapi.com/v3/players/squads?team=`
   patchSearch = `https://api-football-v1.p.rapidapi.com/v3/players?league=135&season=2022&search=`
 
   pathId = `https://api-football-v1.p.rapidapi.com/v3/players?id=`
 
   pathSquad = 'http://localhost:4201/squad'
+  serieA = [492,489,496,487, 505, 497, 494,502,502,488]
 
   pagato!:number
   constructor(private http: HttpClient) { }
 
-  // aggiungiGiocatore(id:number){
-  //   let user:any = localStorage.getItem('user')
-  //   let utente = JSON.parse(user)
-  //   let uId = utente.user.id
 
-  //   // let team:any = localStorage.getItem('team')
-  //   // let t = JSON.parse(team)
-  //   // let budget = t.budget
-
-  //   let newAdd: AggiungiPlayer = {
-  //     playerId: id,
-  //     userId: uId,
-  //     paid: this.pagato
-  //   }
-
-  //   return this.http.post<AggiungiPlayer>(this.pathSquad, newAdd).pipe(catchError(err=>{
+  // playerNapoli() {
+  //   return this.http.get<Rose>(this.path + `${this.napoli}`, this.options).pipe(catchError(err => {
   //     console.log(err);
   //     throw err
   //   }))
   // }
+
 
   newPlayer(newAdd:AggiungiPlayer){
     let user:any = localStorage.getItem('user')

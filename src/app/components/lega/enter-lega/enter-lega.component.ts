@@ -15,10 +15,10 @@ export class EnterLegaComponent implements OnInit {
   id!: number
   idUser!: number
   err: string | undefined
- 
 
 
-  constructor(private legaSrv: LegaService, private r:Router, private route: ActivatedRoute) { }
+
+  constructor(private legaSrv: LegaService, private r: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -29,14 +29,14 @@ export class EnterLegaComponent implements OnInit {
   }
 
   team() {
-    let user:any = localStorage.getItem('user')
+    let user: any = localStorage.getItem('user')
     let utente = JSON.parse(user)
     this.idUser = utente.user.id
 
     console.log(this.id);
-    this.legaSrv.allTeamUser().subscribe(res=>{
-      res.forEach(el=>{
-        if(el.idLega == this.id && el.user_id == this.idUser){
+    this.legaSrv.allTeamUser().subscribe(res => {
+      res.forEach(el => {
+        if (el.idLega == this.id && el.user_id == this.idUser) {
           console.log(el);
           this.nomeTeam = el.nome_team
           this.budget = el.budget
@@ -46,15 +46,25 @@ export class EnterLegaComponent implements OnInit {
 
   }
 
-  admin(){
-    let team: any = localStorage.getItem('team')
-    let t = JSON.parse(team)
+
+  admin() {
+    let user: any = localStorage.getItem('user')
+    let utente = JSON.parse(user)
+    this.idUser = utente.user.id
     let err = document.getElementById('err')
-    if(t.user_admin == true){
-      this.r.navigate(['/impostazioni/lega/'+ this.id])
-    }else{
-      err!.classList.toggle('d-none')
-    }
+    this.legaSrv.allTeamUser().subscribe(res => {
+      res.forEach(el => {
+        if (el.user_id == this.idUser && el.idLega == this.id) {
+          if (el.user_admin == true) {
+            this.r.navigate(['/impostazioni/lega/' + this.id])
+          } else {
+            err!.classList.toggle('d-none')
+          }
+        }
+      })
+    })
   }
+
+
 
 }

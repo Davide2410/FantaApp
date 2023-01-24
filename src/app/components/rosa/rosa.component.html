@@ -53,7 +53,7 @@
                         'bg-warning': searchStat.games.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
                         {{searchStat.games.position}}
                     </span>
-                    <span>{{searchStat.games.rating}}</span>
+                    <span class="mx-1">{{searchStat.games.rating}}</span>
                     <form #budget="ngForm">
                         <input type="number" class="rounded-5" name="budget" #budget="ngModel" ngModel required [ngClass]="{
                             'border-danger':searchStat.games.position == 'Attacker',
@@ -83,82 +83,10 @@
            </div>
         </div>
 
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriRoma">
+        <div class="col-8 mb-4" *ngFor="let p of arrayVuoto">
             <app-player [p]="p"></app-player>
         </div>
 
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriNapoli">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriMilan">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriJuve">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriInter">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriLazio">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriAtalanta">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriUdinese">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriTorino">
-            <app-player [p]="p"></app-player>
-        </div>
-
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriFiorentina">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriBologna">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriSalernitana">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriEmpoli">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriMonza">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriSassuolo">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriSpezia">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriCremonese">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriSampdoria">
-            <app-player [p]="p"></app-player>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriVerona">
-            <app-player [p]="p"></app-player>
-        </div>
 
     </div>
 </div>

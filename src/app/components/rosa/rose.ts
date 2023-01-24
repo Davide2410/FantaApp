@@ -27,7 +27,8 @@ export interface RoseTeam {
     age: number,
     number: number,
     position: string,
-    photo: string
+    photo: string,
+    propietario?:string
 }
 
 export interface Club {

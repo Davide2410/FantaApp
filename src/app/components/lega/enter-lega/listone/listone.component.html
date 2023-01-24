@@ -57,93 +57,18 @@
                         'bg-warning': searchStat.games.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
                         {{searchStat.games.position}}
                     </span>
-                    <span>{{searchStat.games.rating}}</span>
+                    <span class="ms-1">{{searchStat.games.rating}}</span>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
 <div class="container-fluid mt-3" id="all">
     <div class="row justify-content-center align-items-center text-center">
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriRoma" >
-            <app-player-list [p]="p"></app-player-list>
+        <div class="col-8 mb-4" *ngFor="let p of arrayVuoto">
+            <app-player-list [p]="p" ></app-player-list>
         </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriNapoli">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriMilan">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriJuve">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriInter">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriLazio">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriAtalanta">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriUdinese">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriTorino">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriFiorentina">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriBologna">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriSalernitana">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriEmpoli">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriMonza">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriSassuolo">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriSpezia">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriCremonese">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriSampdoria">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-
-        <div class="col-8 mb-4" *ngFor="let p of giocatoriVerona">
-            <app-player-list [p]="p"></app-player-list>
-        </div>
-        
-
     </div>
 </div>

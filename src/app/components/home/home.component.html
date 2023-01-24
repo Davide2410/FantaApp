@@ -40,7 +40,7 @@
                     <div class="lega mx-auto rounded-5 text-center p-2 text-blue" [routerLink]="['/lega/' + a.id]" >
                         <p class="mb-2">{{a.nomeLega}}</p>
                         <hr class="w-50 mx-auto mt-0 mb-0">
-                        <h6 class="mt-2">{{name}}</h6>
+                        <h6 class="mt-2"> <i class="fa fa-users"></i> : {{a.numPartecipanti}}</h6>
                     </div>
                 </div>
             </div>
@@ -70,11 +70,11 @@
                 <h6 class="prova p-1">LEGHE</h6>
                 <p class="text-start text-blue">Gioca con i tuoi amici, sfidatevi e divertitevi ma ricordate sarà solo uno a vincere!</p>
                <div class="wrapper d-flex">
-                <div *ngFor="let a of arrayVuoto" class="col-8 bg-white text-blue p-2 text-center mb-3 mx-1">
+                <div *ngFor="let a of arrayVuoto" class="col-8 bg-white text-blue p-2 text-center mb-3">
                     <div class="lega rounded-5 text-center p-2 text-blue" [routerLink]="['/lega/' + a.id]" >
                         <p class="mb-2">{{a.nomeLega}}</p>
                         <hr class="w-50 mx-auto mt-0 mb-0">
-                        <h6 class="mt-2">{{name}}</h6>
+                        <h6 class="mt-2"> <i class="fa fa-users"></i> : {{a.numPartecipanti}}</h6>
                     </div>
                 </div>
                </div>

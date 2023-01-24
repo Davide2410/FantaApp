@@ -26,6 +26,10 @@ export class DettaglioGiocatoreComponent implements OnInit {
     })
   }
 
+  back(){
+    history.back()
+  }
+
   dettaglio(id: number) {
     this.roseSrv.fetchById(id).subscribe(res => {
       this.searchPlayer = res.response[0]

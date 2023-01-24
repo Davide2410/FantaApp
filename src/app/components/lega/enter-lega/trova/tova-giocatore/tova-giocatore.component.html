@@ -1,0 +1,27 @@
+<div class="row justify-content-evenly align-items-center border-bottom pb-3 pt-3">
+    <div class="col-8 d-flex">
+        <img src="{{p.photo}}" class="player_img border border-2" [ngClass]="{
+            'border-danger': p.position == 'Attacker',
+            'border-primary': p.position == 'Midfielder',
+            'border-success': p.position == 'Defender',
+            'border-warning': p.position == 'Goalkeeper'}">
+        <div class="container-info">
+            <h6>{{p.name}}</h6>
+            <i class="fas fa-info-circle ms-2" [routerLink]="['/details/' + p.id]" [ngClass]="{
+                'text-danger': p.position == 'Attacker',
+                'text-primary': p.position == 'Midfielder',
+                'text-success': p.position == 'Defender',
+                'text-warning': p.position == 'Goalkeeper'}"></i>
+            <span>{{p.propietario}}</span>
+        </div>
+    </div>
+    <div class="col-4 position">
+        <span [ngClass]="{
+            'bg-danger': p.position == 'Attacker',
+            'bg-primary': p.position == 'Midfielder',
+            'bg-success': p.position == 'Defender',
+            'bg-warning': p.position == 'Goalkeeper'}" class="text-white rounded-3 p-1">
+            {{p.position}}
+        </span>
+    </div>
+</div> 

@@ -1,10 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { count } from 'rxjs/internal/operators/count';
 import { Auth } from 'src/app/auth/auth';
 import { Teams } from 'src/app/interface/teams';
-import { AggiungiPlayer, Club, RoseTeam, Search, SearchPlayer, SearchStatistics } from './rose';
+import { AggiungiPlayer, Club, Rose, RoseTeam, Search, SearchPlayer, SearchStatistics } from './rose';
 import { RoseService } from './rose.service';
 
 @Component({
@@ -14,25 +14,7 @@ import { RoseService } from './rose.service';
 })
 export class RosaComponent implements OnInit {
 
-  giocatoriNapoli!: RoseTeam[]
-  giocatoriRoma!: RoseTeam[]
-  giocatoriMilan!: RoseTeam[]
-  giocatoriJuve!: RoseTeam[]
-  giocatoriLazio!: RoseTeam[]
-  giocatoriInter!: RoseTeam[]
-  giocatoriAtalanta!: RoseTeam[]
-  giocatoriUdinese!: RoseTeam[]
-  giocatoriTorino!: RoseTeam[]
-  giocatoriFiorentina!: RoseTeam[]
-  giocatoriBologna!: RoseTeam[]
-  giocatoriSalernitana!: RoseTeam[]
-  giocatoriEmpoli!: RoseTeam[]
-  giocatoriMonza!: RoseTeam[]
-  giocatoriSassuolo!: RoseTeam[]
-  giocatoriSpezia!: RoseTeam[]
-  giocatoriCremonese!: RoseTeam[]
-  giocatoriSampdoria!: RoseTeam[]
-  giocatoriVerona!: RoseTeam[]
+  
 
   giocatori!: RoseTeam[]
   position!: string
@@ -41,6 +23,8 @@ export class RosaComponent implements OnInit {
   search!: string
   searchPlayer!: SearchPlayer[]
   searchStat!: SearchStatistics
+
+  arrayVuoto:any[]=[]
 
   team!: Teams[]
 
@@ -54,10 +38,17 @@ export class RosaComponent implements OnInit {
   idLega!:number
   count: number = 0
   paga:any[]=[]
+  serieA = [492,489,496,487, 505, 497, 494]
+    options = {
+      headers: {
+        'X-RapidAPI-Key': '0bdbd40b81mshff3b7e623d1c230p103862jsn8f8e68750807',
+        'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+      }
+    }
+    path = `https://api-football-v1.p.rapidapi.com/v3/players/squads?team=`
 
 
-
-  constructor(private roseSrv: RoseService, private route: ActivatedRoute) { }
+  constructor(private roseSrv: RoseService, private route: ActivatedRoute,private http:HttpClient) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -66,23 +57,7 @@ export class RosaComponent implements OnInit {
       this.addPlayer()
       this.getPlayerAdd()  
     })
-    this.fetchRoma()
-    // this.fetchNapoli()
-    // this.fetchMilan()
-    // this.fetchInter()
-    // this.fetchJuventus()
-    // this.fetchLazio()
-    // this.fetchAtalanta()
-    // this.fetchBologna()
-    // this.fetchCremonese()
-    // this.fetchEmpoli()
-    // this.fetchFiorentina()
-    // this.fetchMonza()
-    // this.fetchVerona()
-    // this.fetchSalernitana()
-    // this.fetchSampdoria()
-    // this.fetchSassuolo()
-    // this.fetchVerona()
+    this.allSerieA()
   }
 
   reload() {
@@ -179,175 +154,16 @@ export class RosaComponent implements OnInit {
     icon?.classList.toggle('right')
   }
 
-  fetchNapoli() {
-    this.roseSrv.playerNapoli().subscribe(res => {
-      this.giocatoriNapoli = res.response[0].players
-      this.giocatoriNapoli.forEach(el => {
-        el
+  allSerieA(){
+    this.serieA.forEach(el => {   
+        return this.http.get<Rose>(this.path + el, this.options).subscribe(res => {
+          this.giocatori = res.response[0].players
+          this.giocatori.forEach(el=>{
+            let b = this.arrayVuoto.push(el)
+            console.log(el);
+          })
+        })
       })
-    })
-  }
-
-  fetchRoma() {
-    this.roseSrv.playerRoma().subscribe(res => {
-      this.giocatoriRoma = res.response[0].players
-      this.giocatoriRoma.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchMilan() {
-    this.roseSrv.playerMilan().subscribe(res => {
-      this.giocatoriMilan = res.response[0].players
-      this.giocatoriMilan.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchJuventus() {
-    this.roseSrv.playerJuventus().subscribe(res => {
-      this.giocatoriJuve = res.response[0].players
-      this.giocatoriJuve.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchLazio() {
-    this.roseSrv.playerLazio().subscribe(res => {
-      this.giocatoriLazio = res.response[0].players
-      this.giocatoriLazio.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchInter() {
-    this.roseSrv.playerInter().subscribe(res => {
-      this.giocatoriInter = res.response[0].players
-      this.giocatoriInter.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchAtalanta() {
-    this.roseSrv.playerAtalanta().subscribe(res => {
-      this.giocatoriAtalanta = res.response[0].players
-      this.giocatoriAtalanta.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchUdinese() {
-    this.roseSrv.playerUdinese().subscribe(res => {
-      this.giocatoriUdinese = res.response[0].players
-      this.giocatoriUdinese.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchTorino() {
-    this.roseSrv.playerTorino().subscribe(res => {
-      this.giocatoriTorino = res.response[0].players
-      this.giocatoriTorino.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchFiorentina() {
-    this.roseSrv.playerFiorentina().subscribe(res => {
-      this.giocatoriFiorentina = res.response[0].players
-      this.giocatoriFiorentina.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchBologna() {
-    this.roseSrv.playerBologna().subscribe(res => {
-      this.giocatoriBologna = res.response[0].players
-      this.giocatoriBologna.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchSalernitana() {
-    this.roseSrv.playerSalernitana().subscribe(res => {
-      this.giocatoriSalernitana = res.response[0].players
-      this.giocatoriSalernitana.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchEmpoli() {
-    this.roseSrv.playerEmpoli().subscribe(res => {
-      this.giocatoriEmpoli = res.response[0].players
-      this.giocatoriEmpoli.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchMonza() {
-    this.roseSrv.playerMonza().subscribe(res => {
-      this.giocatoriMonza = res.response[0].players
-      this.giocatoriMonza.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchSassuolo() {
-    this.roseSrv.playerSassuolo().subscribe(res => {
-      this.giocatoriSassuolo = res.response[0].players
-      this.giocatoriSassuolo.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchSpezia() {
-    this.roseSrv.playerSpezia().subscribe(res => {
-      this.giocatoriSpezia = res.response[0].players
-      this.giocatoriSpezia.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchCremonese() {
-    this.roseSrv.playerCremonese().subscribe(res => {
-      this.giocatoriCremonese = res.response[0].players
-      this.giocatoriCremonese.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchSampdoria() {
-    this.roseSrv.playerSampdoria().subscribe(res => {
-      this.giocatoriSampdoria = res.response[0].players
-      this.giocatoriSampdoria.forEach(el => {
-        el
-      })
-    })
-  }
-
-  fetchVerona() {
-    this.roseSrv.playerVerona().subscribe(res => {
-      this.giocatoriVerona = res.response[0].players
-      this.giocatoriVerona.forEach(el => {
-        el
-      })
-    })
   }
 
 }

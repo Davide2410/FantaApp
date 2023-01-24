@@ -1,7 +1,7 @@
 <nav id="navbar" class="navbar navbar-expand-lg p-3">
     <div class="container-fluid justify-content-between text-white">
         <div>
-            <i class="fas fa-arrow-left me-5" [routerLink]="['/rose']"></i>
+            <i class="fas fa-arrow-left me-5" (click)="back()"></i>
             <span>News</span>
         </div>
        <span>{{searchStat.league.season}}/23</span>

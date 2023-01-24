@@ -49,6 +49,9 @@ import { SearchPlayerComponent } from './components/rosa/search-player/search-pl
 import { PlayerListComponent } from './components/lega/enter-lega/listone/player-list/player-list.component';
 import { DettaglioTeamComponent } from './components/lega/enter-lega/dettaglio-team/dettaglio-team.component';
 import { SvincolatiComponent } from './components/lega/enter-lega/svincolati/svincolati.component';
+import { GiocatoreComponent } from './components/lega/enter-lega/svincolati/giocatore/giocatore.component';
+import { TrovaComponent } from './components/lega/enter-lega/trova/trova.component';
+import { TovaGiocatoreComponent } from './components/lega/enter-lega/trova/tova-giocatore/tova-giocatore.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +88,10 @@ import { SvincolatiComponent } from './components/lega/enter-lega/svincolati/svi
     SearchPlayerComponent,
     PlayerListComponent,
     DettaglioTeamComponent,
-    SvincolatiComponent
+    SvincolatiComponent,
+    GiocatoreComponent,
+    TrovaComponent,
+    TovaGiocatoreComponent
   ],
   imports: [
     BrowserModule,

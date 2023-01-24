@@ -5,11 +5,11 @@
 </nav>
 <div class="container-fluid">
     <div class="row justify-content-center align-items-center text-center">
-        <div class="col-4 text-start mt-2 mb-2" *ngFor="let l of leghe">
-            <div class="lega mx-auto rounded-5 text-center p-2 text-blue"  (click)="openModal(l , l.id)">
+        <div class="col-12 text-start mt-2 mb-2" *ngFor="let l of leghe">
+            <div class="lega mx-auto rounded-5 text-center p-2 text-blue"  (click)="openModal(l)">
                 <p class="mb-2">{{l.nomeLega}}</p>
                 <hr class="w-50 mx-auto mt-0 mb-0">
-                <h6 class="mt-2">{{name}}</h6>
+                <h6 class="mt-2">{{l.nomeAdmin}}</h6>
             </div>
         </div>
     </div>

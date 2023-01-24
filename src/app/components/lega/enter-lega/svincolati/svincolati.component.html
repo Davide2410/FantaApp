@@ -1,3 +1,48 @@
-<!-- <div *ngFor=" let p of vuoto">
-{{p.name}}
-</div> -->
+<nav class="navbar navbar-expand-lg bg-blue pt-3">
+    <div class="container-fluid justify-content-between align-items-baseline text-white">
+        <div class="d-flex align-items-baseline">
+            <i class="fas fa-arrow-left icon-nav" (click)="back()"></i>
+            <p class="ms-5">Svincolati</p>
+        </div>
+        <i class="fas fa-sync text-white mx-3" (click)="reload()"></i>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+
+            <div class="col-12" *ngFor="let p of arrayRoma">
+                <app-giocatore [p]="p"></app-giocatore>
+            </div>
+
+            <div class="col-12" *ngFor="let p of arrayMilan">
+                <app-giocatore [p]="p"></app-giocatore>
+            </div>
+
+            <div class="col-12" *ngFor="let p of arrayLazio">
+                <app-giocatore [p]="p"></app-giocatore>
+            </div>
+
+            <div class="col-12" *ngFor="let p of arrayNapoli">
+                <app-giocatore [p]="p"></app-giocatore>
+            </div>
+
+            <div class="col-12" *ngFor="let p of arrayInter">
+                <app-giocatore [p]="p"></app-giocatore>
+            </div>
+
+            <div class="col-12" *ngFor="let p of arrayJuve">
+                <app-giocatore [p]="p"></app-giocatore>
+            </div>
+
+            <div class="col-12" *ngFor="let p of arrayAtalanta">
+                <app-giocatore [p]="p"></app-giocatore>
+            </div>
+
+            <div class="col-12" *ngFor="let p of arrayFiore">
+                <app-giocatore [p]="p"></app-giocatore>
+            </div>
+
+        </div>
+    </div>
+</div>

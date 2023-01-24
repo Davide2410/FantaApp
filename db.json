@@ -10,60 +10,28 @@
       "id": 1
     },
     {
-      "email": "lulu.l@gmail.com",
-      "password": "$2a$10$nTVTJrcd5AYorPbFk9OFGeYZzXeQldPY2.C8JHiBFWxmVVQMGb01S",
-      "name": "Lulu",
+      "name": "Luca",
       "gender": "Femmina",
       "birthday": "1999-12-01",
+      "email": "lulu.l@gmail.com",
+      "password": "$2a$10$3vUD5cidxRXXUCKzVkrE0OH0mZCZ9fGEnhbAk2IIoKS58ALe1nilm",
       "id": 19
     },
     {
-      "email": "l@l.it",
-      "password": "$2a$10$wWXX10KzdFfiuqo5yaI9geY23J/QmiV5Mk6fKg.8fdI3FAQ1lou1q",
-      "name": "Luca",
+      "email": "m@m.it",
+      "password": "$2a$10$Ntvy4h/Bd9r/1aveSpTHSOQuZ9aQ7ELaej.ftXB6JdRNnbCVsa1J2",
+      "name": "Mario",
       "gender": "Maschio",
-      "birthday": "1994-02-02",
+      "birthday": "2000-01-30",
       "id": 20
     },
     {
-      "email": "lo@lo.it",
-      "password": "$2a$10$QDWkX5kY5sZKptiS/6yQu.HCufSrrxEx828c9F0HqZuph108hNy5K",
-      "name": "Lorenzo",
+      "email": "daniele@d.it",
+      "password": "$2a$10$ws9K2sPaf8IaaUm05723z.hrpybRs3vUu28jPrDpJNJPou4dkxz7W",
+      "name": "Daniele",
       "gender": "Maschio",
-      "birthday": "2000-10-24",
+      "birthday": "1999-03-27",
       "id": 21
-    },
-    {
-      "email": "m@m.it",
-      "password": "$2a$10$SyncAit9PbR01ORwh5laUeWmGKXLvM7Owe9fdK3laeGAYq3G0zJR6",
-      "name": "Luchetto",
-      "gender": "Maschio",
-      "birthday": "1999-10-08",
-      "id": 22
-    },
-    {
-      "email": "j@j.it",
-      "password": "$2a$10$/iZB8uMSTwsZV9CuRF8Dr.my69JsybssMtmfy.nhSHBD/EN.oD7hq",
-      "name": "Jacopo",
-      "gender": "Maschio",
-      "birthday": "2000-03-25",
-      "id": 23
-    },
-    {
-      "email": "lorenzoalfonsi32@gmail.com",
-      "password": "$2a$10$4.gYvvafZ2R5SjRBf63K0u/lEjdTOvFIayYMGQkx6/tCY/7pGz8iy",
-      "name": "lorenzo",
-      "gender": "Maschio",
-      "birthday": "2000-10-24",
-      "id": 24
-    },
-    {
-      "email": "p@p.it",
-      "password": "$2a$10$LlWD0LzOQ0K9oZHSvAEACeNQ68AR4Bybk61nASLPZjYdoeJHBATp.",
-      "name": "Oinco",
-      "gender": "M",
-      "birthday": "2000-11-11",
-      "id": 25
     }
   ],
   "teams": [
@@ -246,7 +214,9 @@
       "nomeAdmin": "Lulu",
       "partecipanti": [
         19,
-        1
+        1,
+        20,
+        21
       ],
       "gol": "1",
       "autogol": "-2",
@@ -271,6 +241,39 @@
       "fascia_9": "1.5",
       "fascia_10": "0.5",
       "id": 1
+    },
+    {
+      "nomeLega": "Lega Prova",
+      "passwordLega": "test",
+      "user_id": 1,
+      "nomeAdmin": "Davide",
+      "partecipanti": [
+        1,
+        19
+      ],
+      "gol": "",
+      "autogol": "",
+      "assist": "",
+      "ammonizione": "",
+      "espulsione": "",
+      "rigoreSegnato": "",
+      "rigoreSbagliato": "",
+      "rigoreParato": "",
+      "golSubito": "",
+      "golVittoria": "",
+      "golPareggio": "",
+      "cleanSheet": "",
+      "fascia_1": "",
+      "fascia_2": "",
+      "fascia_3": "",
+      "fascia_4": "",
+      "fascia_5": "",
+      "fascia_6": "",
+      "fascia_7": "",
+      "fascia_8": "",
+      "fascia_9": "",
+      "fascia_10": "",
+      "id": 2
     }
   ],
   "squadre": [
@@ -292,8 +295,327 @@
       "nomeLega": "Lega Ciamarra",
       "idLega": 1,
       "id": 10
+    },
+    {
+      "nome_team": "AC Cappatoio",
+      "budget": "500",
+      "user_id": 1,
+      "user_admin": true,
+      "idLega": 2,
+      "nomeLega": "Lega Prova",
+      "id": 11
+    },
+    {
+      "nome_team": "As Roma",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 19,
+      "nomeLega": "Lega Prova",
+      "idLega": 2,
+      "id": 12
+    },
+    {
+      "nome_team": "Cerverini",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 20,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 13
+    },
+    {
+      "nome_team": "Lazio",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 21,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 14
     }
   ],
   "squad": [
+    {
+      "legaId": 1,
+      "playerId": 312,
+      "userId": 1,
+      "paid": 10,
+      "id": 1
+    },
+    {
+      "legaId": 1,
+      "playerId": 2897,
+      "userId": 1,
+      "paid": 1,
+      "id": 3
+    },
+    {
+      "legaId": 1,
+      "playerId": 322,
+      "userId": 1,
+      "paid": 2,
+      "id": 4
+    },
+    {
+      "legaId": 1,
+      "playerId": 21081,
+      "userId": 1,
+      "paid": 10,
+      "id": 5
+    },
+    {
+      "legaId": 1,
+      "playerId": 22221,
+      "userId": 1,
+      "paid": 1,
+      "id": 6
+    },
+    {
+      "legaId": 1,
+      "playerId": 1314,
+      "userId": 1,
+      "paid": 1,
+      "id": 7
+    },
+    {
+      "legaId": 1,
+      "playerId": 1627,
+      "userId": 1,
+      "paid": 10,
+      "id": 8
+    },
+    {
+      "legaId": 1,
+      "playerId": 851,
+      "userId": 19,
+      "paid": 10,
+      "id": 9
+    },
+    {
+      "legaId": 1,
+      "playerId": 850,
+      "userId": 19,
+      "paid": 1,
+      "id": 10
+    },
+    {
+      "legaId": 1,
+      "playerId": 858,
+      "userId": 19,
+      "paid": 1,
+      "id": 11
+    },
+    {
+      "legaId": 1,
+      "playerId": 30497,
+      "userId": 19,
+      "paid": 5,
+      "id": 12
+    },
+    {
+      "legaId": 1,
+      "playerId": 853,
+      "userId": 19,
+      "paid": 1,
+      "id": 13
+    },
+    {
+      "legaId": 1,
+      "playerId": 904,
+      "userId": 19,
+      "paid": 30,
+      "id": 14
+    },
+    {
+      "legaId": 1,
+      "playerId": 271,
+      "userId": 19,
+      "paid": 1,
+      "id": 15
+    },
+    {
+      "legaId": 1,
+      "playerId": 876,
+      "userId": 19,
+      "paid": 1,
+      "id": 16
+    },
+    {
+      "legaId": 1,
+      "playerId": 30415,
+      "userId": 19,
+      "paid": 100,
+      "id": 17
+    },
+    {
+      "legaId": 1,
+      "playerId": 91423,
+      "userId": 19,
+      "paid": 1,
+      "id": 18
+    },
+    {
+      "legaId": 1,
+      "playerId": 18967,
+      "userId": 19,
+      "paid": 1,
+      "id": 19
+    },
+    {
+      "legaId": 1,
+      "playerId": 1151,
+      "userId": 19,
+      "paid": 5,
+      "id": 20
+    },
+    {
+      "legaId": 1,
+      "playerId": 329,
+      "userId": 19,
+      "paid": 16,
+      "id": 21
+    },
+    {
+      "legaId": 1,
+      "playerId": 2780,
+      "userId": 19,
+      "paid": 100,
+      "id": 22
+    },
+    {
+      "legaId": 1,
+      "playerId": 31219,
+      "userId": 19,
+      "paid": 1,
+      "id": 23
+    },
+    {
+      "legaId": 1,
+      "playerId": 483,
+      "userId": 19,
+      "paid": 10,
+      "id": 24
+    },
+    {
+      "legaId": 1,
+      "playerId": 30859,
+      "userId": 1,
+      "paid": 1,
+      "id": 25
+    },
+    {
+      "legaId": 1,
+      "playerId": 2299,
+      "userId": 1,
+      "paid": 2,
+      "id": 26
+    },
+    {
+      "legaId": 1,
+      "playerId": 342035,
+      "userId": 19,
+      "paid": 1,
+      "id": 27
+    },
+    {
+      "legaId": 1,
+      "playerId": 1470,
+      "userId": 20,
+      "paid": 1,
+      "id": 28
+    },
+    {
+      "legaId": 1,
+      "playerId": 30427,
+      "userId": 20,
+      "paid": 1,
+      "id": 29
+    },
+    {
+      "legaId": 1,
+      "playerId": 162500,
+      "userId": 20,
+      "paid": 1,
+      "id": 30
+    },
+    {
+      "legaId": 1,
+      "playerId": 335099,
+      "userId": 20,
+      "paid": 1,
+      "id": 31
+    },
+    {
+      "legaId": 1,
+      "playerId": 30497,
+      "userId": 20,
+      "paid": 10,
+      "id": 32
+    },
+    {
+      "legaId": 1,
+      "playerId": 268341,
+      "userId": 20,
+      "paid": 2,
+      "id": 33
+    },
+    {
+      "legaId": 1,
+      "playerId": 158378,
+      "userId": 20,
+      "paid": 1,
+      "id": 34
+    },
+    {
+      "legaId": 1,
+      "playerId": 266185,
+      "userId": 20,
+      "paid": 1,
+      "id": 35
+    },
+    {
+      "legaId": 1,
+      "playerId": 236,
+      "userId": 20,
+      "paid": 1,
+      "id": 36
+    },
+    {
+      "legaId": 1,
+      "playerId": 340078,
+      "userId": 20,
+      "paid": 1,
+      "id": 37
+    },
+    {
+      "legaId": 1,
+      "playerId": 30410,
+      "userId": 20,
+      "paid": 80,
+      "id": 38
+    },
+    {
+      "legaId": 1,
+      "playerId": 333,
+      "userId": 20,
+      "paid": 60,
+      "id": 39
+    },
+    {
+      "legaId": 1,
+      "playerId": 39271,
+      "userId": 20,
+      "paid": 1,
+      "id": 40
+    },
+    {
+      "legaId": 1,
+      "playerId": 203474,
+      "userId": 20,
+      "paid": 1,
+      "id": 41
+    }
   ]
 }

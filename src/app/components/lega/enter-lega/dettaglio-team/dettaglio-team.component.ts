@@ -43,6 +43,13 @@ export class DettaglioTeamComponent implements OnInit {
       this.ciclaBudget()
     })
     this.printRoma()
+    this.printAtalanta()
+    this.printFiorentina()
+    this.printInter()
+    this.printJuve()
+    this.printLazio()
+    this.printMilan()
+    this.printNapoli()
   }
 
   back(){
@@ -187,4 +194,647 @@ export class DettaglioTeamComponent implements OnInit {
     })
   }
 
+  printNapoli() {
+    this.roseSrv.playerNapoli().subscribe(res => {
+      this.squadPlayer = res.response[0].players
+      this.squadPlayer.forEach(p => {
+        if (p.position == 'Goalkeeper') {
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.portieri >= 3) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.portieri);
+                    this.portieri++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Defender') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.difensori >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.difensori);
+                    this.difensori++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Midfielder') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.centrocampisti >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.centrocampisti);
+                    this.centrocampisti++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Attacker') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.attaccanti >= 6) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.attaccanti);
+                    this.attaccanti++
+                  }
+                }
+              }
+            })
+          })
+        }
+      })
+    })
+  }
+
+  printMilan() {
+    this.roseSrv.playerMilan().subscribe(res => {
+      this.squadPlayer = res.response[0].players
+      this.squadPlayer.forEach(p => {
+        if (p.position == 'Goalkeeper') {
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.portieri >= 3) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.portieri);
+                    this.portieri++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Defender') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.difensori >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.difensori);
+                    this.difensori++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Midfielder') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.centrocampisti >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.centrocampisti);
+                    this.centrocampisti++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Attacker') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.attaccanti >= 6) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.attaccanti);
+                    this.attaccanti++
+                  }
+                }
+              }
+            })
+          })
+        }
+      })
+    })
+  }
+
+  printJuve() {
+    this.roseSrv.playerJuventus().subscribe(res => {
+      this.squadPlayer = res.response[0].players
+      this.squadPlayer.forEach(p => {
+        if (p.position == 'Goalkeeper') {
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.portieri >= 3) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.portieri);
+                    this.portieri++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Defender') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.difensori >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.difensori);
+                    this.difensori++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Midfielder') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.centrocampisti >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.centrocampisti);
+                    this.centrocampisti++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Attacker') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.attaccanti >= 6) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.attaccanti);
+                    this.attaccanti++
+                  }
+                }
+              }
+            })
+          })
+        }
+      })
+    })
+  }
+
+  printInter() {
+    this.roseSrv.playerInter().subscribe(res => {
+      this.squadPlayer = res.response[0].players
+      this.squadPlayer.forEach(p => {
+        if (p.position == 'Goalkeeper') {
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.portieri >= 3) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.portieri);
+                    this.portieri++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Defender') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.difensori >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.difensori);
+                    this.difensori++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Midfielder') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.centrocampisti >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.centrocampisti);
+                    this.centrocampisti++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Attacker') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.attaccanti >= 6) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.attaccanti);
+                    this.attaccanti++
+                  }
+                }
+              }
+            })
+          })
+        }
+      })
+    })
+  }
+
+  printLazio() {
+    this.roseSrv.playerLazio().subscribe(res => {
+      this.squadPlayer = res.response[0].players
+      this.squadPlayer.forEach(p => {
+        if (p.position == 'Goalkeeper') {
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.portieri >= 3) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.portieri);
+                    this.portieri++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Defender') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.difensori >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.difensori);
+                    this.difensori++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Midfielder') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.centrocampisti >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.centrocampisti);
+                    this.centrocampisti++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Attacker') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.attaccanti >= 6) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.attaccanti);
+                    this.attaccanti++
+                  }
+                }
+              }
+            })
+          })
+        }
+      })
+    })
+  }
+
+  printAtalanta() {
+    this.roseSrv.playerAtalanta().subscribe(res => {
+      this.squadPlayer = res.response[0].players
+      this.squadPlayer.forEach(p => {
+        if (p.position == 'Goalkeeper') {
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.portieri >= 3) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.portieri);
+                    this.portieri++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Defender') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.difensori >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.difensori);
+                    this.difensori++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Midfielder') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.centrocampisti >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.centrocampisti);
+                    this.centrocampisti++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Attacker') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.attaccanti >= 6) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.attaccanti);
+                    this.attaccanti++
+                  }
+                }
+              }
+            })
+          })
+        }
+      })
+    })
+  }
+
+  printFiorentina() {
+    this.roseSrv.playerFiorentina().subscribe(res => {
+      this.squadPlayer = res.response[0].players
+      this.squadPlayer.forEach(p => {
+        if (p.position == 'Goalkeeper') {
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.portieri >= 3) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.portieri);
+                    this.portieri++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Defender') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.difensori >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.difensori);
+                    this.difensori++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Midfielder') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.centrocampisti >= 8) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.centrocampisti);
+                    this.centrocampisti++
+                  }
+                }
+              }
+            })
+          })
+        } else if (p.position == 'Attacker') {
+
+          this.roseSrv.fetchAllSquad().subscribe(res => {
+            res.forEach(player => {
+              if (player.userId == this.id && player.legaId == this.idLega) {
+                if (player.playerId == p.id) {
+                  if (this.attaccanti >= 6) {
+                    this.roseSrv.deleteGiocatore(player.id!).subscribe(res => {
+                      console.log(res);
+                    })
+                    this.isFav = false
+                    return
+                  } else {
+                    let b = this.vuoto.push(p)
+                    console.log(this.attaccanti);
+                    this.attaccanti++
+                  }
+                }
+              }
+            })
+          })
+        }
+      })
+    })
+  }
 }

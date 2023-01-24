@@ -57,7 +57,7 @@ export class ModificaComponent implements OnInit {
     this.legaSrv.modificaTeam(data, this.id).subscribe((res=>{
       this.teamForm.reset()
       res.nome_team = data.nome_team
-      this.r.navigate(['/lega'])
+      history.back()
     }))
   }
 

@@ -21,6 +21,7 @@ import { DettaglioGiocatoreComponent } from './components/rosa/dettaglio-giocato
 import { RosaComponent } from './components/rosa/rosa.component';
 import { SearchLegaComponent } from './components/search-lega/search-lega.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { TrovaComponent } from './components/lega/enter-lega/trova/trova.component';
 
 const routes: Routes = [
   {
@@ -94,6 +95,10 @@ const routes: Routes = [
   {
     path: 'svincolati/:id',
     component: SvincolatiComponent
+  },
+  {
+    path: 'trova/:id',
+    component: TrovaComponent
   },
   {
     path: "",

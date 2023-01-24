@@ -26,14 +26,17 @@ export interface Lega {
     fascia_7: [number],
     fascia_8: [number],
     fascia_9: [number],
-    fascia_10: [number]
+    fascia_10: [number],
+    numPartecipanti?:number
 }
 
 export interface LegaInfo{
     id?:number,
     nomeLega: string,
+    nomeAdmin:string,
     passwordLega: string,
     user_id: number,
+    numPartecipanti?:number
 }
 
 export interface LegaTeam {

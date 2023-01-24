@@ -1,12 +1,25 @@
 .bg-blue {
     background: linear-gradient(#091768, #066779, #00E895);
     height: 50px;
+    cursor: pointer;
 }
-
 .text-blue {
     color: #091768;
 }
-
+.filter{
+    p{
+        font-weight: 800;
+        font-size: 18px;
+        border: 1px solid rgba(211, 211, 211, 0.474);
+        width: auto;
+        margin: 0px auto;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .border-blue{
+        border: 1px solid #091768;
+    }
+}
 .player_img {
     height: 50px;
     width: 50px;
@@ -46,9 +59,6 @@
         cursor: pointer;
     }
 }
-
-
-
 .container-info {
     margin-left: 10px;
     text-align: left;
@@ -67,5 +77,16 @@
 .position {
     span {
         font-size: 13px;
+    }
+}
+@media screen and (max-width:420px) {
+    .filter{
+        p{
+            font-size: 16px;
+        }
+        .border-blue{
+            width: 50px;
+            font-size: 14px;
+        }
     }
 }
