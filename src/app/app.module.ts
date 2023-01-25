@@ -52,6 +52,7 @@ import { SvincolatiComponent } from './components/lega/enter-lega/svincolati/svi
 import { GiocatoreComponent } from './components/lega/enter-lega/svincolati/giocatore/giocatore.component';
 import { TrovaComponent } from './components/lega/enter-lega/trova/trova.component';
 import { TovaGiocatoreComponent } from './components/lega/enter-lega/trova/tova-giocatore/tova-giocatore.component';
+import { TopComponent } from './components/top/top.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { TovaGiocatoreComponent } from './components/lega/enter-lega/trova/tova-
     SvincolatiComponent,
     GiocatoreComponent,
     TrovaComponent,
-    TovaGiocatoreComponent
+    TovaGiocatoreComponent,
+    TopComponent
   ],
   imports: [
     BrowserModule,
