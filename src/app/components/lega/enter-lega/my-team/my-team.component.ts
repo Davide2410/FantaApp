@@ -46,14 +46,14 @@ export class MyTeamComponent implements OnInit {
       this.team()
       this.cicla()
     })
-    this.printSquadRoma()
-    this.printSquadMilan()
-    this.printSquadNapoli()
-    this.printSquadAtalanta()
-    this.printSquadInter()
-    this.printSquadJuve()
-    this.printSquadLazio()
-    this.printSquadFiore()
+    // this.printSquadRoma()
+    // this.printSquadMilan()
+    // this.printSquadNapoli()
+    // this.printSquadAtalanta()
+    // this.printSquadInter()
+    // this.printSquadJuve()
+    // this.printSquadLazio()
+    // this.printSquadFiore()
   }
 
   back() {

@@ -12,8 +12,8 @@
 <div class="container position-relative">
     <div class="row justify-content-center align-items-center">
         <div class="col-8 col-md-4 text-center box-team bg-white position-absolute p-4 text-blue shadow rounded-5">
-            <h6><strong>{{nomeTeam}}</strong></h6>
-            <p class="border w-50 mx-auto rounded-5 p-2 border-2 text-blue">{{budget}}</p>
+            <h6><i class="fas fa-shield-alt"></i> <strong>{{nomeTeam}}</strong></h6>
+            <p class="border w-50 mx-auto rounded-5 p-2 border-2 text-blue"><i class="fas fa-dollar-sign"></i> {{budget}}</p>
             <span id="err" class="p-2 rounded-5 text-white d-none">
                 <i class="fas fa-info-circle"></i>
                 Azione consentita solo per l'admin
@@ -40,20 +40,20 @@
             </div>
             <div class="col-lg-4 col-md-6 col-6 mb-5">
                 <div class="d-flex flex-column p-2 rounded-6 shadow bg-white" [routerLink]="['/trova/' + id]">
-                    <i class="fas fa-shield-alt"></i>
+                    <i class="fas fa-user-secret"></i>
                     <span>Chi ce l'ha?</span>
                 </div>
             </div>
             <div class="col-"></div>
 
-            <div class="col-lg-4 col-md-6 col-6 mb-5">
+            <div class="col-lg-4 col-md-6 col-6">
                 <div class="d-flex flex-column p-2 rounded-6 shadow bg-white"  [routerLink]="['/listone']">
                  <i class="fas fa-futbol"></i>
                  <span>Listone</span>
                 </div>
              </div>
 
-             <div class="col-lg-4 col-md-6 col-6 mb-5">
+             <div class="col-lg-4 col-md-6 col-6">
                 <div class="d-flex flex-column p-2 rounded-6 shadow bg-white" [routerLink]="['/svincolati/' + id]">
                     <i class="fas fa-user-minus"></i>
                  <span>Svincolati</span>

@@ -2,7 +2,9 @@
     background: linear-gradient(0.25turn, #091768, #066779, #00E895);
     height: 50px;
 }
-
+.bg-grey{
+    background-color: rgb(211, 211, 211,0.3);
+}
 .text-blue {
     color: #091768;
 }
@@ -13,6 +15,6 @@
 
 .lega{
     border: 1px solid lightgray;
-    width: max-content;
     height: auto;
+    cursor: pointer;
 }

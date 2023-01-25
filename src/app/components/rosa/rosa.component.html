@@ -55,18 +55,20 @@
                     </span>
                     <span class="mx-1">{{searchStat.games.rating}}</span>
                     <form #budget="ngForm">
-                        <input type="number" class="rounded-5" name="budget" #budget="ngModel" ngModel required [ngClass]="{
+                        <input type="number" class="rounded-5" name="budget" #budget="ngModel" ngModel required
+                            [ngClass]="{
                             'border-danger':searchStat.games.position == 'Attacker',
                             'border-primary':searchStat.games.position == 'Midfielder',
                             'border-success':searchStat.games.position == 'Defender',
                             'border-warning':searchStat.games.position == 'Goalkeeper'}">
-                            <button type="submit" class="bg-transparent" (click)=" isFav ? rimuoviLike() : calcola(budget, s.player.id)">
-                                <i class="fas fa-plus mx-auto" [ngClass]="{
+                        <button type="submit" class="bg-transparent"
+                            (click)=" isFav ? rimuoviLike() : calcola(budget, s.player.id)">
+                            <i class="fas fa-plus mx-auto" [ngClass]="{
                                     'text-danger':searchStat.games.position == 'Attacker',
                                     'text-primary':searchStat.games.position == 'Midfielder',
                                     'text-success':searchStat.games.position == 'Defender',
                                     'text-warning':searchStat.games.position == 'Goalkeeper'}"></i>
-                            </button>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -76,17 +78,18 @@
 
 <div class="container-fluid" id="all">
     <div class="row justify-content-center align-items-center text-center">
-
         <div class="col-12 mb-4 d-none" id="errore">
-           <div class="border border-danger border-2 rounded-5 bg-danger opacity-75">
-            <p class="text-white pt-3">Hai aggiunto il numero massimo di giocatori</p>
-           </div>
+            <div class="border border-danger border-2 rounded-5 bg-danger opacity-75">
+                <p class="text-white pt-3">Hai aggiunto il numero massimo di giocatori</p>
+            </div>
         </div>
 
         <div class="col-8 mb-4" *ngFor="let p of arrayVuoto">
             <app-player [p]="p"></app-player>
         </div>
-
-
     </div>
 </div>
+
+<button class="btn bg-blue d-none" id="top" (click)="top()">
+    <i class="fas fa-angle-double-up"></i>
+</button>

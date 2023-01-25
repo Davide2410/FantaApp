@@ -616,6 +616,41 @@
       "userId": 20,
       "paid": 1,
       "id": 41
+    },
+    {
+      "legaId": 1,
+      "playerId": 81012,
+      "userId": 21,
+      "paid": 1,
+      "id": 42
+    },
+    {
+      "legaId": 1,
+      "playerId": 105,
+      "userId": 21,
+      "paid": 1,
+      "id": 43
+    },
+    {
+      "legaId": 1,
+      "playerId": 47300,
+      "userId": 21,
+      "paid": 20,
+      "id": 44
+    },
+    {
+      "legaId": 1,
+      "playerId": 19209,
+      "userId": 21,
+      "paid": 1,
+      "id": 45
+    },
+    {
+      "legaId": 1,
+      "playerId": 902,
+      "userId": 21,
+      "paid": 8,
+      "id": 46
     }
   ]
 }
