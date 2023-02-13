@@ -16,7 +16,7 @@ export class EnterLegaComponent implements OnInit {
   idUser!: number
   err: string | undefined
 
-
+  attivo:boolean = false
 
   constructor(private legaSrv: LegaService, private r: Router, private route: ActivatedRoute) { }
 
@@ -24,7 +24,10 @@ export class EnterLegaComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       let stringId: any = params.get("id");
       this.id = parseFloat(stringId)
-      this.team()
+      setTimeout(()=>{
+        this.team()
+      this.attivo = true
+      },500)
     })
   }
 
@@ -58,7 +61,7 @@ export class EnterLegaComponent implements OnInit {
           if (el.user_admin == true) {
             this.r.navigate(['/impostazioni/lega/' + this.id])
           } else {
-            err!.classList.toggle('d-none')
+            err!.classList.remove('d-none')
           }
         }
       })

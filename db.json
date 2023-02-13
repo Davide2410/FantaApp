@@ -32,6 +32,54 @@
       "gender": "Maschio",
       "birthday": "1999-03-27",
       "id": 21
+    },
+    {
+      "email": "l@l.it",
+      "password": "$2a$10$HEAC8tbPpsEV1K1qBNTxTedzmLW6LoW68ituwLN5p6taSQsZ6zaFO",
+      "name": "Luca",
+      "gender": "Maschio",
+      "birthday": "2000-10-10",
+      "id": 22
+    },
+    {
+      "email": "dario@d.it",
+      "password": "$2a$10$NZvjQUT9coz7GL8fYVkbSuNQrhlvxLGF5qF5chol7NlrSrM3n.CMK",
+      "name": "dario",
+      "gender": "maschio",
+      "birthday": "2000-10-20",
+      "id": 23
+    },
+    {
+      "email": "f@f.it",
+      "password": "$2a$10$ALjIZcBKyDmlTGKNmHr1QeefELfQMTMBwc2ZjAjgMOf5cYYu0XD9q",
+      "name": "Francesco",
+      "gender": "Maschio",
+      "birthday": "2000-10-20",
+      "id": 24
+    },
+    {
+      "email": "c@c.it",
+      "password": "$2a$10$4DVV9vcW1H.GFwkBtovvl.bZsHH3Id1SgYFBNMlB0KdUJ9.Rw6y2u",
+      "name": "Cristiano",
+      "gender": "Maschio",
+      "birthday": "2000-10-10",
+      "id": 25
+    },
+    {
+      "email": "luca@luca.it",
+      "password": "$2a$10$jW1d2QQMGBA/fJEy6G0w.OqKBeh8nRpfxSRGtucTop0zquw7VDX6e",
+      "name": "Luca",
+      "gender": "Maschio",
+      "birthday": "1999-10-08",
+      "id": 26
+    },
+    {
+      "email": "naomi@n.it",
+      "password": "$2a$10$9nmkGEHrbBI1glzi9mjLiOL/bg1cO1UrouKf3G7Dh9Wup7n9KsMpK",
+      "name": "Naomi",
+      "gender": "Femmina",
+      "birthday": "2000-10-25",
+      "id": 27
     }
   ],
   "teams": [
@@ -216,7 +264,13 @@
         19,
         1,
         20,
-        21
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
       ],
       "gol": "1",
       "autogol": "-2",
@@ -334,6 +388,86 @@
       "nomeLega": "Lega Ciamarra",
       "idLega": 1,
       "id": 14
+    },
+    {
+      "nome_team": "Pescara",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 22,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 15
+    },
+    {
+      "nome_team": "Darioo",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 23,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 16
+    },
+    {
+      "nome_team": "Milan",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 24,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 17
+    },
+    {
+      "nome_team": "Milan",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 24,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 18
+    },
+    {
+      "nome_team": "As Roma",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 25,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 19
+    },
+    {
+      "nome_team": "AC Cappatoio",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 26,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 20
+    },
+    {
+      "nome_team": "AC Cappatoio",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 26,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 21
+    },
+    {
+      "nome_team": "USA",
+      "budget": "500",
+      "controlloPsw": true,
+      "user_admin": false,
+      "user_id": 27,
+      "nomeLega": "Lega Ciamarra",
+      "idLega": 1,
+      "id": 22
     }
   ],
   "squad": [
@@ -651,6 +785,76 @@
       "userId": 21,
       "paid": 8,
       "id": 46
+    },
+    {
+      "legaId": 1,
+      "playerId": 21081,
+      "userId": 24,
+      "paid": 10,
+      "id": 47
+    },
+    {
+      "legaId": 1,
+      "playerId": 21081,
+      "userId": 24,
+      "paid": 10,
+      "id": 48
+    },
+    {
+      "legaId": 1,
+      "playerId": 851,
+      "userId": 25,
+      "paid": 1,
+      "id": 49
+    },
+    {
+      "legaId": 1,
+      "playerId": 312,
+      "userId": 26,
+      "paid": 20,
+      "id": 50
+    },
+    {
+      "legaId": 1,
+      "playerId": 21081,
+      "userId": 27,
+      "paid": 20,
+      "id": 51
+    },
+    {
+      "legaId": 1,
+      "playerId": 22221,
+      "userId": 27,
+      "paid": 5,
+      "id": 52
+    },
+    {
+      "legaId": 1,
+      "playerId": 81012,
+      "userId": 27,
+      "paid": 30,
+      "id": 53
+    },
+    {
+      "legaId": 1,
+      "playerId": 1627,
+      "userId": 27,
+      "paid": 1,
+      "id": 54
+    },
+    {
+      "legaId": 1,
+      "playerId": 2045,
+      "userId": 27,
+      "paid": 10,
+      "id": 55
+    },
+    {
+      "legaId": 1,
+      "playerId": 769,
+      "userId": 27,
+      "paid": 5,
+      "id": 56
     }
   ]
 }

@@ -55,7 +55,6 @@ export class ModalLegaComponent implements OnInit {
         error!.classList.add('d-none')
         form.reset()
         this.modalRef.close()
-        history.back()
       })
     }
   }

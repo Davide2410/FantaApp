@@ -16,16 +16,6 @@ import { NewsComponent } from './components/news/news.component';
 import { SecondaryComponent } from './components/news/secondary/secondary.component';
 import { DettaglioComponent } from './components/news/dettaglio/dettaglio.component';
 import { AllComponent } from './components/news/all/all.component';
-import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
-import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
-import {MdbCollapseModule} from 'mdb-angular-ui-kit/collapse';
-import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
-import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
-import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
-import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
-
-import { SwiperModule } from 'swiper/angular';
-import { SwiperComponent } from './components/news/all/swiper/swiper.component';
 import { HomeNewsComponent } from './components/home/home-news/home-news.component';
 import { UltimeNotizieComponent } from './components/home/ultime-notizie/ultime-notizie.component';
 import { UltimeSecondaryComponent } from './components/home/ultime-notizie/ultime-secondary/ultime-secondary.component';
@@ -53,6 +43,16 @@ import { GiocatoreComponent } from './components/lega/enter-lega/svincolati/gioc
 import { TrovaComponent } from './components/lega/enter-lega/trova/trova.component';
 import { TovaGiocatoreComponent } from './components/lega/enter-lega/trova/tova-giocatore/tova-giocatore.component';
 import { TopComponent } from './components/top/top.component';
+
+import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
+import {MdbCollapseModule} from 'mdb-angular-ui-kit/collapse';
+import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
+import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
+import { SwiperModule } from 'swiper/angular';
+import { SwiperComponent } from './components/news/all/swiper/swiper.component';
 
 @NgModule({
   declarations: [

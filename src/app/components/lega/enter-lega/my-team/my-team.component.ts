@@ -53,7 +53,7 @@ export class MyTeamComponent implements OnInit {
     this.printSquadInter()
     this.printSquadJuve()
     this.printSquadLazio()
-    this.printSquadFiore()
+    // this.printSquadFiore()
   }
 
   back() {

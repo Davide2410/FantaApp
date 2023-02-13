@@ -28,7 +28,9 @@ export class ListoneComponent implements OnInit {
 
   arrayVuoto:any[]=[]
 
-  serieA = [492,489,496,487, 505, 497, 494,502,502,488]
+  serieA = [492,489,496,487, 505, 497]
+  // 494,502,502,488
+
   options = {
     headers: {
       'X-RapidAPI-Key': '0bdbd40b81mshff3b7e623d1c230p103862jsn8f8e68750807',
